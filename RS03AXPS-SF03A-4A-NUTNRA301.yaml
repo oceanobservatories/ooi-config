@@ -7,33 +7,33 @@
 #
 
 parameters:
-  a_cutoff: '1.3'                          # Absorbance Cutoff
-  brmtrace: 'False'                        # Bromide Tracing
-  countdwn: '15'                           # Countdown
-  datfsize: '5'                            # Data File Size
+  a_cutoff: 1.3                            # Absorbance Cutoff
+  brmtrace: false                          # Bromide Tracing
+  countdwn: 15                             # Countdown
+  datfsize: 5                              # Data File Size
   drkcormt: SpecAverage                    # Dark Correction Method
-  drkdurat: '5'                            # Dark Duration
-  drksmpls: '1'                            # Dark Samples
-  fitconcs: '1'                            # Concentrations to Fit
-  intadmax: '20'                           # Integration Time Max
-  intadstp: '20'                           # Integration Time Step
-  intpradj: 'True'                         # Integration Time Adjustment
-  intprfac: '1'                            # Integration Time Factor
-  lamptoff: '35'                           # Lamp Switch-Off Temperature
-  lgtdurat: '10'                           # Light Duration
-  lgtsmpls: '5'                            # Light Samples
-  msgfsize: '0'                            # Message File Size
+  drkdurat: 5                              # Dark Duration
+  drksmpls: 1                              # Dark Samples
+  fitconcs: 1                              # Concentrations to Fit
+  intadmax: 20                             # Integration Time Max
+  intadstp: 20                             # Integration Time Step
+  intpradj: true                           # Integration Time Adjustment
+  intprfac: 1                              # Integration Time Factor
+  lamptoff: 35                             # Lamp Switch-Off Temperature
+  lgtdurat: 10                             # Light Duration
+  lgtsmpls: 5                              # Light Samples
+  msgfsize: 0                              # Message File Size
   msglevel: Info                           # Message Level
-  nmlgtspl: '2'                            # Number of Light Samples
+  nmlgtspl: 2                              # Number of Light Samples
   operctrl: Samples                        # Operation Control
   opermode: Polled                         # Operation Mode
   outdrkfr: Output                         # Output Dark Frame
   outfrtyp: Full_ASCII                     # Output Frame Type
-  polltout: '65535'                        # Polled Timeout
-  salinfit: 'True'                         # Salinity Fitting
-  skpsleep: 'True'                         # Skip Sleep at Start
-  stbltime: '5'                            # Lamp Stability Time
-  tempcomp: 'False'                        # Temperature Compensation
-  tlgtsmpl: '30'                           # Time to Take Light Sample
-  wfit_hgh: '240.0'                        # Fit Wavelength High
-  wfit_low: '217.0'                        # Fit Wavelength Low
+  polltout: 65535                          # Polled Timeout
+  salinfit: true                           # Salinity Fitting
+  skpsleep: true                           # Skip Sleep at Start
+  stbltime: 5                              # Lamp Stability Time
+  tempcomp: false                          # Temperature Compensation
+  tlgtsmpl: 30                             # Time to Take Light Sample
+  wfit_hgh: 240.0                          # Fit Wavelength High
+  wfit_low: 217.0                          # Fit Wavelength Low

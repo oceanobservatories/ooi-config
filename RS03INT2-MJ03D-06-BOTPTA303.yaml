@@ -7,9 +7,9 @@
 #
 
 parameters:
-  auto_relevel: None                       # Automatic Releveling Enabled
-  heat_duration: None                      # Heater Run Time Duration
-  output_rate_hz: None                     # NANO Output Rate
-  relevel_timeout: None                    # LILY Leveling Timeout
-  xtilt_relevel_trigger: None              # X-tilt Releveling Trigger
-  ytilt_relevel_trigger: None              # Y-tilt Releveling Trigger
+  auto_relevel: null                       # Automatic Releveling Enabled
+  heat_duration: null                      # Heater Run Time Duration
+  output_rate_hz: null                     # NANO Output Rate
+  relevel_timeout: null                    # LILY Leveling Timeout
+  xtilt_relevel_trigger: null              # X-tilt Releveling Trigger
+  ytilt_relevel_trigger: null              # Y-tilt Releveling Trigger

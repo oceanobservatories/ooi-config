@@ -7,7 +7,7 @@
 #
 
 parameters:
-  initat: 'True'                           # Auto Telemetry
-  initsm: 'True'                           # Silent Mode
+  initat: true                             # Auto Telemetry
+  initsm: true                             # Silent Mode
   maxrate: '0'                             # Maximum Frame Rate
-  netmode: 'False'                         # Network Mode
+  netmode: false                           # Network Mode

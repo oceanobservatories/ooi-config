@@ -7,4 +7,4 @@
 #
 
 parameters:
-  output_period: '15'                      # D1000 Sample Periodicity
+  output_period: 15                        # D1000 Sample Periodicity

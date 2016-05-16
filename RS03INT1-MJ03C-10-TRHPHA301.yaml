@@ -8,7 +8,7 @@
 
 parameters:
   status_interval: 00:00:00                # Acquire Status Interval
-  trhph_cycle_time: '20'                   # Cycle Time
-  trhph_metadata_on_powerup: None          # Metadata on Powerup
-  trhph_metadata_on_restart: None          # Metadata on Restart
-  verbose: None                            # Verbose
+  trhph_cycle_time: 20                     # Cycle Time
+  trhph_metadata_on_powerup: null          # Metadata on Powerup
+  trhph_metadata_on_restart: null          # Metadata on Restart
+  verbose: null                            # Verbose

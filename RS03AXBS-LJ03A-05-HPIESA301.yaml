@@ -7,27 +7,27 @@
 #
 
 parameters:
-  cal hold secs: '20'                      # Calibrate Hold
-  compass dsecs: '10'                      # Compass Delay
-  compass nget: '1'                        # Compass Samples
-  console off timeout: '300'               # Console Timeout
-  dcpwm: 'False'                           # Power Compass with Motor
-  debug: '0'                               # Debug Level
-  dkawm: 'True'                            # Keep Awake with Motor
-  do_rsn: 'True'                           # Configured for RSN
-  led_drivers_invert: 'False'              # Invert LED Drivers
-  m1a_led: '1'                             # M1A LED
-  m1a_tmoc: '200'                          # Motor Timeouts 1A
-  m1b_tmoc: '200'                          # Motor Timeouts 1B
-  m2a_led: '3'                             # M2A LED
-  m2a_tmoc: '200'                          # Motor Timeouts 2A
-  m2b_tmoc: '200'                          # Motor Timeouts 2B
+  cal hold secs: 20                        # Calibrate Hold
+  compass dsecs: 10                        # Compass Delay
+  compass nget: 1                          # Compass Samples
+  console off timeout: 300                 # Console Timeout
+  dcpwm: false                             # Power Compass with Motor
+  debug: 0                                 # Debug Level
+  dkawm: true                              # Keep Awake with Motor
+  do_rsn: true                             # Configured for RSN
+  led_drivers_invert: false                # Invert LED Drivers
+  m1a_led: 1                               # M1A LED
+  m1a_tmoc: 200                            # Motor Timeouts 1A
+  m1b_tmoc: 200                            # Motor Timeouts 1B
+  m2a_led: 3                               # M2A LED
+  m2a_tmoc: 200                            # Motor Timeouts 2A
+  m2b_tmoc: 200                            # Motor Timeouts 2B
   motor dir init: f                        # Initial Motor Direction
-  motor dir nhold: '0'                     # Motor Direction
-  navg cal: '10'                           # Number of Calibration Samples
-  navg ef: '10'                            # Number of HEF Samples
-  navg mot: '10'                           # Number of Motor Samples
-  nfc calibrate: '15'                      # Calibration Periodicity
-  nhc compass: '30'                        # Compass Measurement Periodicity
-  wsrun delay secs: '0'                    # WS Run Delay
-  wsrun pinch secs: '120'                  # WS Run Pinch
+  motor dir nhold: 0                       # Motor Direction
+  navg cal: 10                             # Number of Calibration Samples
+  navg ef: 10                              # Number of HEF Samples
+  navg mot: 10                             # Number of Motor Samples
+  nfc calibrate: 15                        # Calibration Periodicity
+  nhc compass: 30                          # Compass Measurement Periodicity
+  wsrun delay secs: 0                      # WS Run Delay
+  wsrun pinch secs: 120                    # WS Run Pinch

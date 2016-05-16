@@ -9,33 +9,33 @@
 parameters:
   AcquireStatusInterval: 00:00:00          # Acquire Status Interval
   ClockSyncInterval: 00:00:00              # Clock Sync Interval
-  analog_input_address: '0'                # Analog Input Address
-  analog_scale_factor: '6711'              # Analog Output Scale Factor
-  average_interval: '64'                   # Average Interval
-  blanking_distance: '16'                  # Blanking Distance
-  cell_size: '7'                           # Bin Length
-  compass_update_rate: '1'                 # Compass Update Rate
-  coordinate_system: '2'                   # Coordinate System
-  correlation_threshold: '0'               # Correlation Threshold
+  analog_input_address: 0                  # Analog Input Address
+  analog_scale_factor: 6711                # Analog Output Scale Factor
+  average_interval: 64                     # Average Interval
+  blanking_distance: 16                    # Blanking Distance
+  cell_size: 7                             # Bin Length
+  compass_update_rate: 1                   # Compass Update Rate
+  coordinate_system: 2                     # Coordinate System
+  correlation_threshold: 0                 # Correlation Threshold
   deployment_name: ''                      # Deployment Name
-  deployment_start_time: '[0, 0, 0, 0, 0, 0]' # Clock Deploy
-  diagnostics_interval: '10800'            # Diagnostic Interval
+  deployment_start_time: [0, 0, 0, 0, 0, 0] # Clock Deploy
+  diagnostics_interval: 10800              # Diagnostic Interval
   file_comments: ''                        # Comments
-  measurement_interval: '600'              # Measurement Interval
-  mode: '48'                               # Mode
-  mode_test: '4'                           # Mode Test
-  number_beams_per_cell: '1'               # Number Beams Cell Diagnostic
-  number_cells: '1'                        # Number of Bins
-  number_diagnostics_samples: '1'          # Diagnostic Samples
-  number_pings: '0'                        # Number Pings
-  number_pings_diagnostic: '1'             # Number Pings Diagnostic
-  number_samples_per_burst: '0'            # Number of Samples per Burst
-  receive_length: '7'                      # Receive Length
-  sample_rate: '16'                        # Sample Rate
-  sound_speed_adjust_factor: '16657'       # Adjustment Sound Speed
-  tcr: '130'                               # Timing Control Register
-  time_between_bursts: '0'                 # Time Between Burst Sequences
-  time_between_pings: '44'                 # Time Between Pings
-  transmit_pulse_length: '2'               # Transmit Pulse Length
-  transmit_pulse_length_2nd: '2'           # Transmit Pulse Length Second Lag
-  wrap_mode: '0'                           # Wrap Mode
+  measurement_interval: 600                # Measurement Interval
+  mode: 48                                 # Mode
+  mode_test: 4                             # Mode Test
+  number_beams_per_cell: 1                 # Number Beams Cell Diagnostic
+  number_cells: 1                          # Number of Bins
+  number_diagnostics_samples: 1            # Diagnostic Samples
+  number_pings: 0                          # Number Pings
+  number_pings_diagnostic: 1               # Number Pings Diagnostic
+  number_samples_per_burst: 0              # Number of Samples per Burst
+  receive_length: 7                        # Receive Length
+  sample_rate: 16                          # Sample Rate
+  sound_speed_adjust_factor: 16657         # Adjustment Sound Speed
+  tcr: 130                                 # Timing Control Register
+  time_between_bursts: 0                   # Time Between Burst Sequences
+  time_between_pings: 44                   # Time Between Pings
+  transmit_pulse_length: 2                 # Transmit Pulse Length
+  transmit_pulse_length_2nd: 2             # Transmit Pulse Length Second Lag
+  wrap_mode: 0                             # Wrap Mode

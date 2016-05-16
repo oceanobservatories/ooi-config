@@ -7,6 +7,6 @@
 #
 
 parameters:
-  batterytype: '1'                         # Battery Type
-  enablealerts: '1'                        # Enable Alerts
-  sampleperiod: '15'                       # Sample Period
+  batterytype: 1                           # Battery Type
+  enablealerts: 1                          # Enable Alerts
+  sampleperiod: 15                         # Sample Period

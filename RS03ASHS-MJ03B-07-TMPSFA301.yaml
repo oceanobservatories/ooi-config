@@ -7,14 +7,14 @@
 #
 
 parameters:
-  auto_run: '1'                            # Auto Run
+  auto_run: 1                              # Auto Run
   end_date_and_time: 01 Jan 2050 00:00:00  # End Date and Time
-  engineering_units_output: '1'            # Engineering Units Output
-  inhibit_data_storage: '1'                # Inhibit Data Storage
-  output_includes_battery_voltage: '1'     # Output Includes Battery Voltage
-  output_includes_serial_number: '1'       # Output Includes Serial Number
-  power_always_on: '1'                     # Power Always On
+  engineering_units_output: 1              # Engineering Units Output
+  inhibit_data_storage: 1                  # Inhibit Data Storage
+  output_includes_battery_voltage: 1       # Output Includes Battery Voltage
+  output_includes_serial_number: 1         # Output Includes Serial Number
+  power_always_on: 1                       # Power Always On
   sample_interval: 00:00:12                # Sample Interval
-  sampling_led: '0'                        # Sampling LED
-  six_hz_profiling_mode: '0'               # 6Hz Profiling Mode
+  sampling_led: 0                          # Sampling LED
+  six_hz_profiling_mode: 0                 # 6Hz Profiling Mode
   start_date_and_time: 01 Jan 2000 00:00:00 # Start Date and Time

@@ -7,22 +7,22 @@
 #
 
 parameters:
-  AutoRun: 'False'                         # Auto Run
-  DualGTD: 'False'                         # Dual GTD Attached
-  GTD: 'False'                             # GTD Attached
-  IgnoreSwitch: 'True'                     # Ignore Switch
-  MinCondFreq: '500'                       # Minimum Conductivity Frequency
-  Navg: '4'                                # Scans to Average
-  OPTODE: 'False'                          # Optode Attached
-  OutputFormat: '0'                        # Output Format
-  PType: '1'                               # Pressure Sensor Type
-  PumpDelay: '60'                          # Pump Delay
-  SBE38: 'False'                           # SBE38 Attached
-  SBE63: 'False'                           # SBE63 Attached
-  Volt0: 'True'                            # Volt 0
-  Volt1: 'False'                           # Volt 1
-  Volt2: 'False'                           # Volt 2
-  Volt3: 'False'                           # Volt 3
-  Volt4: 'False'                           # Volt 4
-  Volt5: 'False'                           # Volt 5
-  WetLabs: 'False'                         # Wetlabs Sensor Attached
+  AutoRun: false                           # Auto Run
+  DualGTD: false                           # Dual GTD Attached
+  GTD: false                               # GTD Attached
+  IgnoreSwitch: true                       # Ignore Switch
+  MinCondFreq: 500                         # Minimum Conductivity Frequency
+  Navg: 4                                  # Scans to Average
+  OPTODE: false                            # Optode Attached
+  OutputFormat: 0                          # Output Format
+  PType: 1                                 # Pressure Sensor Type
+  PumpDelay: 60                            # Pump Delay
+  SBE38: false                             # SBE38 Attached
+  SBE63: false                             # SBE63 Attached
+  Volt0: true                              # Volt 0
+  Volt1: false                             # Volt 1
+  Volt2: false                             # Volt 2
+  Volt3: false                             # Volt 3
+  Volt4: false                             # Volt 4
+  Volt5: false                             # Volt 5
+  WetLabs: false                           # Wetlabs Sensor Attached

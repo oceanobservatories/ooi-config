@@ -8,4 +8,4 @@
 
 parameters:
   InstrumentSeries: A                      # Instrument Series
-  SampleInterval: '5'                      # Polled Interval
+  SampleInterval: 5                        # Polled Interval

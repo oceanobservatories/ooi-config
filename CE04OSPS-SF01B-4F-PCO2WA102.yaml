@@ -7,16 +7,16 @@
 #
 
 parameters:
-  auto_sample_interval: '3600'             # Auto Sample Interval
-  cycles_between_blanks: '84'              # Cycles Between Blanks
-  deionized_water_flush_duration: '8'      # Deionized Water Flush Duration
-  flush_pump_interval: '1'                 # Flush Pump Interval
-  number_blank_cycles: '28'                # Number of Blank Cycles
-  number_extra_pump_cycles: '56'           # Number of Extra Pump Cycles
-  number_reagent_cycles: '24'              # Number of Reagent Cycles
-  pump_100ml_cycles: '1'                   # Pump 100ml Cycles
-  pump_duration: '32'                      # Pump Measurement Duration
-  pump_pulse: '16'                         # Pump Pulse Duration
-  pump_settings: '0'                       # Pump Settings
-  reagent_flush_duration: '8'              # Reagent Flush Duration
-  samples_per_measurement: '255'           # Samples Per Measurement
+  auto_sample_interval: 3600               # Auto Sample Interval
+  cycles_between_blanks: 84                # Cycles Between Blanks
+  deionized_water_flush_duration: 8        # Deionized Water Flush Duration
+  flush_pump_interval: 1                   # Flush Pump Interval
+  number_blank_cycles: 28                  # Number of Blank Cycles
+  number_extra_pump_cycles: 56             # Number of Extra Pump Cycles
+  number_reagent_cycles: 24                # Number of Reagent Cycles
+  pump_100ml_cycles: 1                     # Pump 100ml Cycles
+  pump_duration: 32                        # Pump Measurement Duration
+  pump_pulse: 16                           # Pump Pulse Duration
+  pump_settings: 0                         # Pump Settings
+  reagent_flush_duration: 8                # Reagent Flush Duration
+  samples_per_measurement: 255             # Samples Per Measurement
