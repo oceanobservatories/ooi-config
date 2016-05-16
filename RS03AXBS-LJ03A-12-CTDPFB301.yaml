@@ -1,0 +1,29 @@
+#
+# RS03AXBS-LJ03A-12-CTDPFB301 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   djm     Default parameters query
+#
+
+parameters:
+  MinCondFreq: 500                         # Minimum Conductivity Frequency
+  OutputFormat: 0                          # Output Format
+  GTD: False                               # GTD Attached
+  Navg: 4                                  # Scans to Average
+  OPTODE: True                             # Optode Attached
+  SBE63: False                             # SBE63 Attached
+  Volt3: False                             # Volt 3
+  Volt0: True                              # Volt 0
+  Volt1: True                              # Volt 1
+  PType: 1                                 # Pressure Sensor Type
+  Volt4: False                             # Volt 4
+  Volt5: False                             # Volt 5
+  SBE38: False                             # SBE38 Attached
+  Volt2: False                             # Volt 2
+  IgnoreSwitch: True                       # Ignore Switch
+  DualGTD: False                           # Dual GTD Attached
+  AutoRun: False                           # Auto Run
+  WetLabs: False                           # Wetlabs Sensor Attached
+  logging: None                            # Logging
+  PumpDelay: 60                            # Pump Delay

@@ -1,0 +1,51 @@
+#
+# RS01SUM1-LJ01B-12-VEL3DB104 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   djm     Default parameters query
+#
+
+parameters:
+  measurements_per_sample: 1               # Measurements per Sample
+  burst_interval_hours: 0                  # Burst Interval Hours
+  sample_period: None                      # Sample Period
+  frequency: 1.0                           # Measurement Frequency
+  3_axis_compass: True                     # 3-axis Compass Sensor
+  solid_state_tilt: True                   # Solid State Tilt Sensor
+  velocity_offset_path_d: None             # Velocity Offset Path D
+  velocity_offset_path_b: None             # Velocity Offset Path B
+  velocity_offset_path_c: None             # Velocity Offset Path C
+  velocity_offset_path_a: None             # Velocity Offset Path A
+  velocity_frame: 3                        # Velocity Frame
+  log/display_fractional_second: True      # Display Fractional Seconds
+  auxiliary_2: False                       # Auxiliary sensor 2
+  auxiliary_3: False                       # Auxiliary sensor 3
+  burst_interval_seconds: 0                # Burst Interval Seconds
+  auxiliary_1: False                       # Auxiliary sensor 1
+  si_conversion: None                      # SI Conversion Coefficient
+  log/display_time: True                   # Log Display Time
+  compass_scale_factors_2: None            # Compass Scale Factor 2
+  serial_number: None                      # Serial Number
+  log/display_acoustic_axis_velocities: True # Acoustic Axis Velocities
+  burst_interval_days: 0                   # Burst Interval Days
+  tilt_roll_offset: None                   # Tilt Offset (Roll)
+  compass_offset_1: None                   # Compass Offset 1
+  compass_offset_0: None                   # Compass Offset 0
+  sensor_orientation: 2                    # Sensor Orientation
+  note2: None                              # Note Line 2
+  compass_offset_2: None                   # Compass Offset 2
+  monitor: True                            # Data Monitor
+  query_mode: False                        # Query Mode
+  tilt_pitch_offset: None                  # Tilt Offset (Pitch)
+  pressure: False                          # Pressure Sensor
+  samples_per_burst: None                  # Samples per Burst
+  compass_scale_factors_0: None            # Compass Scale Factor 0
+  compass_scale_factors_1: None            # Compass Scale Factor 1
+  burst_interval_minutes: 0                # Burst Interval Minutes
+  thermistor: True                         # Thermistor Sensor
+  warm_up_interval: F                      # Warm Up Interval for Sensors
+  note1: None                              # Note Line 1
+  log/display_acoustic_axis_velocities_format: H # Format of Acoustic Axis Velocities
+  sys_clock: None                          # System Clock
+  note3: None                              # Note Line 3

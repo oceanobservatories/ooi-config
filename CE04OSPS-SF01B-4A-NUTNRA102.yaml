@@ -1,0 +1,42 @@
+#
+# CE04OSPS-SF01B-4A-NUTNRA102 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   djm     Default parameters query
+#
+
+parameters:
+  intprfac: 1                              # Integration Time Factor
+  spintper: None                           # Spectrometer Integration Period
+  stbltime: 5                              # Lamp Stability Time
+  drkdurat: 5                              # Dark Duration
+  lamptoff: 35                             # Lamp Switch-Off Temperature
+  datfsize: 5                              # Data File Size
+  nmlgtspl: 2                              # Number of Light Samples
+  countdwn: 15                             # Countdown
+  msglevel: Info                           # Message Level
+  opermode: Polled                         # Operation Mode
+  salinfit: True                           # Salinity Fitting
+  operctrl: Samples                        # Operation Control
+  lgtdurat: 10                             # Light Duration
+  tempcomp: False                          # Temperature Compensation
+  reflimit: None                           # Reference Minute at Lamp-On
+  drksmpls: 1                              # Dark Samples
+  intadstp: 20                             # Integration Time Step
+  wfit_hgh: 240.0                          # Fit Wavelength High
+  fitconcs: 1                              # Concentrations to Fit
+  intadmax: 20                             # Integration Time Max
+  lgtsmpls: 5                              # Light Samples
+  bl_order: None                           # Baseline Order
+  a_cutoff: 1.3                            # Absorbance Cutoff
+  intpradj: True                           # Integration Time Adjustment
+  polltout: 65535                          # Polled Timeout
+  tlgtsmpl: 30                             # Time to Take Light Sample
+  msgfsize: 0                              # Message File Size
+  outfrtyp: Full_ASCII                     # Output Frame Type
+  wfit_low: 217.0                          # Fit Wavelength Low
+  skpsleep: True                           # Skip Sleep at Start
+  brmtrace: False                          # Bromide Tracing
+  outdrkfr: Output                         # Output Dark Frame
+  drkcormt: SpecAverage                    # Dark Correction Method

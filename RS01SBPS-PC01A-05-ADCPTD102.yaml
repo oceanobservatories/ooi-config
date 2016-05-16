@@ -1,0 +1,55 @@
+#
+# RS01SBPS-PC01A-05-ADCPTD102 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   djm     Default parameters query
+#
+
+parameters:
+  WF: 704                                  # Blank After Transmit
+  WE: 2000                                 # Error Velocity Threshold
+  WD: 111100000                            # Serial Out FW Switches
+  WC: 64                                   # Correlation Threshold
+  WB: 0                                    # Bandwidth Control
+  WA: 050,001                              # False Target Threshold
+  WN: 100                                  # Number of Depth Cells
+  WJ: 1                                    # Receiver Gain Select
+  WI: False                                # Clip Data Past Bottom
+  WV: 175                                  # Ambiguity Velocity
+  WU: 0                                    # Ping Weight
+  WT: 0                                    # Transmit Length
+  WS: 800                                  # Depth Cell Size
+  WQ: False                                # Sample Ambient Sound
+  WP: 1                                    # Pings Per Ensemble
+  CP: False                                # Polled Mode
+  TX: 00:00:00                             # Buffered Output Period
+  TT: None                                 # Time
+  TP: 00:01.00                             # Time per Ping
+  clockSynchInterval: 00:00:00             # Clock Sync Interval
+  PD: 0                                    # Data Stream Selection
+  TG: None                                 # Time of First Ping
+  TE: 00:00:00.00                          # Time per Ensemble
+  TC: 0                                    # Ensemble per Burst
+  CI: 0                                    # Instrument ID
+  CH: False                                # Banner
+  CN: True                                 # Save NVRAM to Recorder
+  CL: 0                                    # Sleep Enable
+  ED: 8000                                 # Transducer Depth
+  EA: 0                                    # Heading Alignment
+  CF: 11110                                # Serial Flow Control
+  EC: 1485                                 # Speed of Sound
+  EB: 0                                    # Heading Bias
+  CX: False                                # Latency trigger
+  EX: 00111                                # Coordinate Transformation
+  EZ: 1111101                              # Sensor Source
+  CQ: 255                                  # Transmit Power
+  CD: 000 000 000                          # Serial Data Out
+  EP: 0                                    # Pitch
+  ES: 35                                   # Salinity
+  ER: 0                                    # Roll
+  SW: 0                                    # Sync Delay
+  ST: 0                                    # Slave Timeout
+  getStatusInterval: 00:00:00              # Acquire Status Interval
+  SM: 0                                    # RDS3 Mode Selection
+  SA: 001                                  # Sync Ping Ensemble

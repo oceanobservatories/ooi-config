@@ -1,0 +1,32 @@
+#
+# RS03AXPS-PC03A-4C-FLORDD303 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   djm     Default parameters query
+#
+
+parameters:
+  clk_interval: 00:00:00                   # Run Clock Sync Interval
+  set: 0                                   # Packets per Set
+  ser: None                                # Serial Number
+  pkt: 0                                   # Measurements per Packet
+  int: None                                # Time Interval Between Packets
+  status_interval: 00:00:00                # Acquire Status Interval
+  rat: None                                # Baud Rate
+  ave: 1                                   # Measurements per Reported Value
+  ver: None                                # Firmware Version
+  seq: 0                                   # Predefined Output Sequence
+  clk: None                                # Time
+  mst: None                                # Manual Start Time
+  m2s: None                                # Measurement 2 Slope Value
+  m2d: None                                # Measurement 2 Dark Count
+  rec: 0                                   # Recording Mode
+  m1d: None                                # Measurement 1 Dark Count
+  mem: None                                # Internal Memory Size
+  dat: None                                # Date
+  m1s: None                                # Measurement 1 Slope Value
+  man: 0                                   # Manual Mode
+  m3s: None                                # Measurement 3 Slope Value
+  wiper_interval: 00:00:00                 # Run Wiper Interval
+  m3d: None                                # Measurement 3 Dark Count

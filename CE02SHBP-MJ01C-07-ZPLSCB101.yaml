@@ -1,0 +1,39 @@
+#
+# CE02SHBP-MJ01C-07-ZPLSCB101 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   djm     Default parameters query
+#
+
+parameters:
+  ftp_ip_address: 128.193.64.201           # FTP IP Address
+  ftp_password: 994ef22                    # FTP Password
+  ftp_port: 80                             # FTP Port
+  ftp_username: ooi                        # FTP User Name
+  schedule: file_path: DEFAULT_FILE_PATH
+file_prefix: Driver DEFAULT CONFIG_PREFIX
+intervals:
+- duration: 00:15:00
+  frequency:
+    38000:
+      mode: active
+      power: 100
+      pulse_length: 256
+    120000:
+      mode: active
+      power: 100
+      pulse_length: 64
+    200000:
+      mode: active
+      power: 120
+      pulse_length: 64
+  interval: 1000
+  max_range: 80
+  name: default
+  repeat_every: 01:00
+  start_at: 00:00
+  stop_repeating_at: '23:55'
+  type: constant
+max_file_size: 288
+ # Schedule

@@ -1,0 +1,14 @@
+#
+# CE04OSPS-SF01B-3C-PARADA102 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   djm     Default parameters query
+#
+
+parameters:
+  instrument: None                         # Instrument Type
+  serial: None                             # Serial Number
+  firmware: None                           # Firmware Version
+  AcquireStatusInterval: 00:00:00          # Acquire Status Interval
+  maxrate: None                            # Max Rate

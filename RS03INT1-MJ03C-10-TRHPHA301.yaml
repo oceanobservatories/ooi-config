@@ -1,0 +1,19 @@
+#
+# RS03INT1-MJ03C-10-TRHPHA301 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   djm     Default parameters query
+#
+
+parameters:
+  trhph_eh_amp_power_status: None          # eH Isolation Amp Power
+  verbose: None                            # Verbose
+  trhph_hydro_sensor_power_status: None    # Hydrogen Sensor Power
+  trhph_metadata_on_restart: None          # Metadata on Restart
+  trhph_thermo_hydro_amp_power_status: None # Instrumentation Amp Power
+  trhph_metadata_on_powerup: None          # Metadata on Powerup
+  status_interval: 00:00:00                # Acquire Status Interval
+  trhph_cycle_time: 20                     # Cycle Time
+  trhph_ref_temp_power_status: None        # Reference Temp Power
+  trhph_res_power_status: None             # Res Sensor Power

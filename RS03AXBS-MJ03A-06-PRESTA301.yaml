@@ -1,0 +1,13 @@
+#
+# RS03AXBS-MJ03A-06-PRESTA301 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   djm     Default parameters query
+#
+
+parameters:
+  batterytype: 1                           # Battery Type
+  enablealerts: 1                          # Enable Alerts
+  sampleperiod: 15                         # Sample Period
+  time: None                               # Instrument Time

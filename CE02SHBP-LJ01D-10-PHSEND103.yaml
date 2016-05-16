@@ -1,0 +1,47 @@
+#
+# CE02SHBP-LJ01D-10-PHSEND103 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   djm     Default parameters query
+#
+
+parameters:
+  pump_on_ind: 8                           # Pump On Ind
+  salinity_delay: 0                        # Salinity Delay
+  number_reagent_pumps: 1                  # Number of Reagent Pumps
+  launch_time: 0                           # Launch Time
+  stop_time_from_start: 31536000           # Stop Time After Start Time
+  flush_cycles: 1                          # Seawater 2750ml and Reagent 50ml Flush Cycles
+  prestart_sample_interval: 0              # Prestart Sample Interval
+  seawater_flush_duration: 2               # Seawater Flush Duration
+  prestart_params_pointer: 0               # Prestart Parameter Pointer
+  pump_on_flush: 4                         # Pump On Flush
+  device1_driver_version: 0                # Device 1 Driver Version
+  measure_to_pump_on: 8                    # Measure to Pump On
+  device1_params_pointer: 0                # Device 1 Parameter Pointer
+  device2_sample_interval: 0               # Device 2 Sample Interval
+  number_blanks: 4                         # Number of Blanks
+  device3_driver_version: 0                # Device 3 Driver Version
+  device1_sample_interval: 0               # Device 1 Sample Interval
+  number_samples_averaged: 1               # Number of Samples Averaged
+  pump_measure_t: 8                        # Pump Measure T
+  number_flushes: 55                       # Number of Flushes
+  valve_delay: 8                           # Valve Delay
+  device2_params_pointer: 0                # Device 2 Parameter Pointer
+  reagent_flush_duration: 4                # Reagent Flush Duration
+  pump_off_flush: 32                       # Pump Off Flush
+  auto_sample_interval: 3600               # Auto Sample Interval
+  device2_driver_version: 0                # Device 2 Driver Version
+  prestart_driver_version: 0               # Prestart Driver Version
+  sami_params_pointer: 2                   # Sami Parameter Pointer
+  start_time_from_launch: 157852800        # Start Time After Launch Time
+  pump_off_to_measure: 16                  # Pump Off to Measure
+  device3_sample_interval: 0               # Device 3 Sample Interval
+  number_measurements: 23                  # Number of Measurements
+  global_configuration: 7                  # Global Bits
+  pv_off_ind: 16                           # P/V Off Ind
+  sami_sample_interval: 3600               # Sami Sample Interval
+  device3_params_pointer: 0                # Device 3 Parameter Pointer
+  mode_bits: 2                             # Mode Bits
+  sami_driver_version: 10                  # Sami Driver Version

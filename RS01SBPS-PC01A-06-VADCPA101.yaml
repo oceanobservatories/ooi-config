@@ -1,0 +1,99 @@
+#
+# RS01SBPS-PC01A-06-VADCPA101 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   djm     Default parameters query
+#
+
+parameters:
+  WF: 88                                   # Blank After Transmit
+  WE: 2000                                 # Error Velocity Threshold
+  WD: 111100000                            # Serial Out FW Switches
+  WC: 64                                   # Correlation Threshold
+  WB: 0                                    # Bandwidth Control
+  WA: 050,001                              # False Target Threshold
+  WN: 220                                  # Number of Depth Cells
+  WJ: 1                                    # Receiver Gain Select
+  WI: False                                # Clip Data Past Bottom
+  WV: 175                                  # Ambiguity Velocity
+  WU: 0                                    # Ping Weight
+  WT: 0                                    # Transmit Length
+  WS: 100                                  # Depth Cell Size
+  PD_5th: 0                                # Data Stream Selection (5th beam)
+  WQ: False                                # Sample Ambient Sound
+  WP: 1                                    # Pings Per Ensemble
+  WA_5th: 050,001                          # False Target Threshold (5th beam)
+  CP: False                                # Polled Mode
+  ED_5th: 2000                             # Transducer Depth (5th beam)
+  CH_5th: False                            # Banner (5th beam)
+  ER_5th: 0                                # Roll (5th beam)
+  WS_5th: 94                               # Depth Cell Size (5th beam)
+  WD_5th: 111100000                        # Serial Out FW Switches (5th beam)
+  CN_5th: True                             # Save NVRAM to Recorder (5th beam)
+  CF_5th: 11110                            # Serial Flow Control (5th beam)
+  TX_5th: 00:00:00                         # Buffered Output Period (5th beam)
+  CQ_5th: 255                              # Transmit Power (5th beam)
+  ST_5th: 0                                # Slave Timeout (5th beam)
+  clockSynchInterval: 00:00:00             # Clock Sync Interval
+  TG_5th: None                             # Time of First Ping (5th beam)
+  PD: 0                                    # Data Stream Selection
+  TC_5th: 0                                # Ensemble per Burst (5th beam)
+  WJ_5th: 1                                # Receiver Gain Select (5th beam)
+  TE_5th: 00:00:00.00                      # Time per Ensemble (5th beam)
+  EB_5th: 0                                # Heading Bias (5th beam)
+  ED: 2000                                 # Transducer Depth
+  EA: 0                                    # Heading Alignment
+  EC: 1485                                 # Speed of Sound
+  EB: 0                                    # Heading Bias
+  EX: 00111                                # Coordinate Transformation
+  EZ: 1111101                              # Sensor Source
+  WP_5th: 1                                # Pings Per Ensemble (5th beam)
+  EP: 0                                    # Pitch
+  ES: 35                                   # Salinity
+  ER: 0                                    # Roll
+  EX_5th: 00111                            # Coordinate Transformation (5th beam)
+  SA_5th: 001                              # Sync Ping Ensemble (5th beam)
+  WN_5th: 220                              # Number of Depth Cells (5th beam)
+  TP_5th: 00:00.00                         # Time per Ping (5th beam)
+  WU_5th: 0                                # Ping Weight (5th beam)
+  WI_5th: False                            # Clip Data Past Bottom (5th beam)
+  WE_5th: 2000                             # Error Velocity Threshold (5th beam)
+  EZ_5th: 1111101                          # Sensor Source (5th beam)
+  SW_5th: 0                                # Sync Delay (5th beam)
+  CX_5th: False                            # Latency trigger (5th beam)
+  CP_5th: False                            # Polled Mode (5th beam)
+  WC_5th: 64                               # Correlation Threshold (5th beam)
+  EP_5th: 0                                # Pitch (5th beam)
+  CI: 0                                    # Instrument ID
+  CH: False                                # Banner
+  CN: True                                 # Save NVRAM to Recorder
+  EC_5th: 1485                             # Speed of Sound (5th beam)
+  CD_5th: 000 000 000                      # Serial Data Out (5th beam)
+  CF: 11110                                # Serial Flow Control
+  CD: 000 000 000                          # Serial Data Out
+  CX: False                                # Latency trigger
+  CQ: 255                                  # Transmit Power
+  WT_5th: 0                                # Transmit Length (5th beam)
+  WF_5th: 83                               # Blank After Transmit (5th beam)
+  SW: 100                                  # Sync Delay
+  ST: 0                                    # Slave Timeout
+  SM: 1                                    # RDS3 Mode Selection
+  SA: 001                                  # Sync Ping Ensemble
+  WV_5th: 175                              # Ambiguity Velocity (5th beam)
+  TX: 00:00:00                             # Buffered Output Period
+  TT: None                                 # Time
+  CL: 0                                    # Sleep Enable
+  TP: 00:01.00                             # Time per Ping
+  EA_5th: 0                                # Heading Alignment (5th beam)
+  WB_5th: 0                                # Bandwidth Control (5th beam)
+  TT_5th: None                             # Time (5th beam)
+  ES_5th: 35                               # Salinity (5th beam)
+  TG: None                                 # Time of First Ping
+  TE: 00:00:00.00                          # Time per Ensemble
+  TC: 0                                    # Ensemble per Burst
+  CI_5th: 0                                # Instrument ID (5th beam)
+  WQ_5th: False                            # Sample Ambient Sound (5th beam)
+  CL_5th: 0                                # Sleep Enable (5th beam)
+  SM_5th: 2                                # RDS3 Mode Selection (5th beam)
+  getStatusInterval: 00:00:00              # Acquire Status Interval

@@ -1,0 +1,18 @@
+#
+# RS03INT2-MJ03D-06-BOTPTA303 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   djm     Default parameters query
+#
+
+parameters:
+  relevel_timeout: None                    # LILY Leveling Timeout
+  output_rate_hz: None                     # NANO Output Rate
+  ytilt_relevel_trigger: None              # Y-tilt Releveling Trigger
+  lily_leveling: None                      # Lily Leveling
+  leveling_failed: None                    # LILY Leveling Failed
+  heater_on: None                          # Heater Running
+  xtilt_relevel_trigger: None              # X-tilt Releveling Trigger
+  heat_duration: None                      # Heater Run Time Duration
+  auto_relevel: None                       # Automatic Releveling Enabled

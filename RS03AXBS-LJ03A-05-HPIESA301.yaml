@@ -1,0 +1,65 @@
+#
+# RS03AXBS-LJ03A-05-HPIESA301 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   djm     Default parameters query
+#
+
+parameters:
+  Estimated Water Depth: 3000 meters: None # Estimated Water Depth
+  Acoustic Lockout: 3.60 seconds: None     # Acoustic Lockout
+  temp coeff y3: None                      # Temp Coeff-Y3
+  cal skip: None                           # Calibrate Skip
+  dcpwm: False                             # Power Compass with Motor
+  bliley B0: None                          # Temperature Coefficient B0
+  compass dsecs: 10                        # Compass Delay
+  bliley B2: None                          # Temperature Coefficient B2
+  bliley B3: None                          # Temperature Coefficient B3
+  cal hold secs: 20                        # Calibrate Hold
+  bliley B1: None                          # Temperature Coefficient B1
+  temp coeff y1: None                      # Temp Coeff-Y1
+  nhc compass: 30                          # Compass Measurement Periodicity
+  temp coeff y2: None                      # Temp Coeff-Y2
+  Mission Statement: No mission statement has been entered: None # Mission Statement
+  Telemetry data file enabled: None        # Collect Telemetry Data
+  console off timeout: 300                 # Console Timeout
+  serno: None                              # Serial Number
+  Release Time: Thu Dec 25 12:00:00 2014: None # Release Time
+  pressure coeff c3: None                  # Pressure Coeff-C3
+  pressure coeff t1: None                  # Pressure Coeff-T1
+  Acoustic output set at 186 dB: None      # Acoustic output: (170-197)
+  pressure coeff t5: None                  # Pressure Coeff-T5
+  pressure coeff t4: None                  # Pressure Coeff-T4
+  dkawm: True                              # Keep Awake with Motor
+  navg mot: 10                             # Number of Motor Samples
+  m1b_tmoc: 200                            # Motor Timeouts 1B
+  motor dir init: f                        # Initial Motor Direction
+  m1a_led: 1                               # M1A LED
+  icompass dsecs: None                     # Initial Compass Delay
+  Pressure and Temperature measured every 10 minutes: None # Pressure/Temperature Samples
+  press offset: None                       # Pressure Offset
+  m2b_tmoc: 200                            # Motor Timeouts 2B
+  pressure coeff c2: None                  # Pressure Coeff-C2
+  led_drivers_invert: False                # Invert LED Drivers
+  pressure coeff t3: None                  # Pressure Coeff-T3
+  do_rsn: True                             # Configured for RSN
+  temp coeff u0: None                      # Temp Coeff-U0
+  wsrun pinch secs: 120                    # WS Run Pinch
+  Travel Time Measurements: 4 pings every 10 minutes: None # Echo Samples
+  icompass run: None                       # Initial Compass Run
+  nfc calibrate: 15                        # Calibration Periodicity
+  navg cal: 10                             # Number of Calibration Samples
+  pressure coeff c1: None                  # Pressure Coeff-C1
+  pressure coeff t2: None                  # Pressure Coeff-T2
+  compass nget: 1                          # Compass Samples
+  motor dir nhold: 0                       # Motor Direction
+  navg ef: 10                              # Number of HEF Samples
+  m2a_led: 3                               # M2A LED
+  temp offset: None                        # Temperature Offset
+  m1a_tmoc: 200                            # Motor Timeouts 1A
+  pressure coeff d2: None                  # Pressure Coeff-D2
+  pressure coeff d1: None                  # Pressure Coeff-D1
+  debug: 0                                 # Debug Level
+  m2a_tmoc: 200                            # Motor Timeouts 2A
+  wsrun delay secs: 0                      # WS Run Delay

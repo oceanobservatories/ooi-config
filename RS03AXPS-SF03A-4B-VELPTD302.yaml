@@ -1,0 +1,44 @@
+#
+# RS03AXPS-SF03A-4B-VELPTD302 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   djm     Default parameters query
+#
+
+parameters:
+  diagnostics_interval: 11250              # Diagnostic Interval
+  deployment_name:                         # Deployment Name
+  ClockSyncInterval: 00:00:00              # Clock Sync Interval
+  tcr: 130                                 # Timing Control Register
+  number_beams_per_cell: 1                 # Number Beams Cell Diagnostic
+  file_comments:                           # Comments
+  correlation_threshold: 0                 # Correlation Threshold
+  number_samples_per_burst: 0              # Number of Samples per Burst
+  mode_test: 4                             # Mode Test
+  number_diagnostics_samples: 20           # Diagnostic Samples
+  cell_size: 7                             # Bin Length
+  number_beams: None                       # Number of Beams
+  pcr: None                                # Power Control Register
+  blanking_distance: 49                    # Blanking Distance
+  AcquireStatusInterval: 00:00:00          # Acquire Status Interval
+  time_between_pings: 437                  # Time Between Pings
+  sound_speed_adjust_factor: 1525          # Adjustment Sound Speed
+  software_version: 13902                  # Software Version
+  average_interval: 60                     # Average Interval
+  velocity_adjustment_factor: None         # Velocity Adj Table
+  deployment_start_time: [0, 0, 0, 0, 0, 0] # Clock Deploy
+  transmit_pulse_length: 125               # Transmit Pulse Length
+  measurement_interval: 60                 # Measurement Interval
+  wrap_mode: 0                             # Wrap Mode
+  number_cells: 1                          # Number of Bins
+  coordinate_system: 2                     # Coordinate System
+  number_pings: 1                          # Number Pings
+  analog_input_address: 0                  # Analog Input Address
+  mode: 48                                 # Mode
+  transmit_pulse_length_2nd: 2             # Transmit Pulse Length Second Lag
+  receive_length: 32                       # Receive Length
+  compass_update_rate: 1                   # Compass Update Rate
+  time_between_bursts: 512                 # Time Between Burst Sequences
+  analog_scale_factor: 0                   # Analog Output Scale Factor
+  number_pings_diagnostic: 1               # Number Pings Diagnostic
