@@ -7,42 +7,14 @@
 #
 
 parameters:
-  calibration_coefficients_channel_21: None # Calibration Coefficients Channel 21
-  output_includes_serial_number: 1         # Output Includes Serial Number
-  engineering_units_output: 1              # Engineering Units Output
-  start_date_and_time: 01 Jan 2000 00:00:00 # Start Date and Time
-  calibration_coefficients_channel_18: None # Calibration Coefficients Channel 18
-  calibration_coefficients_channel_19: None # Calibration Coefficients Channel 19
-  auto_run: 1                              # Auto Run
-  calibration_coefficients_channel_14: None # Calibration Coefficients Channel 14
-  calibration_coefficients_channel_15: None # Calibration Coefficients Channel 15
-  calibration_coefficients_channel_16: None # Calibration Coefficients Channel 16
-  output_includes_battery_voltage: 1       # Output Includes Battery Voltage
-  calibration_coefficients_channel_10: None # Calibration Coefficients Channel 10
-  calibration_coefficients_channel_11: None # Calibration Coefficients Channel 11
-  calibration_coefficients_channel_12: None # Calibration Coefficients Channel 12
-  calibration_coefficients_channel_13: None # Calibration Coefficients Channel 13
-  calibration_coefficients_channel_17: None # Calibration Coefficients Channel 17
-  battery_voltage: None                    # Battery Voltage
-  sampling_led: 0                          # Sampling LED
-  identification: None                     # Identification
+  auto_run: '1'                            # Auto Run
   end_date_and_time: 01 Jan 2050 00:00:00  # End Date and Time
-  status: None                             # Logger Status
-  calibration_coefficients_channel_20: None # Calibration Coefficients Channel 20
-  calibration_coefficients_channel_23: None # Calibration Coefficients Channel 23
-  calibration_coefficients_channel_22: None # Calibration Coefficients Channel 22
-  calibration_coefficients_channel_24: None # Calibration Coefficients Channel 24
-  logger_date_and_time: None               # Date/Time
-  power_always_on: 1                       # Power Always On
-  inhibit_data_storage: 1                  # Inhibit Data Storage
-  calibration_coefficients_channel_6: None # Calibration Coefficients Channel 6
-  calibration_coefficients_channel_7: None # Calibration Coefficients Channel 7
-  calibration_coefficients_channel_4: None # Calibration Coefficients Channel 4
-  calibration_coefficients_channel_5: None # Calibration Coefficients Channel 5
-  calibration_coefficients_channel_2: None # Calibration Coefficients Channel 2
-  calibration_coefficients_channel_3: None # Calibration Coefficients Channel 3
-  calibration_coefficients_channel_1: None # Calibration Coefficients Channel 1
-  six_hz_profiling_mode: 0                 # 6Hz Profiling Mode
-  calibration_coefficients_channel_8: None # Calibration Coefficients Channel 8
-  calibration_coefficients_channel_9: None # Calibration Coefficients Channel 9
+  engineering_units_output: '1'            # Engineering Units Output
+  inhibit_data_storage: '1'                # Inhibit Data Storage
+  output_includes_battery_voltage: '1'     # Output Includes Battery Voltage
+  output_includes_serial_number: '1'       # Output Includes Serial Number
+  power_always_on: '1'                     # Power Always On
   sample_interval: 00:00:12                # Sample Interval
+  sampling_led: '0'                        # Sampling LED
+  six_hz_profiling_mode: '0'               # 6Hz Profiling Mode
+  start_date_and_time: 01 Jan 2000 00:00:00 # Start Date and Time

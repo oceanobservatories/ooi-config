@@ -7,8 +7,8 @@
 #
 
 parameters:
-  instrument: None                         # Instrument Type
-  serial: None                             # Serial Number
-  firmware: None                           # Firmware Version
   AcquireStatusInterval: 00:00:00          # Acquire Status Interval
+  firmware: None                           # Firmware Version
+  instrument: None                         # Instrument Type
   maxrate: None                            # Max Rate
+  serial: None                             # Serial Number

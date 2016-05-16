@@ -9,31 +9,12 @@
 parameters:
   ftp_ip_address: 128.193.64.201           # FTP IP Address
   ftp_password: 994ef22                    # FTP Password
-  ftp_port: 80                             # FTP Port
+  ftp_port: '80'                           # FTP Port
   ftp_username: ooi                        # FTP User Name
-  schedule: file_path: DEFAULT_FILE_PATH
-file_prefix: Driver DEFAULT CONFIG_PREFIX
-intervals:
-- duration: 00:15:00
-  frequency:
-    38000:
-      mode: active
-      power: 100
-      pulse_length: 256
-    120000:
-      mode: active
-      power: 100
-      pulse_length: 64
-    200000:
-      mode: active
-      power: 120
-      pulse_length: 64
-  interval: 1000
-  max_range: 80
-  name: default
-  repeat_every: 01:00
-  start_at: 00:00
-  stop_repeating_at: '23:55'
-  type: constant
-max_file_size: 288
- # Schedule
+  schedule: "file_path: DEFAULT_FILE_PATH\nfile_prefix: Driver DEFAULT CONFIG_PREFIX\n\
+  intervals:\n- duration: 00:15:00\n  frequency:\n    38000:\n      mode: active\n\
+  \      power: 100\n      pulse_length: 256\n    120000:\n      mode: active\n  \
+  \    power: 100\n      pulse_length: 64\n    200000:\n      mode: active\n     \
+  \ power: 120\n      pulse_length: 64\n  interval: 1000\n  max_range: 80\n  name:\
+  \ default\n  repeat_every: 01:00\n  start_at: 00:00\n  stop_repeating_at: '23:55'\n\
+  \  type: constant\nmax_file_size: 288\n" # Schedule

@@ -7,20 +7,4 @@
 #
 
 parameters:
-  large_filter_signal_constant: 0.0        # Large Signal Filter Constant
-  parity_type: False                       # Parity Type
-  parity_enable: False                     # Parity Flag
-  baud_rate: 9600                          # Baud Rate
-  echo_commands: True                      # Daisy Chain
-  alarm_enable: False                      # Enable Alarms
-  high_alarm_latching: False               # High Alarm Latching
-  fahrenheit_select: False                 # Fahrenheit Flag
-  linefeed: False                          # Line Feed Flag
-  delay: 0                                 # Communication Delay
-  output_period: 15                        # D1000 Sample Periodicity
-  rtd_34_wire: True                        # 4 Wire RTD Flag
-  small_filter_signal_constant: 0.5        # Small Signal Filter Constant
-  addressing_mode: False                   # Extended Addressing
-  channel_address: 49                      # Base Channel Address
-  output_precision: 6                      # Precision
-  low_alarm_latching: False                # Low Alarm Latching
+  output_period: '15'                      # D1000 Sample Periodicity

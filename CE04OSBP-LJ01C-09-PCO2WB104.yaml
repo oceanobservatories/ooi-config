@@ -7,38 +7,18 @@
 #
 
 parameters:
-  deionized_water_flush_duration: 8        # Deionized Water Flush Duration
-  stop_time_from_start: 31536000           # Stop Time After Start Time
-  prestart_sample_interval: 0              # Prestart Sample Interval
-  external_pump_setting: 30                # External Pump Settings
-  prestart_params_pointer: 0               # Prestart Parameter Pointer
-  cycles_between_blanks: 84                # Cycles Between Blanks
-  device1_driver_version: 1                # Device 1 Driver Version
-  device1_params_pointer: 11               # Device 1 Parameter Pointer
-  device2_sample_interval: 0               # Device 2 Sample Interval
-  flush_pump_interval: 1                   # Flush Pump Interval
-  device3_driver_version: 0                # Device 3 Driver Version
-  device1_sample_interval: 3600            # Device 1 Sample Interval
-  external_pump_delay: 360                 # External Pump Delay
-  pump_settings: 0                         # Pump Settings
-  device2_params_pointer: 0                # Device 2 Parameter Pointer
-  reagent_flush_duration: 8                # Reagent Flush Duration
-  sami_params_pointer: 2                   # Sami Parameter Pointer
-  device2_driver_version: 0                # Device 2 Driver Version
-  prestart_driver_version: 0               # Prestart Driver Version
-  auto_sample_interval: 3600               # Auto Sample Interval
-  number_extra_pump_cycles: 56             # Number of Extra Pump Cycles
-  number_reagent_cycles: 24                # Number of Reagent Cycles
-  pump_duration: 32                        # Pump Measurement Duration
-  start_time_from_launch: 157852800        # Start Time After Launch Time
-  samples_per_measurement: 255             # Samples Per Measurement
-  device3_sample_interval: 0               # Device 3 Sample Interval
-  pump_pulse: 16                           # Pump Pulse Duration
-  number_blank_cycles: 28                  # Number of Blank Cycles
-  global_configuration: 7                  # Global Bits
-  launch_time: 0                           # Launch Time
-  sami_sample_interval: 3600               # Sami Sample Interval
-  device3_params_pointer: 0                # Device 3 Parameter Pointer
-  mode_bits: 2                             # Mode Bits
-  pump_100ml_cycles: 1                     # Pump 100ml Cycles
-  sami_driver_version: 4                   # Sami Driver Version
+  auto_sample_interval: '3600'             # Auto Sample Interval
+  cycles_between_blanks: '84'              # Cycles Between Blanks
+  deionized_water_flush_duration: '8'      # Deionized Water Flush Duration
+  external_pump_delay: '360'               # External Pump Delay
+  external_pump_setting: '30'              # External Pump Settings
+  flush_pump_interval: '1'                 # Flush Pump Interval
+  number_blank_cycles: '28'                # Number of Blank Cycles
+  number_extra_pump_cycles: '56'           # Number of Extra Pump Cycles
+  number_reagent_cycles: '24'              # Number of Reagent Cycles
+  pump_100ml_cycles: '1'                   # Pump 100ml Cycles
+  pump_duration: '32'                      # Pump Measurement Duration
+  pump_pulse: '16'                         # Pump Pulse Duration
+  pump_settings: '0'                       # Pump Settings
+  reagent_flush_duration: '8'              # Reagent Flush Duration
+  samples_per_measurement: '255'           # Samples Per Measurement

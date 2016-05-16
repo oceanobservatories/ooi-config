@@ -7,49 +7,47 @@
 #
 
 parameters:
-  WF: 704                                  # Blank After Transmit
-  WE: 2000                                 # Error Velocity Threshold
-  WD: 111100000                            # Serial Out FW Switches
-  WC: 64                                   # Correlation Threshold
-  WB: 0                                    # Bandwidth Control
-  WA: 050,001                              # False Target Threshold
-  WN: 100                                  # Number of Depth Cells
-  WJ: 1                                    # Receiver Gain Select
-  WI: False                                # Clip Data Past Bottom
-  WV: 175                                  # Ambiguity Velocity
-  WU: 0                                    # Ping Weight
-  WT: 0                                    # Transmit Length
-  WS: 800                                  # Depth Cell Size
-  WQ: False                                # Sample Ambient Sound
-  WP: 1                                    # Pings Per Ensemble
-  CP: False                                # Polled Mode
-  TX: 00:00:00                             # Buffered Output Period
-  TT: None                                 # Time
-  TP: 00:01.00                             # Time per Ping
-  clockSynchInterval: 00:00:00             # Clock Sync Interval
-  PD: 0                                    # Data Stream Selection
-  TG: None                                 # Time of First Ping
-  TE: 00:00:00.00                          # Time per Ensemble
-  TC: 0                                    # Ensemble per Burst
-  CI: 0                                    # Instrument ID
-  CH: False                                # Banner
-  CN: True                                 # Save NVRAM to Recorder
-  CL: 0                                    # Sleep Enable
-  ED: 8000                                 # Transducer Depth
-  EA: 0                                    # Heading Alignment
-  CF: 11110                                # Serial Flow Control
-  EC: 1485                                 # Speed of Sound
-  EB: 0                                    # Heading Bias
-  CX: False                                # Latency trigger
-  EX: 00111                                # Coordinate Transformation
-  EZ: 1111101                              # Sensor Source
-  CQ: 255                                  # Transmit Power
   CD: 000 000 000                          # Serial Data Out
-  EP: 0                                    # Pitch
-  ES: 35                                   # Salinity
-  ER: 0                                    # Roll
-  SW: 0                                    # Sync Delay
-  ST: 0                                    # Slave Timeout
+  CF: '11110'                              # Serial Flow Control
+  CH: 'False'                              # Banner
+  CI: '0'                                  # Instrument ID
+  CL: '0'                                  # Sleep Enable
+  CN: 'True'                               # Save NVRAM to Recorder
+  CP: 'False'                              # Polled Mode
+  CQ: '255'                                # Transmit Power
+  CX: 'False'                              # Latency trigger
+  EA: '0'                                  # Heading Alignment
+  EB: '0'                                  # Heading Bias
+  EC: '1485'                               # Speed of Sound
+  ED: '8000'                               # Transducer Depth
+  EP: '0'                                  # Pitch
+  ER: '0'                                  # Roll
+  ES: '35'                                 # Salinity
+  EX: '00111'                              # Coordinate Transformation
+  EZ: '1111101'                            # Sensor Source
+  PD: '0'                                  # Data Stream Selection
+  SA: '001'                                # Sync Ping Ensemble
+  SM: '0'                                  # RDS3 Mode Selection
+  ST: '0'                                  # Slave Timeout
+  SW: '0'                                  # Sync Delay
+  TC: '0'                                  # Ensemble per Burst
+  TE: '00:00:00.00'                        # Time per Ensemble
+  TP: '00:01.00'                           # Time per Ping
+  TX: 00:00:00                             # Buffered Output Period
+  WA: 050,001                              # False Target Threshold
+  WB: '0'                                  # Bandwidth Control
+  WC: '64'                                 # Correlation Threshold
+  WD: '111100000'                          # Serial Out FW Switches
+  WE: '2000'                               # Error Velocity Threshold
+  WF: '704'                                # Blank After Transmit
+  WI: 'False'                              # Clip Data Past Bottom
+  WJ: '1'                                  # Receiver Gain Select
+  WN: '100'                                # Number of Depth Cells
+  WP: '1'                                  # Pings Per Ensemble
+  WQ: 'False'                              # Sample Ambient Sound
+  WS: '800'                                # Depth Cell Size
+  WT: '0'                                  # Transmit Length
+  WU: '0'                                  # Ping Weight
+  WV: '175'                                # Ambiguity Velocity
+  clockSynchInterval: 00:00:00             # Clock Sync Interval
   getStatusInterval: 00:00:00              # Acquire Status Interval
-  SM: 0                                    # RDS3 Mode Selection
-  SA: 001                                  # Sync Ping Ensemble
