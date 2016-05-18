@@ -4,11 +4,11 @@
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
-#
+#    0-02   2016-05-18   dam     Update maxrate
 
 parameters:
-  AcquireStatusInterval: 00:00:00          # Acquire Status Interval
+  AcquireStatusInterval: 00:00:00          # Driver Parameter: Acquire Status Interval
   firmware: null                           # Firmware Version
   instrument: null                         # Instrument Type
-  maxrate: null                            # Max Rate
+  maxrate: 4                               # Max Rate (hz)
   serial: null                             # Serial Number
