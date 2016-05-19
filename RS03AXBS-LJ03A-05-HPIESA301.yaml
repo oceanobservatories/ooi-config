@@ -1,33 +1,37 @@
-#
+
 # RS03AXBS-LJ03A-05-HPIESA301 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
+#    0-02   2016-05-19   djm     Added additional parameter information
 #
 
 parameters:
-  cal hold secs: 20                        # Calibrate Hold
-  compass dsecs: 10                        # Compass Delay
-  compass nget: 1                          # Compass Samples
-  console off timeout: 300                 # Console Timeout
-  dcpwm: false                             # Power Compass with Motor
-  debug: 0                                 # Debug Level
-  dkawm: true                              # Keep Awake with Motor
-  do_rsn: true                             # Configured for RSN
-  led_drivers_invert: false                # Invert LED Drivers
-  m1a_led: 1                               # M1A LED
-  m1a_tmoc: 200                            # Motor Timeouts 1A
-  m1b_tmoc: 200                            # Motor Timeouts 1B
-  m2a_led: 3                               # M2A LED
-  m2a_tmoc: 200                            # Motor Timeouts 2A
-  m2b_tmoc: 200                            # Motor Timeouts 2B
-  motor dir init: f                        # Initial Motor Direction
-  motor dir nhold: 0                       # Motor Direction
-  navg cal: 10                             # Number of Calibration Samples
-  navg ef: 10                              # Number of HEF Samples
-  navg mot: 10                             # Number of Motor Samples
-  nfc calibrate: 15                        # Calibration Periodicity
-  nhc compass: 30                          # Compass Measurement Periodicity
-  wsrun delay secs: 0                      # WS Run Delay
-  wsrun pinch secs: 120                    # WS Run Pinch
+
+### Startup parameters ###
+
+  cal hold secs: 20                        # Calibrate Hold (None [20]) s
+  compass dsecs: 10                        # Compass Delay ([1, 3600] [10]) s
+  compass nget: 1                          # Compass Samples ([1, 3600] [1]) 
+  console off timeout: 300                 # Console Timeout (None [300]) s
+  dcpwm: false                             # Power Compass with Motor ({u'True': True, u'False': False} [False]) 
+  debug: 0                                 # Debug Level ([0, 3] [0]) 
+  dkawm: true                              # Keep Awake with Motor ({u'True': True, u'False': False} [True]) 
+  do_rsn: true                             # Configured for RSN ({u'True': True, u'False': False} [True]) 
+  led_drivers_invert: false                # Invert LED Drivers ({u'True': True, u'False': False} [False]) 
+  m1a_led: 1                               # M1A LED ([0, 3] [1]) 
+  m1a_tmoc: 200                            # Motor Timeouts 1A ([10, 1000] [200]) 25 ms
+  m1b_tmoc: 200                            # Motor Timeouts 1B ([10, 1000] [200]) 25 ms
+  m2a_led: 3                               # M2A LED ([0, 3] [3]) 
+  m2a_tmoc: 200                            # Motor Timeouts 2A ([10, 1000] [200]) 25 ms
+  m2b_tmoc: 200                            # Motor Timeouts 2B ([10, 1000] [200]) 25 ms
+  motor dir init: f                        # Initial Motor Direction ({u'Forward': u'f', u'Reverse': u'r'} [f]) 
+  motor dir nhold: 0                       # Motor Direction (None [0]) 
+  navg cal: 10                             # Number of Calibration Samples ([1, 100] [10]) 
+  navg ef: 10                              # Number of HEF Samples ([1, 100] [10]) 
+  navg mot: 10                             # Number of Motor Samples ([1, 100] [10]) 
+  nfc calibrate: 15                        # Calibration Periodicity ([1, 3600] [15]) cycle
+  nhc compass: 30                          # Compass Measurement Periodicity ([1, 3600] [30]) half cycle
+  wsrun delay secs: 0                      # WS Run Delay (None [0]) s
+  wsrun pinch secs: 120                    # WS Run Pinch ([1, 3600] [120]) s

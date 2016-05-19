@@ -1,18 +1,22 @@
-#
+
 # RS03AXPS-PC03A-4C-FLORDD303 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
+#    0-02   2016-05-19   djm     Added additional parameter information
 #
 
 parameters:
-  ave: 1                                   # Measurements per Reported Value
-  clk_interval: 00:00:00                   # Run Clock Sync Interval
-  man: 0                                   # Manual Mode
-  pkt: 0                                   # Measurements per Packet
-  rec: 0                                   # Recording Mode
-  seq: 0                                   # Predefined Output Sequence
-  set: 0                                   # Packets per Set
-  status_interval: 00:00:00                # Acquire Status Interval
-  wiper_interval: 00:00:00                 # Run Wiper Interval
+
+### Startup parameters ###
+
+  ave: 1                                   # Measurements per Reported Value ([1, 255] [1]) 
+  clk_interval: 00:00:00                   # Run Clock Sync Interval (None [00:00:00]) HH:MM:SS
+  man: 0                                   # Manual Mode ({u'Disable': 0, u'Enable': 1} [0]) 
+  pkt: 0                                   # Measurements per Packet ([0, 65535] [0]) 
+  rec: 0                                   # Recording Mode ({u'Disable': 0, u'Enable': 1} [0]) 
+  seq: 0                                   # Predefined Output Sequence ([0, 3] [0]) 
+  set: 0                                   # Packets per Set ([0, 65535] [0]) 
+  status_interval: 00:00:00                # Acquire Status Interval (None [00:00:00]) HH:MM:SS
+  wiper_interval: 00:00:00                 # Run Wiper Interval (None [00:00:00]) HH:MM:SS

@@ -1,41 +1,48 @@
-#
+
 # CE02SHBP-LJ01D-07-VEL3DC108 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
+#    0-02   2016-05-19   djm     Added additional parameter information
 #
 
 parameters:
-  AcquireStatusInterval: 00:00:00          # Acquire Status Interval
-  ClockSyncInterval: 00:00:00              # Clock Sync Interval
-  analog_input_address: 0                  # Analog Input Address
-  analog_scale_factor: 6711                # Analog Output Scale Factor
-  average_interval: 64                     # Average Interval
-  blanking_distance: 16                    # Blanking Distance
-  cell_size: 7                             # Bin Length
-  compass_update_rate: 1                   # Compass Update Rate
-  coordinate_system: 2                     # Coordinate System
-  correlation_threshold: 0                 # Correlation Threshold
-  deployment_name: ''                      # Deployment Name
-  deployment_start_time: [0, 0, 0, 0, 0, 0] # Clock Deploy
-  diagnostics_interval: 10800              # Diagnostic Interval
-  file_comments: ''                        # Comments
-  measurement_interval: 600                # Measurement Interval
-  mode: 48                                 # Mode
-  mode_test: 4                             # Mode Test
-  number_beams_per_cell: 1                 # Number Beams Cell Diagnostic
-  number_cells: 1                          # Number of Bins
-  number_diagnostics_samples: 1            # Diagnostic Samples
-  number_pings: 0                          # Number Pings
-  number_pings_diagnostic: 1               # Number Pings Diagnostic
-  number_samples_per_burst: 0              # Number of Samples per Burst
-  receive_length: 7                        # Receive Length
-  sample_rate: 16                          # Sample Rate
-  sound_speed_adjust_factor: 16657         # Adjustment Sound Speed
-  tcr: 130                                 # Timing Control Register
-  time_between_bursts: 0                   # Time Between Burst Sequences
-  time_between_pings: 44                   # Time Between Pings
-  transmit_pulse_length: 2                 # Transmit Pulse Length
-  transmit_pulse_length_2nd: 2             # Transmit Pulse Length Second Lag
-  wrap_mode: 0                             # Wrap Mode
+
+### Startup parameters ###
+
+  AcquireStatusInterval: 00:00:00          # Acquire Status Interval (None [00:00:00]) HH:MM:SS
+  ClockSyncInterval: 00:00:00              # Clock Sync Interval (None [00:00:00]) HH:MM:SS
+  analog_input_address: 0                  # Analog Input Address (None [0]) 
+  analog_scale_factor: 6711                # Analog Output Scale Factor (None [6711]) 
+  average_interval: 64                     # Average Interval ([1, 65535] [64]) s
+  blanking_distance: 16                    # Blanking Distance ([1, 65535] [16]) counts
+  cell_size: 7                             # Bin Length ([1, 65535] [7]) m
+  compass_update_rate: 1                   # Compass Update Rate (None [1]) s
+  coordinate_system: 2                     # Coordinate System ({u'Beam': 2, u'XYZ': 1, u'ENU': 0} [2]) 
+  correlation_threshold: 0                 # Correlation Threshold (None [0]) 
+  deployment_name: ''                      # Deployment Name (None []) 
+  deployment_start_time: [0, 0, 0, 0, 0, 0] # Clock Deploy (None [[0, 0, 0, 0, 0, 0]]) [min, s, d, h, y, m]
+  diagnostics_interval: 10800              # Diagnostic Interval (None [10800]) s
+  file_comments: ''                        # Comments (None []) 
+  measurement_interval: 600                # Measurement Interval ([0, 65535] [600]) s
+  mode: 48                                 # Mode (None [48]) 
+  mode_test: 4                             # Mode Test (None [4]) 
+  number_beams_per_cell: 1                 # Number Beams Cell Diagnostic (None [1]) 
+  number_cells: 1                          # Number of Bins (None [1]) 
+  number_diagnostics_samples: 1            # Diagnostic Samples (None [1]) 
+  number_pings: 0                          # Number Pings ([1, 65535] [0]) Hz
+  number_pings_diagnostic: 1               # Number Pings Diagnostic (None [1]) 
+  number_samples_per_burst: 0              # Number of Samples per Burst (None [0]) 
+  receive_length: 7                        # Receive Length ([1, 65535] [7]) counts
+  sample_rate: 16                          # Sample Rate ([1, 65535] [16]) 
+  sound_speed_adjust_factor: 16657         # Adjustment Sound Speed (None [16657]) m/s
+  time_between_bursts: 0                   # Time Between Burst Sequences ([1, 65535] [0]) counts
+  time_between_pings: 44                   # Time Between Pings (None [44]) counts
+  transmit_pulse_length: 2                 # Transmit Pulse Length ([1, 65535] [2]) counts
+  transmit_pulse_length_2nd: 2             # Transmit Pulse Length Second Lag (None [2]) counts
+  wrap_mode: 0                             # Wrap Mode ({u'No Wrap': 0, u'Wrap when Full': 1} [0]) 
+
+### Read/Write parameters ###
+
+#  tcr: 130                                 # Timing Control Register ([1, 65535] [130]) 

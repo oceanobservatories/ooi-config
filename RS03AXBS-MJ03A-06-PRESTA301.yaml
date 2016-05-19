@@ -1,12 +1,16 @@
-#
+
 # RS03AXBS-MJ03A-06-PRESTA301 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
+#    0-02   2016-05-19   djm     Added additional parameter information
 #
 
 parameters:
-  batterytype: 1                           # Battery Type
-  enablealerts: 1                          # Enable Alerts
-  sampleperiod: 15                         # Sample Period
+
+### Startup parameters ###
+
+  batterytype: 1                           # Battery Type ({u'alkaline': 1, u'lithium': 0} [1]) 
+  enablealerts: 1                          # Enable Alerts ({u'True': True, u'False': False} [1]) 
+  sampleperiod: 15                         # Sample Period ([1, 240] [15]) s

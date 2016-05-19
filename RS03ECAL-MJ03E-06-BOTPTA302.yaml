@@ -1,15 +1,18 @@
-#
+
 # RS03ECAL-MJ03E-06-BOTPTA302 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
+#    0-02   2016-05-19   djm     Added additional parameter information
 #
 
 parameters:
-  auto_relevel: null                       # Automatic Releveling Enabled
-  heat_duration: null                      # Heater Run Time Duration
-  output_rate_hz: null                     # NANO Output Rate
-  relevel_timeout: null                    # LILY Leveling Timeout
-  xtilt_relevel_trigger: null              # X-tilt Releveling Trigger
-  ytilt_relevel_trigger: null              # Y-tilt Releveling Trigger
+
+### Startup parameters ###
+
+  auto_relevel: null                       # Automatic Releveling Enabled ({u'True': u'true', u'False': u'false'} [None]) 
+  output_rate_hz: null                     # NANO Output Rate ([1, 40] [None]) Hz
+  relevel_timeout: null                    # LILY Leveling Timeout ([60, 6000] [None]) s
+  xtilt_relevel_trigger: null              # X-tilt Releveling Trigger ([1, 330] [None]) µrad
+  ytilt_relevel_trigger: null              # Y-tilt Releveling Trigger ([1, 330] [None]) µrad

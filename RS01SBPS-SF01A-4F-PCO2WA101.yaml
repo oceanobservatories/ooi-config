@@ -1,22 +1,26 @@
-#
+
 # RS01SBPS-SF01A-4F-PCO2WA101 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
+#    0-02   2016-05-19   djm     Added additional parameter information
 #
 
 parameters:
-  auto_sample_interval: 3600               # Auto Sample Interval
-  cycles_between_blanks: 84                # Cycles Between Blanks
-  deionized_water_flush_duration: 8        # Deionized Water Flush Duration
-  flush_pump_interval: 1                   # Flush Pump Interval
-  number_blank_cycles: 28                  # Number of Blank Cycles
-  number_extra_pump_cycles: 56             # Number of Extra Pump Cycles
-  number_reagent_cycles: 24                # Number of Reagent Cycles
-  pump_100ml_cycles: 1                     # Pump 100ml Cycles
-  pump_duration: 32                        # Pump Measurement Duration
-  pump_pulse: 16                           # Pump Pulse Duration
-  pump_settings: 0                         # Pump Settings
-  reagent_flush_duration: 8                # Reagent Flush Duration
-  samples_per_measurement: 255             # Samples Per Measurement
+
+### Startup parameters ###
+
+  auto_sample_interval: 3600               # Auto Sample Interval ([600, 604800] [3600]) s
+  cycles_between_blanks: 84                # Cycles Between Blanks ([0, 255] [84]) 
+  deionized_water_flush_duration: 8        # Deionized Water Flush Duration ([0, 255] [8]) 1/8 s
+  flush_pump_interval: 1                   # Flush Pump Interval ([0, 255] [1]) s
+  number_blank_cycles: 28                  # Number of Blank Cycles ([0, 255] [28]) 
+  number_extra_pump_cycles: 56             # Number of Extra Pump Cycles ([0, 255] [56]) 
+  number_reagent_cycles: 24                # Number of Reagent Cycles ([0, 255] [24]) 
+  pump_100ml_cycles: 1                     # Pump 100ml Cycles ([0, 255] [1]) 
+  pump_duration: 32                        # Pump Measurement Duration ([0, 255] [32]) 1/16 s
+  pump_pulse: 16                           # Pump Pulse Duration ([0, 255] [16]) 1/16 s
+  pump_settings: 0                         # Pump Settings ([0, 255] [0]) 
+  reagent_flush_duration: 8                # Reagent Flush Duration ([0, 255] [8]) 1/8 s
+  samples_per_measurement: 255             # Samples Per Measurement ([0, 255] [255]) 

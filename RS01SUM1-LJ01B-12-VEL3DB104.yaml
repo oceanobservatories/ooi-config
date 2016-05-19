@@ -1,38 +1,45 @@
-#
+
 # RS01SUM1-LJ01B-12-VEL3DB104 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
+#    0-02   2016-05-19   djm     Added additional parameter information
 #
 
 parameters:
-  3_axis_compass: true                     # 3-axis Compass Sensor
-  auxiliary_1: false                       # Auxiliary sensor 1
-  auxiliary_2: false                       # Auxiliary sensor 2
-  auxiliary_3: false                       # Auxiliary sensor 3
-  burst_interval_days: 0                   # Burst Interval Days
-  burst_interval_hours: 0                  # Burst Interval Hours
-  burst_interval_minutes: 0                # Burst Interval Minutes
-  burst_interval_seconds: 0                # Burst Interval Seconds
-  frequency: 1.0                           # Measurement Frequency
-  log/display_acoustic_axis_velocities: true # Acoustic Axis Velocities
-  log/display_acoustic_axis_velocities_format: H # Format of Acoustic Axis Velocities
-  log/display_fractional_second: true      # Display Fractional Seconds
-  log/display_time: true                   # Log Display Time
-  measurements_per_sample: 1               # Measurements per Sample
-  monitor: true                            # Data Monitor
-  note1: null                              # Note Line 1
-  note2: null                              # Note Line 2
-  note3: null                              # Note Line 3
-  pressure: false                          # Pressure Sensor
-  query_mode: false                        # Query Mode
-  sample_period: null                      # Sample Period
-  samples_per_burst: null                  # Samples per Burst
-  sensor_orientation: '2'                  # Sensor Orientation
-  si_conversion: null                      # SI Conversion Coefficient
-  solid_state_tilt: true                   # Solid State Tilt Sensor
-  sys_clock: null                          # System Clock
-  thermistor: true                         # Thermistor Sensor
-  velocity_frame: '3'                      # Velocity Frame
-  warm_up_interval: F                      # Warm Up Interval for Sensors
+
+### Startup parameters ###
+
+  3_axis_compass: true                     # 3-axis Compass Sensor (None [True]) 
+  auxiliary_1: false                       # Auxiliary sensor 1 (None [False]) 
+  auxiliary_2: false                       # Auxiliary sensor 2 (None [False]) 
+  auxiliary_3: false                       # Auxiliary sensor 3 (None [False]) 
+  log/display_acoustic_axis_velocities: true # Acoustic Axis Velocities (None [True]) 
+  log/display_acoustic_axis_velocities_format: H # Format of Acoustic Axis Velocities (None [H]) 
+  log/display_fractional_second: true      # Display Fractional Seconds (None [True]) 
+  log/display_time: true                   # Log Display Time (None [True]) 
+  pressure: false                          # Pressure Sensor (None [False]) 
+  query_mode: false                        # Query Mode (None [False]) 
+  sensor_orientation: '2'                  # Sensor Orientation (None [2]) 
+  solid_state_tilt: true                   # Solid State Tilt Sensor (None [True]) 
+  thermistor: true                         # Thermistor Sensor (None [True]) 
+  velocity_frame: '3'                      # Velocity Frame (None [3]) 
+  warm_up_interval: F                      # Warm Up Interval for Sensors (None [F]) 
+
+### Read/Write parameters ###
+
+#  burst_interval_days: 0                   # Burst Interval Days (None [0]) d
+#  burst_interval_hours: 0                  # Burst Interval Hours (None [0]) h
+#  burst_interval_minutes: 0                # Burst Interval Minutes (None [0]) min
+#  burst_interval_seconds: 0                # Burst Interval Seconds (None [0]) s
+#  frequency: 1.0                           # Measurement Frequency (None [1.0]) Hz
+#  measurements_per_sample: 1               # Measurements per Sample (None [1]) 
+#  monitor: true                            # Data Monitor (None [True]) 
+#  note1: null                              # Note Line 1 (None [None]) 
+#  note2: null                              # Note Line 2 (None [None]) 
+#  note3: null                              # Note Line 3 (None [None]) 
+#  sample_period: null                      # Sample Period (None [None]) s
+#  samples_per_burst: null                  # Samples per Burst (None [None]) 
+#  si_conversion: null                      # SI Conversion Coefficient (None [None]) 
+#  sys_clock: null                          # System Clock (None [None]) 'MM/DD/YY HH:MM:SS'

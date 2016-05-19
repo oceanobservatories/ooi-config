@@ -1,14 +1,18 @@
-#
+
 # RS03INT1-MJ03C-10-TRHPHA301 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
+#    0-02   2016-05-19   djm     Added additional parameter information
 #
 
 parameters:
-  status_interval: 00:00:00                # Acquire Status Interval
-  trhph_cycle_time: 20                     # Cycle Time
-  trhph_metadata_on_powerup: null          # Metadata on Powerup
-  trhph_metadata_on_restart: null          # Metadata on Restart
-  verbose: null                            # Verbose
+
+### Startup parameters ###
+
+  status_interval: 00:00:00                # Acquire Status Interval (None [00:00:00]) HH:MM:SS
+  trhph_cycle_time: 20                     # Cycle Time (None [20]) s
+  trhph_metadata_on_powerup: null          # Metadata on Powerup (None [None]) 
+  trhph_metadata_on_restart: null          # Metadata on Restart (None [None]) 
+  verbose: null                            # Verbose (None [None]) 
