@@ -4,10 +4,10 @@
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
-#
+#    0-02   2016-05-18   djm     Update maxrate to match SPKIRA301
 
 parameters:
   initat: true                             # Auto Telemetry
   initsm: true                             # Silent Mode
-  maxrate: '0'                             # Maximum Frame Rate
+  maxrate: 4                               # Maximum Frame Rate
   netmode: false                           # Network Mode
