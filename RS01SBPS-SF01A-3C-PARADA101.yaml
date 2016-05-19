@@ -1,4 +1,4 @@
-#
+
 # RS01SBPS-SF01A-3C-PARADA101 startup configuration file
 #
 # Version   Date         User    Description
@@ -6,7 +6,12 @@
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-18   dam     Update maxrate
 #    0-03   2016-05-18   djm     Driver update 0.0.16 - parameter cleanup
+#    0-04   2016-05-19   djm     Added additional parameter information
+#
 
 parameters:
-  AcquireStatusInterval: 00:00:00          # Driver Parameter: Acquire Status Interval
-  maxrate: 4                               # Max Rate (hz)
+
+### Startup parameters ###
+
+  AcquireStatusInterval: 00:00:00          # Acquire Status Interval (None [00:00:00]) HH:MM:SS
+  maxrate: 4                               # Max Rate ({10, 12, 0.125, 0.5, 1, 2, 4, u'Auto': 0, 8} [None]) Hz

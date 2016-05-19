@@ -1,28 +1,32 @@
-#
+
 # CE02SHBP-LJ01D-06-CTDBPN106 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
+#    0-02   2016-05-19   djm     Added additional parameter information
 #
 
 parameters:
-  AutoRun: false                           # Auto Run
-  DualGTD: false                           # Dual GTD Attached
-  GTD: false                               # GTD Attached
-  IgnoreSwitch: true                       # Ignore Switch
-  MinCondFreq: 500                         # Minimum Conductivity Frequency
-  Navg: 4                                  # Scans to Average
-  OPTODE: true                             # Optode Attached
-  OutputFormat: 0                          # Output Format
-  PType: 3                                 # Pressure Sensor Type
-  PumpDelay: 60                            # Pump Delay
-  SBE38: false                             # SBE38 Attached
-  SBE63: false                             # SBE63 Attached
-  Volt0: true                              # Volt 0
-  Volt1: true                              # Volt 1
-  Volt2: false                             # Volt 2
-  Volt3: false                             # Volt 3
-  Volt4: false                             # Volt 4
-  Volt5: false                             # Volt 5
-  WetLabs: false                           # Wetlabs Sensor Attached
+
+### Startup parameters ###
+
+  AutoRun: false                           # Auto Run ({u'True': True, u'False': False} [False]) 
+  DualGTD: false                           # Dual GTD Attached ({u'True': True, u'False': False} [False]) 
+  GTD: false                               # GTD Attached ({u'True': True, u'False': False} [False]) 
+  IgnoreSwitch: true                       # Ignore Switch ({u'True': True, u'False': False} [True]) 
+  MinCondFreq: 500                         # Minimum Conductivity Frequency ([0, 65535] [500]) Hz
+  Navg: 4                                  # Scans to Average ([0, 65535] [4]) 
+  OPTODE: true                             # Optode Attached ({u'True': True, u'False': False} [True]) 
+  OutputFormat: 0                          # Output Format ({u'Converted xml uvic': 5, u'Converted hex for afm': 4, u'Raw hex': 0, u'Raw decimal': 2, u'Converted decimal': 3, u'Converted hex': 1} [0]) 
+  PType: 3                                 # Pressure Sensor Type ({u'Quartz with Temp Comp': 3, u'Strain Gauge': 1} [3]) 
+  PumpDelay: 60                            # Pump Delay ([0, 65535] [60]) s
+  SBE38: false                             # SBE38 Attached ({u'True': True, u'False': False} [False]) 
+  SBE63: false                             # SBE63 Attached ({u'True': True, u'False': False} [False]) 
+  Volt0: true                              # Volt 0 ({u'True': True, u'False': False} [True]) 
+  Volt1: true                              # Volt 1 ({u'True': True, u'False': False} [True]) 
+  Volt2: false                             # Volt 2 ({u'True': True, u'False': False} [False]) 
+  Volt3: false                             # Volt 3 ({u'True': True, u'False': False} [False]) 
+  Volt4: false                             # Volt 4 ({u'True': True, u'False': False} [False]) 
+  Volt5: false                             # Volt 5 ({u'True': True, u'False': False} [False]) 
+  WetLabs: false                           # Wetlabs Sensor Attached ({u'True': True, u'False': False} [False]) 

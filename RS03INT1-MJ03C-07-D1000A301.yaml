@@ -1,10 +1,14 @@
-#
+
 # RS03INT1-MJ03C-07-D1000A301 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
+#    0-02   2016-05-19   djm     Added additional parameter information
 #
 
 parameters:
-  output_period: 15                        # D1000 Sample Periodicity
+
+### Startup parameters ###
+
+  output_period: 15                        # D1000 Sample Periodicity ([1, 3600] [15]) s

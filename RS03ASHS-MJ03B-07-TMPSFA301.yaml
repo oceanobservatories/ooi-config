@@ -1,20 +1,24 @@
-#
+
 # RS03ASHS-MJ03B-07-TMPSFA301 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
+#    0-02   2016-05-19   djm     Added additional parameter information
 #
 
 parameters:
-  auto_run: 1                              # Auto Run
-  end_date_and_time: 01 Jan 2050 00:00:00  # End Date and Time
-  engineering_units_output: 1              # Engineering Units Output
-  inhibit_data_storage: 1                  # Inhibit Data Storage
-  output_includes_battery_voltage: 1       # Output Includes Battery Voltage
-  output_includes_serial_number: 1         # Output Includes Serial Number
-  power_always_on: 1                       # Power Always On
-  sample_interval: 00:00:12                # Sample Interval
-  sampling_led: 0                          # Sampling LED
-  six_hz_profiling_mode: 0                 # 6Hz Profiling Mode
-  start_date_and_time: 01 Jan 2000 00:00:00 # Start Date and Time
+
+### Startup parameters ###
+
+  auto_run: 1                              # Auto Run ({u'True': 1, u'False': 0} [1]) 
+  end_date_and_time: 01 Jan 2050 00:00:00  # End Date and Time (None [01 Jan 2050 00:00:00]) D M Y H:M:S
+  engineering_units_output: 1              # Engineering Units Output ({u'True': 1, u'False': 0} [1]) 
+  inhibit_data_storage: 1                  # Inhibit Data Storage ({u'True': 1, u'False': 0} [1]) 
+  output_includes_battery_voltage: 1       # Output Includes Battery Voltage ({u'True': 1, u'False': 0} [1]) 
+  output_includes_serial_number: 1         # Output Includes Serial Number ({u'True': 1, u'False': 0} [1]) 
+  power_always_on: 1                       # Power Always On ({u'True': 1, u'False': 0} [1]) 
+  sample_interval: 00:00:12                # Sample Interval (None [00:00:12]) HH:MM:SS
+  sampling_led: 0                          # Sampling LED ({u'True': 1, u'False': 0} [0]) 
+  six_hz_profiling_mode: 0                 # 6Hz Profiling Mode ({u'True': 1, u'False': 0} [0]) 
+  start_date_and_time: 01 Jan 2000 00:00:00 # Start Date and Time (None [01 Jan 2000 00:00:00]) D M Y H:M:S

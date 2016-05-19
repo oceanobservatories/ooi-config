@@ -1,9 +1,10 @@
-#
+
 # RS03AXPS-SF03A-3B-OPTAAD301 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
+#    0-02   2016-05-19   djm     Added additional parameter information
 #
 
 parameters:

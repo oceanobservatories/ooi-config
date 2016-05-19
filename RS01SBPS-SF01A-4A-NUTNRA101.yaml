@@ -1,39 +1,43 @@
-#
+
 # RS01SBPS-SF01A-4A-NUTNRA101 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
+#    0-02   2016-05-19   djm     Added additional parameter information
 #
 
 parameters:
-  a_cutoff: 1.3                            # Absorbance Cutoff
-  brmtrace: false                          # Bromide Tracing
-  countdwn: 15                             # Countdown
-  datfsize: 5                              # Data File Size
-  drkcormt: SpecAverage                    # Dark Correction Method
-  drkdurat: 5                              # Dark Duration
-  drksmpls: 1                              # Dark Samples
-  fitconcs: 1                              # Concentrations to Fit
-  intadmax: 20                             # Integration Time Max
-  intadstp: 20                             # Integration Time Step
-  intpradj: true                           # Integration Time Adjustment
-  intprfac: 1                              # Integration Time Factor
-  lamptoff: 35                             # Lamp Switch-Off Temperature
-  lgtdurat: 10                             # Light Duration
-  lgtsmpls: 5                              # Light Samples
-  msgfsize: 0                              # Message File Size
-  msglevel: Info                           # Message Level
-  nmlgtspl: 2                              # Number of Light Samples
-  operctrl: Samples                        # Operation Control
-  opermode: Polled                         # Operation Mode
-  outdrkfr: Output                         # Output Dark Frame
-  outfrtyp: Full_ASCII                     # Output Frame Type
-  polltout: 65535                          # Polled Timeout
-  salinfit: true                           # Salinity Fitting
-  skpsleep: true                           # Skip Sleep at Start
-  stbltime: 5                              # Lamp Stability Time
-  tempcomp: false                          # Temperature Compensation
-  tlgtsmpl: 30                             # Time to Take Light Sample
-  wfit_hgh: 240.0                          # Fit Wavelength High
-  wfit_low: 217.0                          # Fit Wavelength Low
+
+### Startup parameters ###
+
+  a_cutoff: 1.3                            # Absorbance Cutoff ([0.01, 10.0] [1.3]) 
+  brmtrace: false                          # Bromide Tracing ({u'True': True, u'False': False} [False]) 
+  countdwn: 15                             # Countdown ([0, 3600] [15]) s
+  datfsize: 5                              # Data File Size ([1, 65] [5]) MB
+  drkcormt: SpecAverage                    # Dark Correction Method ({u'SpecAverage': u'SpecAverage', u'SWAverage': u'SWAverage'} [SpecAverage]) 
+  drkdurat: 5                              # Dark Duration ([1, 65535] [5]) s
+  drksmpls: 1                              # Dark Samples ([1, 65535] [1]) 
+  fitconcs: 1                              # Concentrations to Fit ([1, 3] [1]) 
+  intadmax: 20                             # Integration Time Max ([1, 20] [20]) s
+  intadstp: 20                             # Integration Time Step ([1, 20] [20]) s
+  intpradj: true                           # Integration Time Adjustment ({u'True': True, u'False': False} [True]) 
+  intprfac: 1                              # Integration Time Factor ([1, 20] [1]) s
+  lamptoff: 35                             # Lamp Switch-Off Temperature ([-274, 32767] [35]) °C
+  lgtdurat: 10                             # Light Duration ([1, 65535] [10]) s
+  lgtsmpls: 5                              # Light Samples ([1, 65535] [5]) 
+  msgfsize: 0                              # Message File Size ([0, 65] [0]) MB
+  msglevel: Info                           # Message Level ({u'Debug': u'Debug', u'Info': u'Info', u'Warn': u'Warn', u'Error': u'Error'} [Info]) 
+  nmlgtspl: 2                              # Number of Light Samples ([1, 40] [2]) 
+  operctrl: Samples                        # Operation Control ({u'Duration': u'Duration', u'Samples': u'Samples'} [Samples]) 
+  opermode: Polled                         # Operation Mode ({u'Polled': u'Polled', u'Continuous': u'Continuous'} [Polled]) 
+  outdrkfr: Output                         # Output Dark Frame ({u'Output': u'Output', u'Suppress': u'Suppress'} [Output]) 
+  outfrtyp: Full_ASCII                     # Output Frame Type ({u'None': u'None', u'MBARI': u'MBARI', u'Full_ASCII': u'Full_ASCII', u'Full_Binary': u'Full_Binary', u'Reduced_Binary': u'Reduced_Binary', u'Concentration': u'Concentration', u'APF': u'APF'} [Full_ASCII]) 
+  polltout: 65535                          # Polled Timeout ([1, 65535] [65535]) s
+  salinfit: true                           # Salinity Fitting ({u'True': True, u'False': False} [True]) 
+  skpsleep: true                           # Skip Sleep at Start ({u'True': True, u'False': False} [True]) 
+  stbltime: 5                              # Lamp Stability Time ([0, 255] [5]) ds
+  tempcomp: false                          # Temperature Compensation ({u'True': True, u'False': False} [False]) 
+  tlgtsmpl: 30                             # Time to Take Light Sample ([0, 30] [30]) s
+  wfit_hgh: 240.0                          # Fit Wavelength High ([210, 350] [240.0]) nm
+  wfit_low: 217.0                          # Fit Wavelength Low ([210, 350] [217.0]) nm

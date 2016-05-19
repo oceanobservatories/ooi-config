@@ -1,27 +1,31 @@
-#
+
 # RS01SBPS-PC01A-4B-PHSENA102 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
+#    0-02   2016-05-19   djm     Added additional parameter information
 #
 
 parameters:
-  auto_sample_interval: 3600               # Auto Sample Interval
-  flush_cycles: 1                          # Seawater 2750ml and Reagent 50ml Flush Cycles
-  measure_to_pump_on: 8                    # Measure to Pump On
-  number_blanks: 4                         # Number of Blanks
-  number_flushes: 55                       # Number of Flushes
-  number_measurements: 23                  # Number of Measurements
-  number_reagent_pumps: 1                  # Number of Reagent Pumps
-  number_samples_averaged: 1               # Number of Samples Averaged
-  pump_measure_t: 8                        # Pump Measure T
-  pump_off_flush: 32                       # Pump Off Flush
-  pump_off_to_measure: 16                  # Pump Off to Measure
-  pump_on_flush: 4                         # Pump On Flush
-  pump_on_ind: 8                           # Pump On Ind
-  pv_off_ind: 16                           # P/V Off Ind
-  reagent_flush_duration: 4                # Reagent Flush Duration
-  salinity_delay: 0                        # Salinity Delay
-  seawater_flush_duration: 2               # Seawater Flush Duration
-  valve_delay: 8                           # Valve Delay
+
+### Startup parameters ###
+
+  auto_sample_interval: 3600               # Auto Sample Interval ([600, 604800] [3600]) s
+  flush_cycles: 1                          # Seawater 2750ml and Reagent 50ml Flush Cycles ([0, 4294967295] [1]) 
+  measure_to_pump_on: 8                    # Measure to Pump On ([0, 255] [8]) 16 Hz
+  number_blanks: 4                         # Number of Blanks ([1, 63] [4]) 
+  number_flushes: 55                       # Number of Flushes ([0, 255] [55]) 
+  number_measurements: 23                  # Number of Measurements ([0, 26] [23]) 
+  number_reagent_pumps: 1                  # Number of Reagent Pumps ([0, 255] [1]) 
+  number_samples_averaged: 1               # Number of Samples Averaged ([0, 255] [1]) 
+  pump_measure_t: 8                        # Pump Measure T ([0, 255] [8]) 16 Hz
+  pump_off_flush: 32                       # Pump Off Flush ([0, 255] [32]) 16 Hz
+  pump_off_to_measure: 16                  # Pump Off to Measure ([0, 255] [16]) 16 Hz
+  pump_on_flush: 4                         # Pump On Flush ([0, 255] [4]) 16 Hz
+  pump_on_ind: 8                           # Pump On Ind ([0, 255] [8]) 16 Hz
+  pv_off_ind: 16                           # P/V Off Ind ([0, 255] [16]) 16 Hz
+  reagent_flush_duration: 4                # Reagent Flush Duration ([0, 255] [4]) 8 Hz
+  salinity_delay: 0                        # Salinity Delay ([0, 255] [0]) 16 Hz
+  seawater_flush_duration: 2               # Seawater Flush Duration ([0, 255] [2]) 8 Hz
+  valve_delay: 8                           # Valve Delay ([0, 255] [8]) 16 Hz

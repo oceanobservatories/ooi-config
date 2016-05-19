@@ -1,9 +1,10 @@
-#
+
 # CE04OSBP-LJ01C-08-OPTAAC104 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
+#    0-02   2016-05-19   djm     Added additional parameter information
 #
 
 parameters:

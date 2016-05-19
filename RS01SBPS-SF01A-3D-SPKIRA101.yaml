@@ -1,13 +1,18 @@
-#
+
 # RS01SBPS-SF01A-3D-SPKIRA101 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-18   djm     Update maxrate to match SPKIRA301
+#    0-03   2016-05-19   djm     Added additional parameter information
+#
 
 parameters:
-  initat: true                             # Auto Telemetry
-  initsm: true                             # Silent Mode
-  maxrate: 4                               # Maximum Frame Rate
-  netmode: false                           # Network Mode
+
+### Startup parameters ###
+
+  initat: true                             # Auto Telemetry ({u'True': True, u'False': False} [True]) 
+  initsm: true                             # Silent Mode ({u'True': True, u'False': False} [True]) 
+  maxrate: 4                               # Maximum Frame Rate ({10, 12, u'auto': 0, 0.125, 0.5, 1, 2, 4, 0.25, 8} [0]) Hz
+  netmode: false                           # Network Mode ({u'True': True, u'False': False} [False]) 
