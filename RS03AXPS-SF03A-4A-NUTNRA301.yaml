@@ -28,9 +28,9 @@ parameters:
   lgtsmpls: 5                              # Light Samples ([1, 65535] [5]) 
   msgfsize: 0                              # Message File Size ([0, 65] [0]) MB
   msglevel: Info                           # Message Level ({u'Debug': u'Debug', u'Info': u'Info', u'Warn': u'Warn', u'Error': u'Error'} [Info]) 
-  nmlgtspl: 2                              # Number of Light Samples ([1, 40] [2]) 
+  nmlgtspl: 1                              # Number of Light Samples ([1, 40] [2]) 
   operctrl: Samples                        # Operation Control ({u'Duration': u'Duration', u'Samples': u'Samples'} [Samples]) 
-  opermode: Polled                         # Operation Mode ({u'Polled': u'Polled', u'Continuous': u'Continuous'} [Polled]) 
+  opermode: Continuous                     # Operation Mode ({u'Polled': u'Polled', u'Continuous': u'Continuous'} [Polled]) 
   outdrkfr: Output                         # Output Dark Frame ({u'Output': u'Output', u'Suppress': u'Suppress'} [Output]) 
   outfrtyp: Full_ASCII                     # Output Frame Type ({u'None': u'None', u'MBARI': u'MBARI', u'Full_ASCII': u'Full_ASCII', u'Full_Binary': u'Full_Binary', u'Reduced_Binary': u'Reduced_Binary', u'Concentration': u'Concentration', u'APF': u'APF'} [Full_ASCII]) 
   polltout: 65535                          # Polled Timeout ([1, 65535] [65535]) s
@@ -38,6 +38,6 @@ parameters:
   skpsleep: true                           # Skip Sleep at Start ({u'True': True, u'False': False} [True]) 
   stbltime: 5                              # Lamp Stability Time ([0, 255] [5]) ds
   tempcomp: false                          # Temperature Compensation ({u'True': True, u'False': False} [False]) 
-  tlgtsmpl: 30                             # Time to Take Light Sample ([0, 30] [30]) s
+  tlgtsmpl: 10                             # Time to Take Light Sample ([0, 30] [30]) s
   wfit_hgh: 240.0                          # Fit Wavelength High ([210, 350] [240.0]) nm
   wfit_low: 217.0                          # Fit Wavelength Low ([210, 350] [217.0]) nm
