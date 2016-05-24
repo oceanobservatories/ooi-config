@@ -5,6 +5,7 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-05-24   djm     Updated to match nutnr_status particle from 2015-06-25
 #
 
 parameters:
@@ -28,7 +29,6 @@ parameters:
   lgtsmpls: 5                              # Light Samples ([1, 65535] [5]) 
   msgfsize: 0                              # Message File Size ([0, 65] [0]) MB
   msglevel: Info                           # Message Level ({u'Debug': u'Debug', u'Info': u'Info', u'Warn': u'Warn', u'Error': u'Error'} [Info]) 
-  nmlgtspl: 1                              # Number of Light Samples ([1, 40] [2]) 
   operctrl: Samples                        # Operation Control ({u'Duration': u'Duration', u'Samples': u'Samples'} [Samples]) 
   opermode: Continuous                     # Operation Mode ({u'Polled': u'Polled', u'Continuous': u'Continuous'} [Polled]) 
   outdrkfr: Output                         # Output Dark Frame ({u'Output': u'Output', u'Suppress': u'Suppress'} [Output]) 
@@ -38,6 +38,7 @@ parameters:
   skpsleep: true                           # Skip Sleep at Start ({u'True': True, u'False': False} [True]) 
   stbltime: 5                              # Lamp Stability Time ([0, 255] [5]) ds
   tempcomp: false                          # Temperature Compensation ({u'True': True, u'False': False} [False]) 
-  tlgtsmpl: 10                             # Time to Take Light Sample ([0, 30] [30]) s
   wfit_hgh: 240.0                          # Fit Wavelength High ([210, 350] [240.0]) nm
   wfit_low: 217.0                          # Fit Wavelength Low ([210, 350] [217.0]) nm
+  nmlgtspl: 2                              # Driver Parameter: Number of Light Samples ([1, 40] [2]) 
+  tlgtsmpl: 10                             # Driver Parameter: Time to Take Light Sample ([0, 30] [30]) s
