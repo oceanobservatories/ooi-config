@@ -131,7 +131,7 @@ parameters:
   SA_5th: '001'                            # Sync Ping Ensemble (5th beam) (None [001])
   SM_5th: 2                                # RDS3 Mode Selection (5th beam) ({u'NEMO': 3, u'Off': 0, u'RDS3 master': 1, u'RDS3 slave': 2} [2])
   ST_5th: 0                                # Slave Timeout (5th beam) ([0, 10800] [0]) s
-  SW_5th: 100                              # Sync Delay (5th beam) ([0, 65535] [0]) 0.1 ms
+  SW_5th: 0                                # Sync Delay (5th beam) ([0, 65535] [0]) 0.1 ms
   TC_5th: 0                                # Ensemble per Burst (5th beam) ([0, 65535] [0])
   TE_5th: '00:00:00.00'                    # Time per Ensemble (5th beam) (None [00:00:00.00]) hh:mm:ss:ff
   TP_5th: '00:00.00'                       # Time per Ping (5th beam) (None [00:00.00]) mm:ss:ff
