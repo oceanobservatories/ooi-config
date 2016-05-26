@@ -42,7 +42,7 @@ parameters:
   SW: 100                                  # Sync Delay ([0, 65535] [100]) 0.1 ms
   TC: 0                                    # Ensemble per Burst ([0, 65535] [0])
   TE: '00:00:00.00'                        # Time per Ensemble (None [00:00:00.00]) hh:mm:ss:ff
-  TP: '00:01.00'                           # Time per Ping (None [00:01.00]) mm:ss:ff
+  TP: '00:00.00'                           # Time per Ping (None [00:01.00]) mm:ss:ff
   TX: 00:00:00                             # Buffered Output Period (None [00:00:00]) hh:mm:ss
   WA: 050,001                              # False Target Threshold (None [050,001]) nnn,bbb
   WB: 0                                    # Bandwidth Control ({u'Wide': 0, u'Narrow': 1} [0])
