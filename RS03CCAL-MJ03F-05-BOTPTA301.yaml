@@ -5,14 +5,15 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-06-01   djm     Changed default values to match instrument
 #
 
 parameters:
 
 ### Startup parameters ###
 
-  auto_relevel: null                       # Automatic Releveling Enabled ({u'True': u'true', u'False': u'false'} [None]) 
-  output_rate_hz: null                     # NANO Output Rate ([1, 40] [None]) Hz
-  relevel_timeout: null                    # LILY Leveling Timeout ([60, 6000] [None]) s
-  xtilt_relevel_trigger: null              # X-tilt Releveling Trigger ([1, 330] [None]) µrad
-  ytilt_relevel_trigger: null              # Y-tilt Releveling Trigger ([1, 330] [None]) µrad
+  auto_relevel: false                      # Automatic Releveling Enabled ({true, false} [None]) 
+  output_rate_hz: 20                       # NANO Output Rate ([1, 40] [None]) Hz
+  relevel_timeout: 600                     # LILY Leveling Timeout ([60, 6000] [None]) s
+  xtilt_relevel_trigger: 300               # X-tilt Releveling Trigger ([1, 330] [None]) µrad
+  ytilt_relevel_trigger: 300               # Y-tilt Releveling Trigger ([1, 330] [None]) µrad
