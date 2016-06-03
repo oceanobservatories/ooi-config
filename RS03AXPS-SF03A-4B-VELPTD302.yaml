@@ -5,44 +5,80 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-05-26   pec     Pulled config from running instrument
 #
 
 parameters:
 
 ### Startup parameters ###
-
+### Driver parameters ###
   AcquireStatusInterval: 00:00:00          # Acquire Status Interval (None [00:00:00]) HH:MM:SS
   ClockSyncInterval: 00:00:00              # Clock Sync Interval (None [00:00:00]) HH:MM:SS
-  analog_input_address: 0                  # Analog Input Address (None [0]) 
-  analog_scale_factor: 0                   # Analog Output Scale Factor ([0, 65535] [0]) 
-  average_interval: 60                     # Average Interval ([1, 65535] [60]) s
+
+### Instrument parameters ###
+  analog_input_address: 0                  # Analog Input Address (None [0])
+  analog_scale_factor: 0                   # Analog Output Scale Factor ([0, 65535] [0])
+  average_interval: 1                      # Average Interval ([1, 65535] [60]) s
   blanking_distance: 49                    # Blanking Distance ([0, 65535] [49]) counts
-  cell_size: 7                             # Bin Length ([1, 65535] [7]) m
+  cell_size: 32                            # Bin Length ([1, 65535] [7]) m
   compass_update_rate: 1                   # Compass Update Rate (None [1]) s
-  coordinate_system: 2                     # Coordinate System ({u'Beam': 2, u'XYZ': 1, u'ENU': 0} [2]) 
-  correlation_threshold: 0                 # Correlation Threshold (None [0]) 
-  deployment_name: ''                      # Deployment Name (None []) 
+  coordinate_system: 0                     # Coordinate System ({u'Beam': 2, u'XYZ': 1, u'ENU': 0} [2])
+  correlation_threshold: 0                 # Correlation Threshold (None [0])
+  deployment_name: ''                      # Deployment Name (None [])
   deployment_start_time: [0, 0, 0, 0, 0, 0] # Clock Deploy (None [[0, 0, 0, 0, 0, 0]]) [min, s, d, h, y, m]
-  diagnostics_interval: 11250              # Diagnostic Interval ([0, 65535] [11250]) s
-  file_comments: ''                        # Comments (None []) 
-  measurement_interval: 60                 # Measurement Interval ([1, 65535] [60]) s
-  mode: 48                                 # Mode (None [48]) 
-  mode_test: 4                             # Mode Test (None [4]) 
-  number_beams_per_cell: 1                 # Number Beams Cell Diagnostic (None [1]) 
-  number_cells: 1                          # Number of Bins (None [1]) 
-  number_diagnostics_samples: 20           # Diagnostic Samples ([0, 65535] [20]) 
-  number_pings: 1                          # Number Pings ([0, 65535] [1]) counts
-  number_pings_diagnostic: 1               # Number Pings Diagnostic (None [1]) 
-  number_samples_per_burst: 0              # Number of Samples per Burst (None [0]) 
+  diagnostics_interval: 43200              # Diagnostic Interval ([0, 65535] [11250]) s
+  file_comments: ''                        # Comments (None [])
+  measurement_interval: 1                  # Measurement Interval ([1, 65535] [60]) s
+  mode: 32                                 # Mode (None [48])
+  mode_test: 4                             # Mode Test (None [4])
+  number_beams_per_cell: 1                 # Number Beams Cell Diagnostic (None [1])
+  number_cells: 1                          # Number of Bins (None [1])
+  number_diagnostics_samples: 20           # Diagnostic Samples ([0, 65535] [20])
+  number_pings: 6                          # Number Pings ([0, 65535] [1]) counts
+  number_pings_diagnostic: 20              # Number Pings Diagnostic (None [1])
+  number_samples_per_burst: 0              # Number of Samples per Burst (None [0])
   receive_length: 32                       # Receive Length ([0, 65535] [32]) counts
-  software_version: 13902                  # Software Version ([0, 65535] [13902]) 
-  sound_speed_adjust_factor: 1525          # Adjustment Sound Speed ([0, 65535] [1525]) m/s
-  time_between_bursts: 512                 # Time Between Burst Sequences ([0, 65535] [512]) counts
+  software_version: 13902                  # Software Version ([0, 65535] [13902])
+  sound_speed_adjust_factor: 16657         # Adjustment Sound Speed ([0, 65535] [1525]) m/s
+  time_between_bursts: 128                 # Time Between Burst Sequences ([0, 65535] [512]) counts
   time_between_pings: 437                  # Time Between Pings ([0, 65535] [437]) counts
   transmit_pulse_length: 125               # Transmit Pulse Length ([0, 65535] [125]) counts
-  transmit_pulse_length_2nd: 2             # Transmit Pulse Length Second Lag (None [2]) counts
-  wrap_mode: 0                             # Wrap Mode ({u'No Wrap': 0, u'Wrap when Full': 1} [0]) 
+  transmit_pulse_length_2nd: 6             # Transmit Pulse Length Second Lag (None [2]) counts
+  wrap_mode: 0                             # Wrap Mode ({u'No Wrap': 0, u'Wrap when Full': 1} [0])
 
 ### Read/Write parameters ###
 
-#  tcr: 130                                 # Timing Control Register ([1, 65535] [130]) 
+#  tcr: 34                                  # Timing Control Register ([1, 65535] [130])
+
+# Fetched from instrument 26 May 2016
+
+#  analog_input_address 0
+#  analog_scale_factor 0
+#  average_interval 1
+#  blanking_distance 49
+#  cell_size 32
+#  compass_update_rate 1
+#  coordinate_system 0
+#  correlation_threshold 0
+#  deployment_name b''
+#  deployment_start_time [49, 44, 30, 18, 15, 6]
+#  diagnostics_interval 43200
+#  file_comments b''
+#  measurement_interval 1
+#  mode 32
+#  mode_test 4
+#  number_beams_per_cell 1
+#  number_cells 1
+#  number_diagnostics_samples 20
+#  number_pings 6
+#  number_pings_diagnostic 20
+#  number_samples_per_burst 0
+#  receive_length 32
+#  software_version 13902
+#  sound_speed_adjust_factor 16657
+#  tcr 34
+#  time_between_bursts 128
+#  time_between_pings 437
+#  transmit_pulse_length 125
+#  transmit_pulse_length_2nd 6
+#  wrap_mode 0
