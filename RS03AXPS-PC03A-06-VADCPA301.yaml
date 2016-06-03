@@ -5,95 +5,198 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-06-03   djm     Updated to current instrument configuration
 #
 
 parameters:
 
 ### Startup parameters ###
 
-  CD: 000 000 000                          # Serial Data Out (None [000 000 000]) 
-  CD_5th: 000 000 000                      # Serial Data Out (5th beam) (None [000 000 000]) 
-  CF: '11110'                              # Serial Flow Control (None [11110]) 
-  CF_5th: '11110'                          # Serial Flow Control (5th beam) (None [11110]) 
-  CH: false                                # Banner ({u'True': True, u'False': False} [False]) 
-  CH_5th: false                            # Banner (5th beam) ({u'True': True, u'False': False} [False]) 
-  CI: 0                                    # Instrument ID ([0, 255] [0]) 
-  CI_5th: 0                                # Instrument ID (5th beam) ([0, 255] [0]) 
-  CL: 0                                    # Sleep Enable ({u'True': 1, u'False': 0} [0]) 
-  CL_5th: 0                                # Sleep Enable (5th beam) ({u'True': 1, u'False': 0} [0]) 
-  CN: true                                 # Save NVRAM to Recorder ({u'True': True, u'False': False} [True]) 
-  CN_5th: true                             # Save NVRAM to Recorder (5th beam) ({u'True': True, u'False': False} [True]) 
-  CP: false                                # Polled Mode ({u'True': True, u'False': False} [False]) 
-  CP_5th: false                            # Polled Mode (5th beam) ({u'True': True, u'False': False} [False]) 
-  CQ: 255                                  # Transmit Power ([0, 255] [255]) 
-  CQ_5th: 255                              # Transmit Power (5th beam) ([0, 255] [255]) 
-  CX: false                                # Latency trigger ({u'True': True, u'False': False} [False]) 
-  CX_5th: false                            # Latency trigger (5th beam) ({u'True': True, u'False': False} [False]) 
-  EA: 0                                    # Heading Alignment ([-17999, 18000] [0]) c...°
-  EA_5th: 0                                # Heading Alignment (5th beam) ([-17999, 18000] [0]) c...°
-  EB: 0                                    # Heading Bias ([-17999, 18000] [0]) c...°
-  EB_5th: 0                                # Heading Bias (5th beam) ([-17999, 18000] [0]) c...°
-  EC: 1485                                 # Speed of Sound ([1400, 1600] [1485]) m/s
-  EC_5th: 1485                             # Speed of Sound (5th beam) ([1400, 1600] [1485]) m/s
-  ED: 2000                                 # Transducer Depth ([0, 65535] [2000]) dm
-  ED_5th: 2000                             # Transducer Depth (5th beam) ([0, 65535] [2000]) dm
-  EP: 0                                    # Pitch ([-6000, 6000] [0]) c...°
-  EP_5th: 0                                # Pitch (5th beam) ([-6000, 6000] [0]) c...°
-  ER: 0                                    # Roll ([-6000, 6000] [0]) c...°
-  ER_5th: 0                                # Roll (5th beam) ([-6000, 6000] [0]) c...°
-  ES: 35                                   # Salinity ([0, 40] [35]) ppt
-  ES_5th: 35                               # Salinity (5th beam) ([0, 40] [35]) ppt
-  EX: '00111'                              # Coordinate Transformation (None [00111]) 
-  EX_5th: '00111'                          # Coordinate Transformation (5th beam) (None [00111]) 
-  EZ: '1111101'                            # Sensor Source (None [1111101]) 
-  EZ_5th: '1111101'                        # Sensor Source (5th beam) (None [1111101]) 
-  PD: 0                                    # Data Stream Selection ([0, 18] [0]) 
-  PD_5th: 0                                # Data Stream Selection (5th beam) ([0, 18] [0]) 
-  SA: '001'                                # Sync Ping Ensemble (None [001]) 
-  SA_5th: '001'                            # Sync Ping Ensemble (5th beam) (None [001]) 
-  SM: 1                                    # RDS3 Mode Selection ({u'NEMO': 3, u'Off': 0, u'RDS3 master': 1, u'RDS3 slave': 2} [1]) 
-  SM_5th: 2                                # RDS3 Mode Selection (5th beam) ({u'NEMO': 3, u'Off': 0, u'RDS3 master': 1, u'RDS3 slave': 2} [2]) 
-  ST: 0                                    # Slave Timeout ([0, 10800] [0]) s
-  ST_5th: 0                                # Slave Timeout (5th beam) ([0, 10800] [0]) s
-  SW: 100                                  # Sync Delay ([0, 65535] [100]) 0.1 ms
-  SW_5th: 0                                # Sync Delay (5th beam) ([0, 65535] [0]) 0.1 ms
-  TC: 0                                    # Ensemble per Burst ([0, 65535] [0]) 
-  TC_5th: 0                                # Ensemble per Burst (5th beam) ([0, 65535] [0]) 
-  TE: '00:00:00.00'                        # Time per Ensemble (None [00:00:00.00]) hh:mm:ss:ff
-  TE_5th: '00:00:00.00'                    # Time per Ensemble (5th beam) (None [00:00:00.00]) hh:mm:ss:ff
-  TP: '00:01.00'                           # Time per Ping (None [00:01.00]) mm:ss:ff
-  TP_5th: '00:00.00'                       # Time per Ping (5th beam) (None [00:00.00]) mm:ss:ff
-  TX: 00:00:00                             # Buffered Output Period (None [00:00:00]) hh:mm:ss
-  TX_5th: 00:00:00                         # Buffered Output Period (5th beam) (None [00:00:00]) hh:mm:ss
-  WA: 050,001                              # False Target Threshold (None [050,001]) nnn,bbb
-  WA_5th: 050,001                          # False Target Threshold (5th beam) (None [050,001]) nnn,bbb
-  WB: 0                                    # Bandwidth Control ({u'Wide': 0, u'Narrow': 1} [0]) 
-  WB_5th: 0                                # Bandwidth Control (5th beam) ({u'Wide': 0, u'Narrow': 1} [0]) 
-  WC: 64                                   # Correlation Threshold ([0, 255] [64]) counts
-  WC_5th: 64                               # Correlation Threshold (5th beam) ([0, 255] [64]) counts
-  WD: '111100000'                          # Serial Out FW Switches (None [111100000]) 
-  WD_5th: '111100000'                      # Serial Out FW Switches (5th beam) (None [111100000]) 
-  WE: 2000                                 # Error Velocity Threshold ([0, 5000] [2000]) mm/s
-  WE_5th: 2000                             # Error Velocity Threshold (5th beam) ([0, 5000] [2000]) mm/s
-  WF: 88                                   # Blank After Transmit ([0, 9999] [88]) cm
-  WF_5th: 83                               # Blank After Transmit (5th beam) ([0, 9999] [83]) cm
-  WI: false                                # Clip Data Past Bottom ({u'True': True, u'False': False} [False]) 
-  WI_5th: false                            # Clip Data Past Bottom (5th beam) ({u'True': True, u'False': False} [False]) 
-  WJ: 1                                    # Receiver Gain Select ({u'-40 dB Receiver Gain': 0, u'Normal': 1} [1]) 
-  WJ_5th: 1                                # Receiver Gain Select (5th beam) ({u'-40 dB Receiver Gain': 0, u'Normal': 1} [1]) 
-  WN: 220                                  # Number of Depth Cells ([1, 255] [220]) 
-  WN_5th: 220                              # Number of Depth Cells (5th beam) ([1, 255] [220]) 
-  WP: 1                                    # Pings Per Ensemble ([0, 16384] [1]) 
-  WP_5th: 1                                # Pings Per Ensemble (5th beam) ([0, 16384] [1]) 
-  WQ: false                                # Sample Ambient Sound ({u'True': True, u'False': False} [False]) 
-  WQ_5th: false                            # Sample Ambient Sound (5th beam) ({u'True': True, u'False': False} [False]) 
-  WS: 100                                  # Depth Cell Size ([40, 3200] [100]) cm
-  WS_5th: 94                               # Depth Cell Size (5th beam) ([40, 3200] [94]) cm
-  WT: 0                                    # Transmit Length ([0, 3200] [0]) cm
-  WT_5th: 0                                # Transmit Length (5th beam) ([0, 3200] [0]) cm
-  WU: 0                                    # Ping Weight ({u'Box': 0, u'Triangle': 1} [0]) 
-  WU_5th: 0                                # Ping Weight (5th beam) ({u'Box': 0, u'Triangle': 1} [0]) 
-  WV: 175                                  # Ambiguity Velocity ([2, 480] [175]) cm/s
-  WV_5th: 175                              # Ambiguity Velocity (5th beam) ([2, 480] [175]) cm/s
+### Driver ###
   clockSynchInterval: 00:00:00             # Clock Sync Interval (None [00:00:00]) hh:mm:ss
   getStatusInterval: 00:00:00              # Acquire Status Interval (None [00:00:00]) hh:mm:ss
+
+### Master ###
+  CD: 000 000 000                          # Serial Data Out (None [000 000 000])
+  CF: '11110'                              # Serial Flow Control (None [11110])
+  CH: false                                # Banner ({u'True': True, u'False': False} [False])
+  CI: 0                                    # Instrument ID ([0, 255] [0])
+  CL: 0                                    # Sleep Enable ({u'True': 1, u'False': 0} [0])
+  CN: true                                 # Save NVRAM to Recorder ({u'True': True, u'False': False} [True])
+  CP: false                                # Polled Mode ({u'True': True, u'False': False} [False])
+  CQ: 255                                  # Transmit Power ([0, 255] [255])
+  CX: false                                # Latency trigger ({u'True': True, u'False': False} [False])
+  EA: 0                                    # Heading Alignment ([-17999, 18000] [0]) c...°
+  EB: 0                                    # Heading Bias ([-17999, 18000] [0]) c...°
+  EC: 1500                                 # Speed of Sound ([1400, 1600] [1485]) m/s
+  ED: 0                                    # Transducer Depth ([0, 65535] [2000]) dm
+  EP: 0                                    # Pitch ([-6000, 6000] [0]) c...°
+  ER: 0                                    # Roll ([-6000, 6000] [0]) c...°
+  ES: 35                                   # Salinity ([0, 40] [35]) ppt
+  EX: '00111'                              # Coordinate Transformation (None [00111])
+  EZ: '1111101'                            # Sensor Source (None [1111101])
+  PD: 0                                    # Data Stream Selection ([0, 18] [0])
+  SA: '001'                                # Sync Ping Ensemble (None [001])
+  SM: 1                                    # RDS3 Mode Selection ({u'NEMO': 3, u'Off': 0, u'RDS3 master': 1, u'RDS3 slave': 2} [1])
+  ST: 0                                    # Slave Timeout ([0, 10800] [0]) s
+  SW: 0                                    # Sync Delay ([0, 65535] [100]) 0.1 ms
+  TC: 0                                    # Ensemble per Burst ([0, 65535] [0])
+  TE: '00:00:00.00'                        # Time per Ensemble (None [00:00:00.00]) hh:mm:ss:ff
+  TP: '00:00.00'                           # Time per Ping (None [00:01.00]) mm:ss:ff
+  TX: 00:00:00                             # Buffered Output Period (None [00:00:00]) hh:mm:ss
+  WA: 050,001                              # False Target Threshold (None [050,001]) nnn,bbb
+  WB: 0                                    # Bandwidth Control ({u'Wide': 0, u'Narrow': 1} [0])
+  WC: 64                                   # Correlation Threshold ([0, 255] [64]) counts
+  WD: '111100000'                          # Serial Out FW Switches (None [111100000])
+  WE: 2000                                 # Error Velocity Threshold ([0, 5000] [2000]) mm/s
+  WF: 88                                   # Blank After Transmit ([0, 9999] [88]) cm
+  WI: false                                # Clip Data Past Bottom ({u'True': True, u'False': False} [False])
+  WJ: 1                                    # Receiver Gain Select ({u'-40 dB Receiver Gain': 0, u'Normal': 1} [1])
+  WN: 220                                  # Number of Depth Cells ([1, 255] [220])
+  WP: 1                                    # Pings Per Ensemble ([0, 16384] [1])
+  WQ: false                                # Sample Ambient Sound ({u'True': True, u'False': False} [False])
+  WS: 100                                  # Depth Cell Size ([40, 3200] [100]) cm
+  WT: 0                                    # Transmit Length ([0, 3200] [0]) cm
+  WU: 0                                    # Ping Weight ({u'Box': 0, u'Triangle': 1} [0])
+  WV: 175                                  # Ambiguity Velocity ([2, 480] [175]) cm/s
+
+# INSTRUMENT RESPONSES (VADCPA301 - 03 June 2016)
+# MASTER
+#
+# CD = 000 000 000 --------- Serial Data Out (Vel;Cor;Amp  PG;St;P0  P1;P2;P3)
+# CF = 11110 --------------- Flow Ctrl (EnsCyc;PngCyc;Binry;Ser;Rec)
+# CH = 0 ------------------- Suppress Banner
+# CI = 000 ----------------- Instrument ID (0-255)
+# CL = 0 ------------------- Sleep Enable (0 = Disable, 1 = Enable, 2 See Manual)
+# CN = 1 ------------------- Save NVRAM to recorder (0 = ON, 1 = OFF)
+# CP = 0 ------------------- PolledMode (1=ON, 0=OFF;  BREAK resets)
+# CQ = 255 ----------------- Xmt Power (0=Low, 255=High)
+# CX = 0 ------------------- Trigger Enable (0 = OFF, 1 = ON)
+# EA = +00000 -------------- Heading Alignment (1/100 deg)
+# EB = +00000 -------------- Heading Bias (1/100 deg)
+# EC = 1500 ---------------- Speed Of Sound (m/s)
+# ED = 00000 --------------- Transducer Depth (0 - 65535 dm)
+# EP = +0000 --------------- Tilt 1 Sensor (1/100 deg)
+# ER = +0000 --------------- Tilt 2 Sensor (1/100 deg)
+# ES = 35 ------------------ Salinity (0-40 pp thousand)
+# EX = 00111 --------------- Coord Transform (Xform:Type; Tilts; 3Bm; Map)
+# EZ = 1111101 ------------- Sensor Source (C;D;H;P;R;S;T)
+# PD = 00 ------------------ Data Stream Select (0-18)
+# SA = 001 ----------------- Synch Before/After Ping/Ensemble Bottom/Water/Both
+# SM = 1 ------------------- Mode Select (0=OFF,1=MASTER,2=SLAVE,3=NEMO)
+# ST = 00000 --------------- Slave Timeout (seconds,0=indefinite)
+# SW = 00000 --------------- Synch Delay (1/10 msec)
+# TC 00000 --------------- Ensembles Per Burst (0-65535)
+# TE 00:00:00.00 --------- Time per Ensemble (hrs:min:sec.sec/100)
+# TG ****/**/**,**:**:** - Time of First Ping (CCYY/MM/DD,hh:mm:ss)
+# TP 00:00.00 ------------ Time per Ping (min:sec.sec/100)
+# TT 2016/06/03,17:47:06 - Time Set (CCYY/MM/DD ,hh:mm:ss)
+# TX 00:00:00 ------------ Buffer Output Period: (hh:mm:ss)
+# WA 050,001 ------------- False Target Threshold (Max)(0-255),[Start Bin]
+# WB 0 ------------------- Bandwidth Control (0=Wid,1=Nar)
+# WC 064 ----------------- Correlation Threshold
+# WD 111100000 ----------- Data Out (Vel;Cor;Amp  PG;St;P0  P1;P2;P3)
+# WE 2000 ---------------- Error Velocity Threshold (0-5000 mm/s)
+# WF 0088 ---------------- Blank After Transmit (cm)
+# WI 0 ------------------- Clip Data Past Bottom (0=OFF,1=ON)
+# WJ 1 ------------------- Rcvr Gain Select (0=Low,1=High)
+# WN 220 ----------------- Number of depth cells (1-255)
+# WP 00001 --------------- Pings per Ensemble (0-16384)
+# WQ 0 ------------------- Sample Ambient Sound (0=OFF,1=ON)
+# WS 0100 ---------------- Depth Cell Size (cm)
+# WT 0000 ---------------- Transmit Length (cm) [0 = Bin Length]
+# WU 0 ------------------- Ping Weighting (0=Box,1=Triangle)
+# WV 175 ----------------- Mode 1 Ambiguity Vel (cm/s radial)
+
+### Slave ###
+  CD_5th: 000 000 000                      # Serial Data Out (5th beam) (None [000 000 000])
+  CF_5th: '11110'                          # Serial Flow Control (5th beam) (None [11110])
+  CH_5th: false                            # Banner (5th beam) ({u'True': True, u'False': False} [False])
+  CI_5th: 0                                # Instrument ID (5th beam) ([0, 255] [0])
+  CL_5th: 0                                # Sleep Enable (5th beam) ({u'True': 1, u'False': 0} [0])
+  CN_5th: true                             # Save NVRAM to Recorder (5th beam) ({u'True': True, u'False': False} [True])
+  CP_5th: false                            # Polled Mode (5th beam) ({u'True': True, u'False': False} [False])
+  CQ_5th: 255                              # Transmit Power (5th beam) ([0, 255] [255])
+  CX_5th: false                            # Latency trigger (5th beam) ({u'True': True, u'False': False} [False])
+  EA_5th: 0                                # Heading Alignment (5th beam) ([-17999, 18000] [0]) c...°
+  EB_5th: 0                                # Heading Bias (5th beam) ([-17999, 18000] [0]) c...°
+  EC_5th: 1500                             # Speed of Sound (5th beam) ([1400, 1600] [1485]) m/s
+  ED_5th: 0                                # Transducer Depth (5th beam) ([0, 65535] [2000]) dm
+  EP_5th: 0                                # Pitch (5th beam) ([-6000, 6000] [0]) c...°
+  ER_5th: 0                                # Roll (5th beam) ([-6000, 6000] [0]) c...°
+  ES_5th: 35                               # Salinity (5th beam) ([0, 40] [35]) ppt
+  EX_5th: '00111'                          # Coordinate Transformation (5th beam) (None [00111])
+  EZ_5th: '1000001'                        # Sensor Source (5th beam) (None [1111101])
+  PD_5th: 0                                # Data Stream Selection (5th beam) ([0, 18] [0])
+  SA_5th: '001'                            # Sync Ping Ensemble (5th beam) (None [001])
+  SM_5th: 2                                # RDS3 Mode Selection (5th beam) ({u'NEMO': 3, u'Off': 0, u'RDS3 master': 1, u'RDS3 slave': 2} [2])
+  ST_5th: 0                                # Slave Timeout (5th beam) ([0, 10800] [0]) s
+  SW_5th: 0                                # Sync Delay (5th beam) ([0, 65535] [0]) 0.1 ms
+  TC_5th: 1024                                # Ensemble per Burst (5th beam) ([0, 65535] [0])
+  TE_5th: '00:00:00.00'                    # Time per Ensemble (5th beam) (None [00:00:00.00]) hh:mm:ss:ff
+  TP_5th: '00:00.00'                       # Time per Ping (5th beam) (None [00:00.00]) mm:ss:ff
+  TX_5th: 00:00:00                         # Buffered Output Period (5th beam) (None [00:00:00]) hh:mm:ss
+  WA_5th: 050,001                          # False Target Threshold (5th beam) (None [050,001]) nnn,bbb
+  WB_5th: 0                                # Bandwidth Control (5th beam) ({u'Wide': 0, u'Narrow': 1} [0])
+  WC_5th: 64                               # Correlation Threshold (5th beam) ([0, 255] [64]) counts
+  WD_5th: '111100000'                      # Serial Out FW Switches (5th beam) (None [111100000])
+  WE_5th: 2000                             # Error Velocity Threshold (5th beam) ([0, 5000] [2000]) mm/s
+  WF_5th: 83                               # Blank After Transmit (5th beam) ([0, 9999] [83]) cm
+  WI_5th: false                            # Clip Data Past Bottom (5th beam) ({u'True': True, u'False': False} [False])
+  WJ_5th: 1                                # Receiver Gain Select (5th beam) ({u'-40 dB Receiver Gain': 0, u'Normal': 1} [1])
+  WN_5th: 220                              # Number of Depth Cells (5th beam) ([1, 255] [220])
+  WP_5th: 1                                # Pings Per Ensemble (5th beam) ([0, 16384] [1])
+  WQ_5th: false                            # Sample Ambient Sound (5th beam) ({u'True': True, u'False': False} [False])
+  WS_5th: 94                               # Depth Cell Size (5th beam) ([40, 3200] [94]) cm
+  WT_5th: 0                                # Transmit Length (5th beam) ([0, 3200] [0]) cm
+  WU_5th: 0                                # Ping Weight (5th beam) ({u'Box': 0, u'Triangle': 1} [0])
+  WV_5th: 175                              # Ambiguity Velocity (5th beam) ([2, 480] [175]) cm/s
+
+# INSTRUMENT RESPONSES (VADCPA101 - 25 May 2016)
+# SLAVE
+#
+# CD = 000 000 000 --------- Serial Data Out (Vel;Cor;Amp  PG;St;P0  P1;P2;P3)
+# CF = 11110 --------------- Flow Ctrl (EnsCyc;PngCyc;Binry;Ser;Rec)
+# CH = 0 ------------------- Suppress Banner
+# CI = 0 ----------------- Instrument ID (0-255)
+# CL = 0 ------------------- Sleep Enable (0 = Disable, 1 = Enable, 2 See Manual)
+# CN = 1 ------------------- Save NVRAM to recorder (0 = ON, 1 = OFF)
+# CP = 0 ------------------- PolledMode (1=ON, 0=OFF;  BREAK resets)
+# CQ = 255 ----------------- Xmt Power (0=Low, 255=High)
+# CX = 0 ------------------- Trigger Enable (0 = OFF, 1 = ON)
+# EA = +00000 -------------- Heading Alignment (1/100 deg)
+# EB = +00000 -------------- Heading Bias (1/100 deg)
+# EC = 1500 ---------------- Speed Of Sound (m/s)
+# ED = 00000 --------------- Transducer Depth (0 - 65535 dm)
+# EP = +0000 --------------- Tilt 1 Sensor (1/100 deg)
+# ER = +0000 --------------- Tilt 2 Sensor (1/100 deg)
+# ES = 35 ------------------ Salinity (0-40 pp thousand)
+# EX = 00111 --------------- Coord Transform (Xform:Type; Tilts; 3Bm; Map)
+# EZ = 1000001 ------------- Sensor Source (C;D;H;P;R;S;T)
+# PD = 00 ------------------ Data Stream Select (0-18)
+# SA = 001 ----------------- Synch Before/After Ping/Ensemble Bottom/Water/Both
+# SM = 2 ------------------- Mode Select (0=OFF,1=MASTER,2=SLAVE,3=NEMO)
+# ST = 00000 --------------- Slave Timeout (seconds,0=indefinite)
+# SW = 00000 --------------- Synch Delay (1/10 msec)
+# TC 1024 --------------- Ensembles Per Burst (0-65535)
+# TE 00:00:00.00 --------- Time per Ensemble (hrs:min:sec.sec/100)
+# TG ****/**/**,**:**:** - Time of First Ping (CCYY/MM/DD,hh:mm:ss)
+# TP 00:00.00 ------------ Time per Ping (min:sec.sec/100)
+# TT 2016/06/03,17:55:07 - Time Set (CCYY/MM/DD,hh:mm:ss)
+# TX 00:00:00 ------------ Buffer Output Period: (hh:mm:ss)
+# WA 050,001 ------------- False Target Threshold (Max)(0-255),[Start Bin]
+# WB 0 ------------------- Bandwidth Control (0=Wid,1=Nar)
+# WC 064 ----------------- Correlation Threshold
+# WD 111100000 ----------- Data Out (Vel;Cor;Amp  PG;St;P0  P1;P2;P3)
+# WE 2000 ---------------- Error Velocity Threshold (0-5000 mm/s)
+# WF 0083 ---------------- Blank After Transmit (cm)
+# WI 0 ------------------- Clip Data Past Bottom (0=OFF,1=ON)
+# WJ 1 ------------------- Rcvr Gain Select (0=Low,1=High)
+# WN 220 ----------------- Number of depth cells (1-255)
+# WP 00001 --------------- Pings per Ensemble (0-16384)
+# WQ 0 ------------------- Sample Ambient Sound (0=OFF,1=ON)
+# WS 0094 ---------------- Depth Cell Size (cm)
+# WT 0000 ---------------- Transmit Length (cm) [0 = Bin Length]
+# WU 0 ------------------- Ping Weighting (0=Box,1=Triangle)
+# WV 175 ----------------- Mode 1 Ambiguity Vel (cm/s radial)
+#
