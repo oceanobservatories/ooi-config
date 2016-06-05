@@ -5,6 +5,7 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-06-05   djm     Updated to match deployed instrument
 #
 
 parameters:
@@ -15,18 +16,18 @@ parameters:
   CF: '11110'                              # Serial Flow Control (None [11110]) 
   CH: false                                # Banner ({u'True': True, u'False': False} [False]) 
   CI: 0                                    # Instrument ID ([0, 255] [0]) 
-  CL: 0                                    # Sleep Enable ({u'True': 1, u'False': 0} [0]) 
+  CL: 1                                    # Sleep Enable ({u'True': 1, u'False': 0} [0]) 
   CN: true                                 # Save NVRAM to Recorder ({u'True': True, u'False': False} [True]) 
   CP: false                                # Polled Mode ({u'True': True, u'False': False} [False]) 
   CQ: 255                                  # Transmit Power ([0, 255] [255]) 
   CX: false                                # Latency trigger ({u'True': True, u'False': False} [False]) 
   EA: 0                                    # Heading Alignment ([-17999, 18000] [0]) c...°
   EB: 0                                    # Heading Bias ([-17999, 18000] [0]) c...°
-  EC: 1485                                 # Speed of Sound ([1400, 1600] [1485]) m/s
-  ED: 8000                                 # Transducer Depth ([0, 65535] [8000]) dm
+  EC: 1500                                 # Speed of Sound ([1400, 1600] [1485]) m/s
+  ED: 780                                  # Transducer Depth ([0, 65535] [8000]) dm
   EP: 0                                    # Pitch ([-6000, 6000] [0]) c...°
   ER: 0                                    # Roll ([-6000, 6000] [0]) c...°
-  ES: 35                                   # Salinity ([0, 40] [35]) ppt
+  ES: 34                                   # Salinity ([0, 40] [35]) ppt
   EX: '00111'                              # Coordinate Transformation (None [00111]) 
   EZ: '1111101'                            # Sensor Source (None [1111101]) 
   PD: 0                                    # Data Stream Selection ([0, 18] [0]) 
@@ -36,22 +37,68 @@ parameters:
   SW: 0                                    # Sync Delay ([0, 65535] [0]) 0.1 ms
   TC: 0                                    # Ensemble per Burst ([0, 65535] [0]) 
   TE: '00:00:00.00'                        # Time per Ensemble (None [00:00:00.00]) hh:mm:ss:ff
-  TP: '00:01.00'                           # Time per Ping (None [00:01.00]) mm:ss:ff
+  TP: '00:00.57'                           # Time per Ping (None [00:01.00]) mm:ss:ff
   TX: 00:00:00                             # Buffered Output Period (None [00:00:00]) hh:mm:ss
   WA: 050,001                              # False Target Threshold (None [050,001]) nnn,bbb
   WB: 0                                    # Bandwidth Control ({u'Wide': 0, u'Narrow': 1} [0]) 
   WC: 64                                   # Correlation Threshold ([0, 255] [64]) counts
   WD: '111100000'                          # Serial Out FW Switches (None [111100000]) 
   WE: 2000                                 # Error Velocity Threshold ([0, 5000] [2000]) mm/s
-  WF: 704                                  # Blank After Transmit ([0, 9999] [704]) cm
+  WF: 176                                  # Blank After Transmit ([0, 9999] [704]) cm
   WI: false                                # Clip Data Past Bottom ({u'True': True, u'False': False} [False]) 
   WJ: 1                                    # Receiver Gain Select ({u'-40 dB Receiver Gain': 0, u'Normal': 1} [1]) 
-  WN: 100                                  # Number of Depth Cells ([1, 255] [100]) 
+  WN: 20                                   # Number of Depth Cells ([1, 255] [100]) 
   WP: 1                                    # Pings Per Ensemble ([0, 16384] [1]) 
   WQ: false                                # Sample Ambient Sound ({u'True': True, u'False': False} [False]) 
-  WS: 800                                  # Depth Cell Size ([40, 3200] [800]) cm
+  WS: 400                                  # Depth Cell Size ([40, 3200] [800]) cm
   WT: 0                                    # Transmit Length ([0, 3200] [0]) cm
   WU: 0                                    # Ping Weight ({u'Box': 0, u'Triangle': 1} [0]) 
   WV: 175                                  # Ambiguity Velocity ([2, 480] [175]) cm/s
   clockSynchInterval: 00:00:00             # Clock Sync Interval (None [00:00:00]) hh:mm:ss
   getStatusInterval: 00:00:00              # Acquire Status Interval (None [00:00:00]) hh:mm:ss
+
+### taken from instrument
+#CD: = 000 000 000 --------- Serial Data Out (Vel;Cor;Amp  PG;St;P0  P1;P2;P3)
+#CF: = 11110 --------------- Flow Ctrl (EnsCyc;PngCyc;Binry;Ser;Rec)
+#CH: = 0 ------------------- Suppress Banner
+#CI: = 000 ----------------- Instrument ID (0-255)
+#CL: = 1 ------------------- Sleep Enable (0 = Disable, 1 = Enable, 2 See Manual)
+#CN: = 1 ------------------- Save NVRAM to recorder (0 = ON, 1 = OFF)
+#CP: = 0 ------------------- PolledMode (1=ON, 0=OFF;  BREAK resets)
+#CQ: = 255 ----------------- Xmt Power (0=Low, 255=High)
+#CX: = 0 ------------------- Trigger Enable (0 = OFF, 1 = ON)
+#EA: = +00000 -------------- Heading Alignment (1/100 deg)
+#EB: = +00000 -------------- Heading Bias (1/100 deg)
+#EC: = 1500 ---------------- Speed Of Sound (m/s)
+#ED: = 00780 --------------- Transducer Depth (0 - 65535 dm)
+#EP: = +0000 --------------- Tilt 1 Sensor (1/100 deg)
+#ER: = +0000 --------------- Tilt 2 Sensor (1/100 deg)
+#ES: = 34 ------------------ Salinity (0-40 pp thousand)
+#EX: = 00111 --------------- Coord Transform (Xform:Type; Tilts; 3Bm; Map)
+#EZ: = 1111101 ------------- Sensor Source (C;D;H;P;R;S;T)
+#PD: = 00 ------------------ Data Stream Select (0-18)
+#SA: = 001 ----------------- Synch Before/After Ping/Ensemble Bottom/Water/Both
+#SM: = 0 ------------------- Mode Select (0=OFF,1=MASTER,2=SLAVE,3=NEMO)
+#ST: = 00000 --------------- Slave Timeout (seconds,0=indefinite)
+#SW: = 00000 --------------- Synch Delay (1/10 msec)
+#TC: 00000 --------------- Ensembles Per Burst (0-65535)
+#TE: 00:00:00.00 --------- Time per Ensemble (hrs:min:sec.sec/100)
+#TG: ****/**/**,**:**:** - Time of First Ping (CCYY/MM/DD,hh:mm:ss)
+#TP: 00:00.57 ------------ Time per Ping (min:sec.sec/100)
+#TT: 2016/06/04,02:06:41 - Time Set (CCYY/MM/DD,hh:mm:ss)
+#TX: 00:00:00 ------------ Buffer Output Period: (hh:mm:ss)
+#WA: 050,001 ------------- False Target Threshold (Max)(0-255),[Start Bin]
+#WB: 0 ------------------- Bandwidth Control (0=Wid,1=Nar)
+#WC: 064 ----------------- Correlation Threshold
+#WD: 111100000 ----------- Data Out (Vel;Cor;Amp  PG;St;P0  P1;P2;P3)
+#WE: 2000 ---------------- Error Velocity Threshold (0-5000 mm/s)
+#WF: 0176 ---------------- Blank After Transmit (cm)
+#WI: 0 ------------------- Clip Data Past Bottom (0=OFF,1=ON)
+#WJ: 1 ------------------- Rcvr Gain Select (0=Low,1=High)
+#WN: 020 ----------------- Number of depth cells (1-255)
+#WP: 00001 --------------- Pings per Ensemble (0-16384)
+#WQ: 0 ------------------- Sample Ambient Sound (0=OFF,1=ON)
+#WS: 0400 ---------------- Depth Cell Size (cm)
+#WT: 0000 ---------------- Transmit Length (cm) [0 = Bin Length]
+#WU: 0 ------------------- Ping Weighting (0=Box,1=Triangle)
+#WV: 175 ----------------- Mode 1 Ambiguity Vel (cm/s radial)
