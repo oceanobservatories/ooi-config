@@ -35,7 +35,7 @@ parameters:
   operctrl: Samples                        # Operation Control ({u'Duration': u'Duration', u'Samples': u'Samples'} [Samples]) 
   outdrkfr: Output                         # Output Dark Frame ({u'Output': u'Output', u'Suppress': u'Suppress'} [Output]) 
   outfrtyp: Full_ASCII                     # Output Frame Type ({u'None': u'None', u'MBARI': u'MBARI', u'Full_ASCII': u'Full_ASCII', u'Full_Binary': u'Full_Binary', u'Reduced_Binary': u'Reduced_Binary', u'Concentration': u'Concentration', u'APF': u'APF'} [Full_ASCII]) 
-  perddura: 1                              # Periodic Duration ([1, 255] [10]) s
+  perddura: 5                              # Periodic Duration ([1, 255] [10]) s
   perdival: 30m                            # Periodic Interval ({u'00:20': u'20m', u'00:30': u'30m', u'04:00': u'4h', u'01:00': u'1h', u'12:00': u'12h', u'00:10': u'10m', u'00:06': u'6m', u'00:05': u'5m', u'00:02': u'2m', u'00:01': u'1m', u'00:15': u'15m', u'24:00': u'24h', u'03:00': u'3h', u'08:00': u'8h', u'06:00': u'6h', u'02:00': u'2h'} [1h]) 
   perdoffs: 0                              # Periodic Offset ([0, 86399] [0]) s
   perdsmpl: 3                              # Periodic Samples ([1, 255] [10]) 
