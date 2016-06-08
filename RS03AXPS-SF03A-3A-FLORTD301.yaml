@@ -6,24 +6,23 @@
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
 #    0-03   2016-05-23   dam     Update ave and wiper_interval parameters
+#    0-04   2016-06-08   djm     Update comments
 #
 
 parameters:
 
-### Startup parameters ###
-### Driver parameters ###
+### Startup parameters - Driver ###
   clk_interval: 00:00:00                   # Run Clock Sync Interval (None [00:00:00]) HH:MM:SS
   status_interval: 00:00:00                # Acquire Status Interval (None [00:00:00]) HH:MM:SS
   wiper_interval: 00:30:00                 # Run Wiper Interval (None [00:00:00]) HH:MM:SS
 
-### Instrument parameters ###
+### Startup parameters - Instrument ###
   ave: 18                                  # Measurements per Reported Value ([1, 255] [1])
   man: 0                                   # Manual Mode ({u'Disable': 0, u'Enable': 1} [0])
   pkt: 0                                   # Measurements per Packet ([0, 65535] [0])
   rec: 0                                   # Recording Mode ({u'Disable': 0, u'Enable': 1} [0])
   seq: 0                                   # Predefined Output Sequence ([0, 3] [0])
   set: 0                                   # Packets per Set ([0, 65535] [0])
-
 
 
 ### Retrieved from instrument 25 May 2016 @ 2240Z
@@ -48,18 +47,3 @@ parameters:
 #Clk 22:41:05
 #Mst 22:23:39
 #Mem 87
-#
-#$met
-#0,Delimiter,pf_tab,TAB
-#1,DATE,MM/DD/YY,US_DATE
-#2,TIME,HH:MM:SS,24H_TIME
-#3,Ref_1,Emission_WL,
-#4,Sig_1,counts,,SO,1.814E-06,52
-#5,Ref_2,Emission_WL,
-#6,Sig_2,counts,,SO,1.210E-02,51
-#7,Ref_3,Emission_WL,
-#8,Sig_3,counts,,SO,9.060E-02,43
-#9,I-Temp,counts,C,EC,
-#10,Termination,CRLF,Carriage_return-Line_feed
-#IHM=0
-#IOM=2

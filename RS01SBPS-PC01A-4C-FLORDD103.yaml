@@ -5,18 +5,44 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-06-08   djm     Updated to match deployed configuration
 #
 
 parameters:
 
-### Startup parameters ###
-
-  ave: 1                                   # Measurements per Reported Value ([1, 255] [1]) 
+### Startup parameters - Driver ###
   clk_interval: 00:00:00                   # Run Clock Sync Interval (None [00:00:00]) HH:MM:SS
+  status_interval: 00:00:00                # Acquire Status Interval (None [00:00:00]) HH:MM:SS
+  wiper_interval: 00:30:00                 # Run Wiper Interval (None [00:00:00]) HH:MM:SS
+
+### Startup parameters - Instrument ###
+  ave: 18                                  # Measurements per Reported Value ([1, 255] [1]) 
   man: 0                                   # Manual Mode ({u'Disable': 0, u'Enable': 1} [0]) 
   pkt: 0                                   # Measurements per Packet ([0, 65535] [0]) 
   rec: 0                                   # Recording Mode ({u'Disable': 0, u'Enable': 1} [0]) 
   seq: 0                                   # Predefined Output Sequence ([0, 3] [0]) 
   set: 0                                   # Packets per Set ([0, 65535] [0]) 
-  status_interval: 00:00:00                # Acquire Status Interval (None [00:00:00]) HH:MM:SS
-  wiper_interval: 00:00:00                 # Run Wiper Interval (None [00:00:00]) HH:MM:SS
+
+
+### Retrieved from Instrument 8 June 2016
+#'mvs 1
+#Ave 18
+#Clk '13:33:48
+#Dat 06/08/16
+#Int 00:30:00
+#M1d 49
+#M1s '1.806E-06
+#M2d 51
+#M2s 1.210E-02
+#M3d 45
+#M3s 9.090E-02
+#Man 0
+#Mem 98
+#Mst 13:31:44
+#Pkt 1500
+#Rat '19200
+#Rec 0
+#Seq 0
+#Ser BBFL2W-1297
+#Set 0
+#Ver Triplet5.33
