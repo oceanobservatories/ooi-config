@@ -9,35 +9,121 @@
 
 parameters:
 
-### Startup parameters ###
+### Startup parameters - Driver ###
+  nmlgtspl: 2                              # Number of Light Samples ([1, 40] [2]) 
+  tlgtsmpl: 30                             # Time to Take Light Sample ([0, 30] [30]) s
 
+### Startup parameters - Instrument ###
   a_cutoff: 1.3                            # Absorbance Cutoff ([0.01, 10.0] [1.3]) 
   brmtrace: false                          # Bromide Tracing ({u'True': True, u'False': False} [False]) 
   countdwn: 15                             # Countdown ([0, 3600] [15]) s
   datfsize: 5                              # Data File Size ([1, 65] [5]) MB
   drkcormt: SpecAverage                    # Dark Correction Method ({u'SpecAverage': u'SpecAverage', u'SWAverage': u'SWAverage'} [SpecAverage]) 
-  drkdurat: 5                              # Dark Duration ([1, 65535] [5]) s
-  drksmpls: 1                              # Dark Samples ([1, 65535] [1]) 
-  fitconcs: 1                              # Concentrations to Fit ([1, 3] [1]) 
+  drkdurat: 36                             # Dark Duration ([1, 65535] [5]) s
+  drksmpls: 2                              # Dark Samples ([1, 65535] [1])
+  fitconcs: 3                              # Concentrations to Fit ([1, 3] [1])
   intadmax: 20                             # Integration Time Max ([1, 20] [20]) s
   intadstp: 20                             # Integration Time Step ([1, 20] [20]) s
-  intpradj: true                           # Integration Time Adjustment ({u'True': True, u'False': False} [True]) 
+  intpradj: false                          # Integration Time Adjustment ({u'True': True, u'False': False} [True]) 
   intprfac: 1                              # Integration Time Factor ([1, 20] [1]) s
   lamptoff: 35                             # Lamp Switch-Off Temperature ([-274, 32767] [35]) °C
-  lgtdurat: 10                             # Light Duration ([1, 65535] [10]) s
+  lgtdurat: 1                              # Light Duration ([1, 65535] [10]) s
   lgtsmpls: 5                              # Light Samples ([1, 65535] [5]) 
-  msgfsize: 0                              # Message File Size ([0, 65] [0]) MB
+  msgfsize: 2                              # Message File Size ([0, 65] [0]) MB
   msglevel: Info                           # Message Level ({u'Debug': u'Debug', u'Info': u'Info', u'Warn': u'Warn', u'Error': u'Error'} [Info]) 
-  nmlgtspl: 2                              # Number of Light Samples ([1, 40] [2]) 
   operctrl: Samples                        # Operation Control ({u'Duration': u'Duration', u'Samples': u'Samples'} [Samples]) 
-  opermode: Polled                         # Operation Mode ({u'Polled': u'Polled', u'Continuous': u'Continuous'} [Polled]) 
   outdrkfr: Output                         # Output Dark Frame ({u'Output': u'Output', u'Suppress': u'Suppress'} [Output]) 
   outfrtyp: Full_ASCII                     # Output Frame Type ({u'None': u'None', u'MBARI': u'MBARI', u'Full_ASCII': u'Full_ASCII', u'Full_Binary': u'Full_Binary', u'Reduced_Binary': u'Reduced_Binary', u'Concentration': u'Concentration', u'APF': u'APF'} [Full_ASCII]) 
-  polltout: 65535                          # Polled Timeout ([1, 65535] [65535]) s
+  perddura: 5                              # Periodic Duration ([1, 255] [10]) s
+  perdival: 30m                            # Periodic Interval ({u'00:20': u'20m', u'00:30': u'30m', u'04:00': u'4h', u'01:00': u'1h', u'12:00': u'12h', u'00:10': u'10m', u'00:06': u'6m', u'00:05': u'5m', u'00:02': u'2m', u'00:01': u'1m', u'00:15': u'15m', u'24:00': u'24h', u'03:00': u'3h', u'08:00': u'8h', u'06:00': u'6h', u'02:00': u'2h'} [1h]) 
+  perdoffs: 0                              # Periodic Offset ([0, 86399] [0]) s
+  perdsmpl: 3                              # Periodic Samples ([1, 255] [10]) 
+  polltout: 15                             # Polled Timeout ([1, 65535] [65535]) s
   salinfit: true                           # Salinity Fitting ({u'True': True, u'False': False} [True]) 
-  skpsleep: true                           # Skip Sleep at Start ({u'True': True, u'False': False} [True]) 
+  skpsleep: false                          # Skip Sleep at Start ({u'True': True, u'False': False} [True]) 
   stbltime: 5                              # Lamp Stability Time ([0, 255] [5]) ds
   tempcomp: false                          # Temperature Compensation ({u'True': True, u'False': False} [False]) 
-  tlgtsmpl: 30                             # Time to Take Light Sample ([0, 30] [30]) s
   wfit_hgh: 240.0                          # Fit Wavelength High ([210, 350] [240.0]) nm
   wfit_low: 217.0                          # Fit Wavelength Low ([210, 350] [217.0]) nm
+
+### collected from instrument on 6 June 2016
+#A_CUTOFF 1.3000
+#BRMTRACE Off
+#COUNTDWN 15
+#DATFSIZE 5
+#DRKCORMT SpecAverage
+#DRKDURAT 36
+#DRKSMPLS 2
+#FITCONCS 3
+#INTADMAX 20
+#INTADSTP 20
+#INTPRADJ Off
+#INTPRFAC 1
+#LAMPTOFF 35
+#LGTDURAT 1
+#LGTSMPLS 58
+#MSGFSIZE 2
+#MSGLEVEL Info
+#OPERCTRL Samples
+#OPERMODE Periodic
+#OUTDRKFR Output
+#OUTFRTYP Full_ASCII
+#PERDDURA 5
+#PERDIVAL 30m
+#PERDOFFS 0
+#PERDSMPL 3
+#POLLTOUT 15
+#SALINFIT On
+#SKPSLEEP Off
+#STBLTIME 5
+#TEMPCOMP Off
+#WFIT_HGH 240.00
+#WFIT_LOW 217.00
+
+#ACQCOUNT 5
+#AFILEDUR 60
+#ANALGBRD Available
+#APFATOFF 10.0000
+#APFIFACE Missing
+#BAUDRATE 57600
+#BL_ORDER 1
+#CNTCOUNT 465
+#CUSTOMID None
+#DATAMODE Real
+#DCMINNO3 -5.000
+#DCMAXNO3 100.000
+#DRKAVERS 1
+#EXDEVPRE 0
+#EXDEVRUN Off
+#EXDEVTYP None
+#EXDVIVAL 0
+#EXTPPORT Missing
+#FIBERLSN M3.D01.1853
+#FIXDDURA 60
+#INTDATLG Available
+#INTWIPER Missing
+#LAMPTIME 305257
+#LGTAVERS 1
+#LOGDRKFR Output
+#LOGFRTYP None
+#LOGFTYPE Acquisition
+#OWIRETHS 104e178d020800cd
+#OWIRETLP 10ebede7020800ea
+#OWIRETSP 10814ce702080018
+#PATHLGTH 10mm
+#PWRSVISR Available
+#RELAYBRD Missing
+#SCHDLING Available
+#SDI12ADD 48
+#SDI12BRD Available
+#SENSTYPE SUNA
+#SENSVERS V2
+#SERIALNO 625
+#SPINTPER 500
+#STUPSTUS Done
+#SUPRCAPS Available
+#THEBRAND Satlantic
+#USBSWTCH Available
+#WDAT_HGH 250.00
+#WDAT_LOW 217.00
+#ZSPEC_SN 98100
