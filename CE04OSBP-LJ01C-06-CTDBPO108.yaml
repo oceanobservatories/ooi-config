@@ -5,6 +5,7 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-06-09   keh     Made parameter corrections to match default configurations, added comments containing default configurations
 #
 
 parameters:
@@ -33,66 +34,55 @@ parameters:
 
 
 # GetCD Output
-# ProfileMode
-# ScansToAverage	2
-# MinimumCondFreq	3200
-# PumpDelay	5
 # AutoRun	yes
-# IgnoreSwitch	yes
-# Battery
-# Type	alkaline
+# Battery	
 # CutOff	7.5
-# DataChannels
+# DataChannels	
+# EchoCharacters	yes
 # ExtVolt0	yes
 # ExtVolt1	yes
 # ExtVolt2	no
 # ExtVolt3	no
 # ExtVolt4	no
 # ExtVolt5	no
-# SBE38	no
-# WETLABS	no
-# OPTODE	yes
-# SBE63	no
 # GTD	no
-# EchoCharacters	yes
+# IgnoreSwitch	yes
+# MinimumCondFreq	3200
+# OPTODE	yes
 # OutputExecutedTag	no
 # OutputFormat	raw HEX
+# PumpDelay	5
+# SBE38	no
+# SBE63	no
+# ScansToAverage	2
+# Type	alkaline
+# WETLABS	no
 
-# GetHD  Output
-# Manufacturer	Sea-Bird Electronics, Inc.
-# FirmwareVersion	2.5.2
-# FirmwareDate	12 Mar 2013 11:50
+# GetHD Output
 # CommandSetVersion	1.3
+# FirmwareDate	12 Mar 2013 11:50
+# FirmwareVersion	2.5.2
+# Manufacturer	Sea-Bird Electronics, Inc.
 # MfgDate	14-Dec-2012
-# InternalSensors
-# Sensor id	Main Temperature'
-# type	temperature0
+# InternalSensors	
+# Sensor id	Main Temperature - type: temperature0
 # SerialNumber	1907249
-# Sensor id	Main Conductivity'
-# type	conductivity-0
+# Sensor id	Main Conductivity - type: conductivity-0
 # SerialNumber	1907249
-# Sensor id	Main Pressure'
-# type	quartzTC-0
+# Sensor id	Main Pressure - type: quartzTC-0
 # SerialNumber	125427
-# ExternalSensors
-# Sensor id	volt 0'
-# type	not assigned
+# ExternalSensors	
+# Sensor id	volt 0 - type: not assigned
 # SerialNumber	not assigned
-# Sensor id	volt 1'
-# type	not assigned
+# Sensor id	volt 1 - type: not assigned
 # SerialNumber	not assigned
-# Sensor id	volt 2'
-# type	not assigned
+# Sensor id	volt 2 - type: not assigned
 # SerialNumber	not assigned
-# Sensor id	volt 3'
-# type	not assigned
+# Sensor id	volt 3 - type: not assigned
 # SerialNumber	not assigned
-# Sensor id	volt 4'
-# type	not assigned
+# Sensor id	volt 4 - type: not assigned
 # SerialNumber	not assigned
-# Sensor id	volt 5'
-# type	not assigned
+# Sensor id	volt 5 - type: not assigned
 # SerialNumber	not assigned
-# Sensor id	serial'
-# type	not assigned
+# Sensor id	serial - type: not assigned
 # SerialNumber	not assigned

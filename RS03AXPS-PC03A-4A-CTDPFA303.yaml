@@ -5,6 +5,7 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-06-09   keh     Added comments containing default configurations
 #
 
 parameters:
@@ -30,3 +31,58 @@ parameters:
   Volt4: false                             # Volt 4 ({u'True': True, u'False': False} [False]) 
   Volt5: false                             # Volt 5 ({u'True': True, u'False': False} [False]) 
   WetLabs: false                           # Wetlabs Sensor Attached ({u'True': True, u'False': False} [False]) 
+
+
+# GetCD Output
+# AutoRun	no
+# Battery	
+# CutOff	7.5
+# DataChannels	
+# EchoCharacters	yes
+# ExtVolt0	yes
+# ExtVolt1	yes
+# ExtVolt2	no
+# ExtVolt3	no
+# ExtVolt4	no
+# ExtVolt5	no
+# GTD	no
+# IgnoreSwitch	yes
+# MinimumCondFreq	500
+# OPTODE	yes
+# OutputExecutedTag	no
+# OutputFormat	raw HEX
+# PumpDelay	60
+# SBE38	no
+# SBE63	no
+# ScansToAverage	4
+# Type	alkaline
+# WETLABS	no
+
+# GetHD Output
+# CommandSetVersion	1.3
+# FirmwareDate	3/12/2013 11:50
+# FirmwareVersion	2.5.2
+# Manufacturer	Sea-Bird Electronics, Inc.
+# MfgDate	13-Apr-15
+# InternalSensors	
+# Sensor id	Main Temperature - type: temperature0
+# SerialNumber	1950123
+# Sensor id	Main Conductivity - type: conductivity-0
+# SerialNumber	1950123
+# Sensor id	Main Pressure - type: strain-0
+# SerialNumber	4357261
+# ExternalSensors	
+# Sensor id	volt 0 - type: not assigned
+# SerialNumber	not assigned
+# Sensor id	volt 1 - type: not assigned
+# SerialNumber	not assigned
+# Sensor id	volt 2 - type: not assigned
+# SerialNumber	not assigned
+# Sensor id	volt 3 - type: not assigned
+# SerialNumber	not assigned
+# Sensor id	volt 4 - type: not assigned
+# SerialNumber	not assigned
+# Sensor id	volt 5 - type: not assigned
+# SerialNumber	not assigned
+# Sensor id	serial - type: not assigned
+# SerialNumber	not assigned
