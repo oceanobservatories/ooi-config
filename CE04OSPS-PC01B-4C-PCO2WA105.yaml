@@ -10,15 +10,14 @@
 
 parameters:
 
-### Startup parameters ###
-### Driver Parameters ###
+### Startup Parameters - Driver ###
 
   auto_sample_interval: 3600               # Auto Sample Interval ([600, 604800] [3600]) s
   deionized_water_flush_duration: 8        # Deionized Water Flush Duration ([0, 255] [8]) 1/8 s
   reagent_flush_duration: 8                # Reagent Flush Duration ([0, 255] [8]) 1/8 s
   pump_100ml_cycles: 1                     # Pump 100ml Cycles ([0, 255] [1]) 
 
-### Instrument Parameters ###
+### Startup Parameters - Instrument ###
   cycles_between_blanks: 84                # Cycles Between Blanks ([0, 255] [84]) 
   flush_pump_interval: 1                   # Flush Pump Interval ([0, 255] [1]) s
   number_blank_cycles: 28                  # Number of Blank Cycles ([0, 255] [28]) 
