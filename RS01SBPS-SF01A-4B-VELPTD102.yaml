@@ -5,6 +5,7 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-06-03   djm     Updated to match deployed instrument
 #
 
 parameters:
@@ -15,34 +16,111 @@ parameters:
   ClockSyncInterval: 00:00:00              # Clock Sync Interval (None [00:00:00]) HH:MM:SS
   analog_input_address: 0                  # Analog Input Address (None [0]) 
   analog_scale_factor: 0                   # Analog Output Scale Factor ([0, 65535] [0]) 
-  average_interval: 60                     # Average Interval ([1, 65535] [60]) s
+  average_interval: 1                      # Average Interval ([1, 65535] [60]) s
   blanking_distance: 49                    # Blanking Distance ([0, 65535] [49]) counts
-  cell_size: 7                             # Bin Length ([1, 65535] [7]) m
+  cell_size: 32                            # Bin Length ([1, 65535] [7]) m
   compass_update_rate: 1                   # Compass Update Rate (None [1]) s
-  coordinate_system: 2                     # Coordinate System ({u'Beam': 2, u'XYZ': 1, u'ENU': 0} [2]) 
+  coordinate_system: 0                     # Coordinate System ({u'Beam': 2, u'XYZ': 1, u'ENU': 0} [2]) 
   correlation_threshold: 0                 # Correlation Threshold (None [0]) 
   deployment_name: ''                      # Deployment Name (None []) 
-  deployment_start_time: [0, 0, 0, 0, 0, 0] # Clock Deploy (None [[0, 0, 0, 0, 0, 0]]) [min, s, d, h, y, m]
-  diagnostics_interval: 11250              # Diagnostic Interval ([0, 65535] [11250]) s
+  deployment_start_time: [0, 0, 0, 0, 0, 0]  # Clock Deploy (None [[0, 0, 0, 0, 0, 0]]) [min, s, d, h, y, m]
+  diagnostics_interval: 43200              # Diagnostic Interval ([0, 65535] [11250]) s
   file_comments: ''                        # Comments (None []) 
-  measurement_interval: 60                 # Measurement Interval ([1, 65535] [60]) s
-  mode: 48                                 # Mode (None [48]) 
+  measurement_interval: 1                  # Measurement Interval ([1, 65535] [60]) s
+  mode: 0                                  # Mode (None [48]) 
   mode_test: 4                             # Mode Test (None [4]) 
   number_beams_per_cell: 1                 # Number Beams Cell Diagnostic (None [1]) 
   number_cells: 1                          # Number of Bins (None [1]) 
   number_diagnostics_samples: 20           # Diagnostic Samples ([0, 65535] [20]) 
-  number_pings: 1                          # Number Pings ([0, 65535] [1]) counts
-  number_pings_diagnostic: 1               # Number Pings Diagnostic (None [1]) 
+  number_pings: 6                          # Number Pings ([0, 65535] [1]) counts
+  number_pings_diagnostic: 20              # Number Pings Diagnostic (None [1]) 
   number_samples_per_burst: 0              # Number of Samples per Burst (None [0]) 
   receive_length: 32                       # Receive Length ([0, 65535] [32]) counts
   software_version: 13902                  # Software Version ([0, 65535] [13902]) 
-  sound_speed_adjust_factor: 1525          # Adjustment Sound Speed ([0, 65535] [1525]) m/s
-  time_between_bursts: 512                 # Time Between Burst Sequences ([0, 65535] [512]) counts
+  sound_speed_adjust_factor: 16657         # Adjustment Sound Speed ([0, 65535] [1525]) m/s
+  time_between_bursts: 128                 # Time Between Burst Sequences ([0, 65535] [512]) counts
   time_between_pings: 437                  # Time Between Pings ([0, 65535] [437]) counts
   transmit_pulse_length: 125               # Transmit Pulse Length ([0, 65535] [125]) counts
-  transmit_pulse_length_2nd: 2             # Transmit Pulse Length Second Lag (None [2]) counts
+  transmit_pulse_length_2nd: 6             # Transmit Pulse Length Second Lag (None [2]) counts
   wrap_mode: 0                             # Wrap Mode ({u'No Wrap': 0, u'Wrap when Full': 1} [0]) 
 
 ### Read/Write parameters ###
 
 #  tcr: 130                                 # Timing Control Register ([1, 65535] [130]) 
+
+### Taken from the instrument 26 May 2016 ###
+# http://ooiufs01.ooi.rutgers.edu:12576/sensor/inv/RS01SBPS/SF01A/4B-VELPTD102/streamed/velpt_user_configuration?limit=100
+#    "diagnostics_interval": 43200, 
+#    "deployment_name": "", 
+#    "analog_output_enable": 0, 
+#    "mode_type": 0, 
+#    "analog_power_output": 0, 
+#    "file_comments": "", 
+#    "correlation_threshold": 0, 
+#    "number_samples_per_burst": 0, 
+#    "wave_data_rate": 0, 
+#    "driver_timestamp": 3673277104.4133401, 
+#    "number_diagnostics_samples": 20, 
+#    "cell_size": 32, 
+#    "number_beams": 3, 
+#    "diagnostics_mode_enable": 0, 
+#    "software_version": 13902, 
+#    "wave_cell_position": 0, 
+#    "start_on_sync": 0, 
+#    "blanking_distance": 49, 
+#    "serial_output_enable": 1, 
+#    "wave_transmit_pulse": 0, 
+#    "ingestion_timestamp": 3673277108.3610001, 
+#    "stage_enable": 0, 
+#    "time_between_pings": 437, 
+#    "internal_timestamp": 0.0, 
+#    "number_diagnostics_per_wave": 20, 
+#    "fixed_wave_blanking_distance": 0, 
+#    "pk": {
+#      "node": "SF01A", 
+#      "stream": "velpt_user_configuration", 
+#      "subsite": "RS01SBPS", 
+#      "deployment": 2, 
+#      "time": 3673277103.783937, 
+#      "sensor": "4B-VELPTD102", 
+#      "method": "streamed"
+#    }, 
+#    "sound_speed_adjust_factor": 16657, 
+#    "power_level_tcm2": 0, 
+#    "power_level_tcm1": 1, 
+#    "filter_constants": "Cv/N/4sA5QDuAAsAhP89/w==", 
+#    "velocity_adjustment_factor": "Aj0ePTk9Uz1uPYg9oj27PdQ97T0GPh4+Nj5OPmU+fT6TPqo+wD7WPuw+Aj8XPyw/QT9VP2k/fT+RP6Q/uD/KP90/8D8CQBRAJkA3QElAWkBrQHxAjECcQKxAvEDMQNtA6kD5QAhBF0ElQTNBQkFPQV1BakF4QYVBkkGeQatBt0HDQc9B20HnQfJB/UEIQhNCHkIoQjNCPUJHQlFCW0JkQm5Cd0KAQolCkUKaQqJCqkKyQrpC", 
+#    "profile_type": 1, 
+#    "analog_input_address": 0, 
+#    "power_level_pcr2": 0, 
+#    "port_timestamp": 3673277103.783937, 
+#    "power_level_pcr1": 0, 
+#    "deployment_start_time": [49, 44, 30, 18, 15, 6], 
+#    "sample_on_sync": 0, 
+#    "filter_data_output": 0, 
+#    "scaling": 0, 
+#    "wrap_mode": 0, 
+#    "transmit_pulse_length": 125, 
+#    "wave_measurement_cell_size": 0, 
+#    "use_specified_sound_speed": 0, 
+#    "int_ctd_pressure": 189.92022144431826, 
+#    "measurement_interval": 1, 
+#    "preferred_timestamp": "port_timestamp", 
+#    "average_interval": 1, 
+#    "number_cells": 1, 
+#    "sync_out_position": 0, 
+#    "analog_scale_factor": 0, 
+#    "coordinate_system": 0, 
+#    "number_pings": 6, 
+#    "number_beams_per_cell": 1, 
+#    "transmit_pulse_length_2nd": 6, 
+#    "output_format_nortek": 0, 
+#    "time": 3673277103.783937, 
+#    "receive_length": 32, 
+#    "use_dsp_filter": 0, 
+#    "compass_update_rate": 1, 
+#    "time_between_bursts": 128, 
+#    "percent_wave_cell_position": 0, 
+#    "number_pings_diagnostic": 20, 
+#    "dynamic_position_type": 0
+
