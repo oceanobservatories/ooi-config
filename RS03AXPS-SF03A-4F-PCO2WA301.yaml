@@ -5,22 +5,38 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-06-01   djm     Updated with data from pco2w_a_configuration
 #
 
 parameters:
 
-### Startup parameters ###
-
+### Startup Parameters - Driver ###
   auto_sample_interval: 3600               # Auto Sample Interval ([600, 604800] [3600]) s
-  cycles_between_blanks: 84                # Cycles Between Blanks ([0, 255] [84]) 
   deionized_water_flush_duration: 8        # Deionized Water Flush Duration ([0, 255] [8]) 1/8 s
+  reagent_flush_duration: 8                # Reagent Flush Duration ([0, 255] [8]) 1/8 s
+  pump_100ml_cycles: 1                     # Pump 100ml Cycles ([0, 255] [1]) 
+
+### Startup Parameters - Instrument ###
+  cycles_between_blanks: 168               # Cycles Between Blanks ([0, 255] [84]) 
   flush_pump_interval: 1                   # Flush Pump Interval ([0, 255] [1]) s
   number_blank_cycles: 28                  # Number of Blank Cycles ([0, 255] [28]) 
   number_extra_pump_cycles: 56             # Number of Extra Pump Cycles ([0, 255] [56]) 
   number_reagent_cycles: 24                # Number of Reagent Cycles ([0, 255] [24]) 
-  pump_100ml_cycles: 1                     # Pump 100ml Cycles ([0, 255] [1]) 
   pump_duration: 32                        # Pump Measurement Duration ([0, 255] [32]) 1/16 s
   pump_pulse: 16                           # Pump Pulse Duration ([0, 255] [16]) 1/16 s
   pump_settings: 0                         # Pump Settings ([0, 255] [0]) 
-  reagent_flush_duration: 8                # Reagent Flush Duration ([0, 255] [8]) 1/8 s
   samples_per_measurement: 255             # Samples Per Measurement ([0, 255] [255]) 
+
+
+### Config from pco2w_a_configuration particle - 2015-06-30T18:42:12
+#    "cycles_between_blanks": 168,
+#    "flush_pump_interval": 1,
+#    "num_blank_cycles": 28,
+#    "cycle_rate": 56,
+#    "num_reagent_cycles": 24,
+#    "pump_on_to_measure": 32,
+#    "pump_pulse": 16,
+#    "disable_start_blank_flush": 0, -> pump_settings
+#    "measure_after_pump_pulse": 0,  -> pump_settings
+#    "samples_per_measure": 255,
+
