@@ -10,13 +10,11 @@
 
 parameters:
 
-### Startup parameters ###
-
-### Driver ###
+### Startup Parameters - Driver ###
   clockSynchInterval: 00:00:00             # Clock Sync Interval (None [00:00:00]) hh:mm:ss
   getStatusInterval: 00:00:00              # Acquire Status Interval (None [00:00:00]) hh:mm:ss
 
-### Master ###
+### Startup Parameters - Master - Instrument ###
   CD: 000 000 000                          # Serial Data Out (None [000 000 000])
   CF: '11110'                              # Serial Flow Control (None [11110])
   CH: false                                # Banner ({u'True': True, u'False': False} [False])
@@ -108,7 +106,7 @@ parameters:
 # WU 0 ------------------- Ping Weighting (0=Box,1=Triangle)
 # WV 175 ----------------- Mode 1 Ambiguity Vel (cm/s radial)
 
-### Slave ###
+### Startup Parameters - Slave - Instrument ###
   CD_5th: 000 000 000                      # Serial Data Out (5th beam) (None [000 000 000])
   CF_5th: '11110'                          # Serial Flow Control (5th beam) (None [11110])
   CH_5th: false                            # Banner (5th beam) ({u'True': True, u'False': False} [False])
