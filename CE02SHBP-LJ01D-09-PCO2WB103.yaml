@@ -5,17 +5,19 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-06-13   djm     Reorganized to show driver parameters
 #
 
 parameters:
 
-### Startup parameters ###
-
+### Startup Parameters - Driver ###
   auto_sample_interval: 3600               # Auto Sample Interval ([600, 604800] [3600]) s
-  cycles_between_blanks: 84                # Cycles Between Blanks ([0, 255] [84]) 
   deionized_water_flush_duration: 8        # Deionized Water Flush Duration ([0, 255] [8]) 1/8 s
   external_pump_delay: 360                 # External Pump Delay ([0, 86400] [360]) s
   external_pump_setting: 30                # External Pump Settings ([0, 255] [30]) s
+
+### Startup Parameters - Instrument ###
+  cycles_between_blanks: 84                # Cycles Between Blanks ([0, 255] [84]) 
   flush_pump_interval: 1                   # Flush Pump Interval ([0, 255] [1]) s
   number_blank_cycles: 28                  # Number of Blank Cycles ([0, 255] [28]) 
   number_extra_pump_cycles: 56             # Number of Extra Pump Cycles ([0, 255] [56]) 

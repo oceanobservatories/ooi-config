@@ -5,20 +5,22 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-06-13   djm     Added additional parameter information
 #
 
 parameters:
 
-### Startup parameters ###
-
+### Startup Parameters - Driver ###
   auto_sample_interval: 3600               # Auto Sample Interval ([600, 604800] [3600]) s
-  cycles_between_blanks: 84                # Cycles Between Blanks ([0, 255] [84]) 
-  deionized_water_flush_duration: 8        # Deionized Water Flush Duration ([0, 255] [8]) 1/8 s
+  deionized_water_flush_duration: 8        # Deionized Water Flush Duration ([0, 255] [8]) 1/8 s - appears to be hardcoded to 8 in driver
   external_pump_delay: 360                 # External Pump Delay ([0, 86400] [360]) s
   external_pump_setting: 30                # External Pump Settings ([0, 255] [30]) s
+
+### Startup Parameters - Instrument ###
+  cycles_between_blanks: 84                # Cycles Between Blanks ([0, 255] [84]) 
   flush_pump_interval: 1                   # Flush Pump Interval ([0, 255] [1]) s
   number_blank_cycles: 28                  # Number of Blank Cycles ([0, 255] [28]) 
-  number_extra_pump_cycles: 56             # Number of Extra Pump Cycles ([0, 255] [56]) 
+  number_extra_pump_cycles: 56             # Number of Extra Pump Cycles ([0, 255] [56])  - appears to not be used anywhere
   number_reagent_cycles: 24                # Number of Reagent Cycles ([0, 255] [24]) 
   pump_100ml_cycles: 1                     # Pump 100ml Cycles ([0, 255] [1]) 
   pump_duration: 32                        # Pump Measurement Duration ([0, 255] [32]) 1/16 s
@@ -26,3 +28,62 @@ parameters:
   pump_settings: 0                         # Pump Settings ([0, 255] [0]) 
   reagent_flush_duration: 8                # Reagent Flush Duration ([0, 255] [8]) 1/8 s
   samples_per_measurement: 255             # Samples Per Measurement ([0, 255] [255]) 
+
+### Config from pco2w_b_configuration particle - 2016-06-14T00:40:26.748437
+#    "cycles_between_blanks": 84, 
+#    "flush_pump_interval": 1, 
+#    "num_blank_cycles": 28, 
+#    "cycle_rate": 56,  - number_extra_pump_cycles
+#    "num_reagent_cycles": 24, 
+#    "pump_on_to_measure": 32,  - pump_duration
+#    "pump_pulse": 16, 
+#    "disable_start_blank_flush": 0,  - pump_settings
+#    "measure_after_pump_pulse": 0,  - pump_settings
+#    "samples_per_measure": 255, 
+#
+#    "send_record_type": 1, 
+#    "send_live_records": 1, 
+#    "external_pump_setting": 20, 
+#    "slot2_independent_schedule": 0, 
+#    "extend_global_config": 0, 
+#    "driver_timestamp": 3674853626.908421, 
+#    "slot1_independent_schedule": 1, 
+#    "slot1_follows_sami_sample": 0, 
+#    "pmi_sample_schedule": 0, 
+#    "start_time_offset": 144375494, 
+#    "driver_id_device1": 1, 
+#    "driver_id_device2": 0, 
+#    "driver_id_device3": 0, 
+#    "sami_sample_schedule": 1, 
+#    "ingestion_timestamp": 3674853629.678, 
+#    "recording_time": 31536000, 
+#    "internal_timestamp": 0.0, 
+#    "pk": {
+#      "node": "LJ01C", 
+#      "stream": "pco2w_b_configuration", 
+#      "subsite": "CE04OSBP", 
+#      "deployment": 2, 
+#      "time": 3674853626.7484369, 
+#      "sensor": "09-PCO2WB104", 
+#      "method": "streamed"
+#    }, 
+#    "slot2_follows_sami_sample": 0, 
+#    "driver_id_prestart": 0, 
+#    "parameter_pointer_sami": 2, 
+#    "parameter_pointer_prestart": 13, 
+#    "port_timestamp": 3674853626.7484369, 
+#    "time": 3674853626.7484369, 
+#    "driver_id_sami": 4, 
+#    "slot3_independent_schedule": 0, 
+#    "timer_interval_sami": 3600, 
+#    "timer_interval_device1": 600, 
+#    "timer_interval_device2": 0, 
+#    "timer_interval_device3": 0, 
+#    "preferred_timestamp": "port_timestamp", 
+#    "parameter_pointer_device1": 11, 
+#    "parameter_pointer_device3": 13, 
+#    "parameter_pointer_device2": 13, 
+#    "launch_time": 3516302505, 
+#    "slot3_follows_sami_sample": 0, 
+#    "use_baud_rate_57600": 1, 
+#    "timer_interval_prestart": 0
