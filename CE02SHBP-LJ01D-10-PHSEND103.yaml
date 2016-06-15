@@ -5,6 +5,7 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-06-14   keh     Added default data as comments for reference
 #
 
 parameters:
@@ -29,3 +30,65 @@ parameters:
   salinity_delay: 0                        # Salinity Delay ([0, 255] [0]) 16 Hz
   seawater_flush_duration: 2               # Seawater Flush Duration ([0, 255] [2]) 8 Hz
   valve_delay: 8                           # Valve Delay ([0, 255] [8]) 16 Hz
+
+
+### Config from phsen_regular_status particle - 2016-06-14T16:53:19.859934
+#    "pump_on_ind": 0,
+#    "send_record_type": 0,
+#    "number_reagent_pumps": 0,
+#    "pv_off_ind": 0,
+#    "number_samples_averaged": 0,
+#    "send_live_records": 0,
+#    "pump_on_flush": 0,
+#    "slot2_independent_schedule": 0,
+#    "extend_global_config": 0,
+#    "driver_timestamp": 3674912000.0660677,
+#    "slot1_independent_schedule": 0,
+#    "slot1_follows_sami_sample": 0,
+#    "salinity_delay": 0,
+#    "valve_delay": 0,
+#    "pmi_sample_schedule": 1,
+#    "number_flushes": 0,
+#    "start_time_offset": 1114112,
+#    "driver_id_device1": 8,
+#    "driver_id_device2": 0,
+#    "driver_id_device3": 0,
+#    "sami_sample_schedule": 0,
+#    "number_blanks": 0,
+#    "recording_time": 4359,
+#    "internal_timestamp": 0.0,
+#    "pump_off_to_measure": 0,
+#    "pk": {
+#      "node": "LJ01D",
+#      "stream": "phsen_configuration",
+#      "subsite": "CE02SHBP",
+#      "deployment": 2,
+#      "time": 3674911999.8599343,
+#      "sensor": "10-PHSEND103",
+#      "method": "streamed"
+#    },
+#    "slot2_follows_sami_sample": 0,
+#    "driver_id_prestart": 0,
+#    "pump_measure_t": 0,
+#    "parameter_pointer_sami": 8,
+#    "parameter_pointer_prestart": 0,
+#    "ingestion_timestamp": 3674912002.25,
+#    "port_timestamp": 3674911999.8599343,
+#    "time": 3674911999.8599343,
+#    "driver_id_sami": 1,
+#    "pump_off_flush": 0,
+#    "slot3_independent_schedule": 0,
+#    "timer_interval_sami": 3605536,
+#    "timer_interval_device1": 528388,
+#    "timer_interval_device2": 530176,
+#    "timer_interval_device3": 0,
+#    "preferred_timestamp": "port_timestamp",
+#    "parameter_pointer_device1": 16,
+#    "measure_to_pump_on": 0,
+#    "parameter_pointer_device3": 0,
+#    "parameter_pointer_device2": 0,
+#    "launch_time": 285212672,
+#    "number_measurements": 0,
+#    "slot3_follows_sami_sample": 0,
+#    "use_baud_rate_57600": 0,
+#    "timer_interval_prestart": 0

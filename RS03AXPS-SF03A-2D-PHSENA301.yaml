@@ -5,6 +5,7 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-06-14   keh     Added default data as comments for reference
 #
 
 parameters:
@@ -29,3 +30,66 @@ parameters:
   salinity_delay: 0                        # Salinity Delay ([0, 255] [0]) 16 Hz
   seawater_flush_duration: 2               # Seawater Flush Duration ([0, 255] [2]) 8 Hz
   valve_delay: 8                           # Valve Delay ([0, 255] [8]) 16 Hz
+
+
+### Config from phsen_regular_status particle - 2016-06-14T16:30:14.215560
+#    "pump_on_ind": 8,
+#    "send_record_type": 1,
+#    "number_reagent_pumps": 1,
+#    "pv_off_ind": 16,
+#    "number_samples_averaged": 1,
+#    "send_live_records": 1,
+#    "int_ctd_pressure": 192.68584061231772,
+#    "pump_on_flush": 4,
+#    "slot2_independent_schedule": 0,
+#    "extend_global_config": 0,
+#    "driver_timestamp": 3674910614.4178171,
+#    "slot1_independent_schedule": 0,
+#    "slot1_follows_sami_sample": 0,
+#    "salinity_delay": 0,
+#    "valve_delay": 8,
+#    "pmi_sample_schedule": 0,
+#    "number_flushes": 55,
+#    "start_time_offset": 63158137,
+#    "driver_id_device1": 0,
+#    "driver_id_device2": 0,
+#    "driver_id_device3": 0,
+#    "sami_sample_schedule": 1,
+#    "number_blanks": 4,
+#    "recording_time": 31536000,
+#    "internal_timestamp": 0.0,
+#    "pump_off_to_measure": 16,
+#    "pk": {
+#      "node": "SF03A",
+#      "stream": "phsen_configuration",
+#      "subsite": "RS03AXPS",
+#      "deployment": 2,
+#      "time": 3674910614.2155604,
+#      "sensor": "2D-PHSENA301",
+#      "method": "streamed"
+#    },
+#    "slot2_follows_sami_sample": 0,
+#    "driver_id_prestart": 0,
+#    "pump_measure_t": 8,
+#    "parameter_pointer_sami": 2,
+#    "parameter_pointer_prestart": 17,
+#    "ingestion_timestamp": 3674910617.7469997,
+#    "port_timestamp": 3674910614.2155604,
+#    "time": 3674910614.2155604,
+#    "driver_id_sami": 10,
+#    "pump_off_flush": 32,
+#    "slot3_independent_schedule": 0,
+#    "timer_interval_sami": 900,
+#    "timer_interval_device1": 0,
+#    "timer_interval_device2": 0,
+#    "timer_interval_device3": 0,
+#    "preferred_timestamp": "port_timestamp",
+#    "parameter_pointer_device1": 17,
+#    "measure_to_pump_on": 8,
+#    "parameter_pointer_device3": 17,
+#    "parameter_pointer_device2": 17,
+#    "launch_time": 3518443762,
+#    "number_measurements": 23,
+#    "slot3_follows_sami_sample": 0,
+#    "use_baud_rate_57600": 1,
+#    "timer_interval_prestart": 0
