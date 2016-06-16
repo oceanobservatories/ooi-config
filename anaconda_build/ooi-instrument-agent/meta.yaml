@@ -1,0 +1,33 @@
+package:
+  name: ooi-instrument-agent
+  version: 0.0.3
+
+source:
+  git_url: https://github.com/oceanobservatories/ooi-instrument-agent
+  git_rev: 8493710d346e684ab97629cf943191c328b55498
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - flask
+    - gevent
+    - pyzmq
+    - python-consul
+    - twisted
+  run:
+    - python
+    - setuptools
+    - flask
+    - gevent
+    - pyzmq
+    - python-consul
+    - twisted
+
+build:
+  number: 0
+
+about:
+  home: http://oceanobservatories.org
+  license: apache 2.0
+  summary: Instrument Agent for the Ocean Observatories Project
