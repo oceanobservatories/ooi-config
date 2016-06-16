@@ -1,0 +1,48 @@
+package:
+  name: mi-instrument
+  version: 0.3.86
+
+source:
+  git_url: https://github.com/oceanobservatories/mi-instrument
+  git_rev: 582f5dc0a360d145e39526dd3193c32ca957e5d5
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    # conda default channel
+    - python
+    - setuptools
+    - pyzmq
+    - pyyaml
+    - numpy
+    - nose
+    - mock
+    - sqlalchemy
+    - psycopg2
+    - gevent
+    - ipython
+    - docopt
+    - requests
+    - meld3
+    - xarray
+    - pandas
+    # conda ooi channel
+    - qpid-python ==0.32
+    - python-consul ==0.6.0
+    - apscheduler ==2.1.0
+    - ooi_port_agent
+    - ntplib ==0.3.3
+    - tqdm ==2.0.0
+    - librabbitmq ==1.6.1
+    - kombu ==3.0.35
+    - amqp ==1.4.9
+
+build:
+  number: 0
+
+about:
+  home: http://oceanobservatories.org
+  license: apache 2.0
+  summary: Port Agent for the Ocean Observatories Project
