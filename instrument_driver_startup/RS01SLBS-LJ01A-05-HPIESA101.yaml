@@ -5,13 +5,14 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-06-17   djm     Updated to match deployed instrument configuration
 #
 
 parameters:
 
 ### Startup parameters ###
 
-  cal hold secs: 20                        # Calibrate Hold (None [20]) s
+  cal hold secs: 12.90                     # Calibrate Hold (None [20]) s
   compass dsecs: 10                        # Compass Delay ([1, 3600] [10]) s
   compass nget: 1                          # Compass Samples ([1, 3600] [1]) 
   console off timeout: 300                 # Console Timeout (None [300]) s
@@ -28,10 +29,59 @@ parameters:
   m2b_tmoc: 200                            # Motor Timeouts 2B ([10, 1000] [200]) 25 ms
   motor dir init: f                        # Initial Motor Direction ({u'Forward': u'f', u'Reverse': u'r'} [f]) 
   motor dir nhold: 0                       # Motor Direction (None [0]) 
-  navg cal: 10                             # Number of Calibration Samples ([1, 100] [10]) 
+  navg cal: 3                              # Number of Calibration Samples ([1, 100] [10]) 
   navg ef: 10                              # Number of HEF Samples ([1, 100] [10]) 
   navg mot: 10                             # Number of Motor Samples ([1, 100] [10]) 
   nfc calibrate: 15                        # Calibration Periodicity ([1, 3600] [15]) cycle
   nhc compass: 30                          # Compass Measurement Periodicity ([1, 3600] [30]) half cycle
   wsrun delay secs: 0                      # WS Run Delay (None [0]) s
   wsrun pinch secs: 120                    # WS Run Pinch ([1, 3600] [120]) s
+
+### Collected from instrument - 2016-06-17 ###
+##3_params
+#serno               = 8
+#debug               = 0
+#scibaud             = 9600
+#*3248\r\n#3_
+#wsrun pinch secs    = 120 s -- half cycle duration
+#ef skip secs        = 14.95 s
+#
+#nfc calibrate       = 15 full cycles -- calibrate every 3600 s
+#cal hold secs       = 12.90 s
+#cal skip secs       = 10.04 s
+#
+#nhc compass         = 30 half cycles -- compass every 3600 s
+#compass nget = 1
+#compass dsecs       = 10 s
+#
+#icompass run secs   = 10 s
+#icompass dsecs      = 1.00 s
+#
+#secs per ofile      = 86400 s
+#navg mot            = 10 -- 0.250 s
+#navg ef             = 10 -- 1.024 s
+#navg cal            = 3 -- 0.307 s
+#
+#console off timeout = 300 s
+#wsrun delay secs    = 0 s
+#
+#motor dir nhold     = 0
+#motor dir init      = f
+#run motors sep      = 1
+#
+#do_compass_pwr_with_motor = 0
+#do_keep_awake_with_motor  = 1
+#m1a_tmoc  = 200
+#m1b_tmoc = 200
+#m2a_tmoc  = 200
+#m2b_tmoc  = 200
+#
+#do_rsn   = 1
+#led_drivers_invert = 0
+#m1a_led   = 1
+#m2a_led   = 3
+#
+#Flash: total: 488 MB, free: 0 MB
+#Free space will store -0 days
+#If started now:  2016-06-17 20:49:12
+#Flash will fill: 2016-06-17 20:49:12
