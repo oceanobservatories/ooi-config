@@ -1,0 +1,6 @@
+package: setuptools_cython
+install_channels:
+  - ooi
+script:
+  - conda build .
+build_targets: conda

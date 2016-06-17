@@ -1,0 +1,34 @@
+package:
+  name: ion-functions
+  version: 2.1.1
+
+source:
+  git_url: https://github.com/ooici/ion-functions
+  git_rev: dac1bd1bc9c397dc334786dff1d263a33199a1b2
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - setuptools_cython
+    - cython
+    - numpy
+  run:
+    # conda default channel
+    - python
+    - setuptools
+    - ipython
+    - scipy
+    - numexpr
+    # conda ooi channel
+    - geomag
+    - pygsw
+
+build:
+  number: 0
+
+about:
+  home: http://oceanobservatories.org
+  license: apache 2.0
+  summary: Functions for OOI
+
