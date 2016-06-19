@@ -6,6 +6,7 @@
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
 #    0-03   2016-06-09   keh     Added comments containing default configurations
+#    0-04   2016-06-19   djm     Corrected yaml compatibility (removed tab ctrl-M)
 #
 
 parameters:
@@ -33,7 +34,6 @@ parameters:
   WetLabs: false                           # Wetlabs Sensor Attached ({u'True': True, u'False': False} [False]) 
 
 
-
 # GetCD Output	
 # AutoRun	no
 # Battery	
@@ -58,7 +58,7 @@ parameters:
 # ScansToAverage	4
 # Type	alkaline
 # WETLABS	no
-		
+
 # GetHD Output	
 # CommandSetVersion	1.3
 # FirmwareDate	3/12/2013 11:50
