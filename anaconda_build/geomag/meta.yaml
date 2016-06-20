@@ -1,0 +1,60 @@
+package:
+  name: geomag
+  version: "0.9.2015"
+
+source:
+  fn: geomag-0.9.2015.zip
+  url: https://files.pythonhosted.org/packages/0d/1f/95b5d9db29b89735af88713e7fb49b20052d1ce5a05e8e4ea0f2f96da4b3/geomag-0.9.2015.zip
+  md5: be623cd585e14840c3ed6e3215bf1340
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - geomag = geomag:main
+    #
+    # Would create an entry point called geomag that calls geomag.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - geomag
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://geomag.googlecode.com/
+  license: GNU Library or Lesser General Public License (LGPL)
+  summary: 'Magnetic variation/declination'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

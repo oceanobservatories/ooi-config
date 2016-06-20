@@ -1,0 +1,16 @@
+package:
+  name: libev
+  version: 4.22
+
+#source:
+#  fn: libev-4.22.tar.gz
+#  url: http://dist.schmorp.de/libev/Attic/libev-4.22.tar.gz
+#  md5: bf0007e37240103d3c2be80ca9bee3f9
+
+build:
+  number: 0
+
+about:
+  home: http://software.schmorp.de/pkg/libev.html
+  license: BSD
+  summary: A full-featured and high-performance event loop that is loosely modeled after libevent, but without its limitations and bugs.
