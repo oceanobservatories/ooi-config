@@ -5,6 +5,7 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-06-21   djm     Updated to match deployed configuration
 #
 
 parameters:
@@ -39,7 +40,7 @@ parameters:
 #  note1: null                              # Note Line 1 (None [None]) 
 #  note2: null                              # Note Line 2 (None [None]) 
 #  note3: null                              # Note Line 3 (None [None]) 
-#  sample_period: null                      # Sample Period (None [None]) s
-#  samples_per_burst: null                  # Samples per Burst (None [None]) 
-#  si_conversion: null                      # SI Conversion Coefficient (None [None]) 
+#  sample_period: 1.000                     # Sample Period (None [None]) s
+#  samples_per_burst: 1                     # Samples per Burst (None [None]) 
+#  si_conversion: 0.0028033                 # SI Conversion Coefficient (None [None]) 
 #  sys_clock: null                          # System Clock (None [None]) 'MM/DD/YY HH:MM:SS'
