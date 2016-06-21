@@ -29,7 +29,7 @@ parameters:
   intprfac: 1                              # Integration Time Factor ([1, 20] [1]) s
   lamptoff: 35                             # Lamp Switch-Off Temperature ([-274, 32767] [35]) °C
   lgtdurat: 1                              # Light Duration ([1, 65535] [10]) s
-  lgtsmpls: 5                              # Light Samples ([1, 65535] [5]) 
+  lgtsmpls: 58                             # Light Samples ([1, 65535] [5]) 
   msgfsize: 2                              # Message File Size ([0, 65] [0]) MB
   msglevel: Info                           # Message Level ({u'Debug': u'Debug', u'Info': u'Info', u'Warn': u'Warn', u'Error': u'Error'} [Info]) 
   operctrl: Samples                        # Operation Control ({u'Duration': u'Duration', u'Samples': u'Samples'} [Samples]) 
