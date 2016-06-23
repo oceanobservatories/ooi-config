@@ -6,6 +6,7 @@
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
 #    0-03   2016-06-14   keh     Added default data as comments for reference
+#    0-04   2016-06-23   djm     Removed ^M characters
 #
 
 parameters:
@@ -67,7 +68,7 @@ parameters:
 #      "time": 3674906100.8110442, 
 #      "sensor": "2D-PHSENA101", 
 #      "method": "streamed"
-    },
+#    },
 #    "slot2_follows_sami_sample": 0,
 #    "driver_id_prestart": 0,
 #    "pump_measure_t": 8,
