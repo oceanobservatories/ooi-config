@@ -5,6 +5,7 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-06-28   djm     Updated to match deployed instrument configuration
 #
 
 parameters:
@@ -19,7 +20,7 @@ parameters:
   blanking_distance: 16                    # Blanking Distance ([1, 65535] [16]) counts
   cell_size: 7                             # Bin Length ([1, 65535] [7]) m
   compass_update_rate: 1                   # Compass Update Rate (None [1]) s
-  coordinate_system: 2                     # Coordinate System ({u'Beam': 2, u'XYZ': 1, u'ENU': 0} [2]) 
+  coordinate_system: 0                     # Coordinate System ({u'Beam': 2, u'XYZ': 1, u'ENU': 0} [2]) 
   correlation_threshold: 0                 # Correlation Threshold (None [0]) 
   deployment_name: ''                      # Deployment Name (None []) 
   deployment_start_time: [0, 0, 0, 0, 0, 0] # Clock Deploy (None [[0, 0, 0, 0, 0, 0]]) [min, s, d, h, y, m]
@@ -31,13 +32,13 @@ parameters:
   number_beams_per_cell: 1                 # Number Beams Cell Diagnostic (None [1]) 
   number_cells: 1                          # Number of Bins (None [1]) 
   number_diagnostics_samples: 1            # Diagnostic Samples (None [1]) 
-  number_pings: 0                          # Number Pings ([1, 65535] [0]) Hz
-  number_pings_diagnostic: 1               # Number Pings Diagnostic (None [1]) 
+  number_pings: 1                          # Number Pings ([1, 65535] [0]) Hz
+  number_pings_diagnostic: 20              # Number Pings Diagnostic (None [1]) 
   number_samples_per_burst: 0              # Number of Samples per Burst (None [0]) 
   receive_length: 7                        # Receive Length ([1, 65535] [7]) counts
   sample_rate: 16                          # Sample Rate ([1, 65535] [16]) 
   sound_speed_adjust_factor: 16657         # Adjustment Sound Speed (None [16657]) m/s
-  time_between_bursts: 0                   # Time Between Burst Sequences ([1, 65535] [0]) counts
+  time_between_bursts: 512                 # Time Between Burst Sequences ([1, 65535] [0]) counts
   time_between_pings: 44                   # Time Between Pings (None [44]) counts
   transmit_pulse_length: 2                 # Transmit Pulse Length ([1, 65535] [2]) counts
   transmit_pulse_length_2nd: 2             # Transmit Pulse Length Second Lag (None [2]) counts
