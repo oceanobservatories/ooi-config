@@ -6,6 +6,7 @@
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
 #    0-03   2016-06-28   djm     Updated to match deployed instrument configuration
+#    0-04   2016-06-28   djm     Fix analog scale factor
 #
 
 parameters:
@@ -15,7 +16,7 @@ parameters:
   AcquireStatusInterval: 00:00:00          # Acquire Status Interval (None [00:00:00]) HH:MM:SS
   ClockSyncInterval: 00:00:00              # Clock Sync Interval (None [00:00:00]) HH:MM:SS
   analog_input_address: 0                  # Analog Input Address (None [0]) 
-  analog_scale_factor: 6711                # Analog Output Scale Factor (None [6711]) 
+  analog_scale_factor: 11185               # Analog Output Scale Factor (None [6711]) 
   average_interval: 64                     # Average Interval ([1, 65535] [64]) s
   blanking_distance: 16                    # Blanking Distance ([1, 65535] [16]) counts
   cell_size: 7                             # Bin Length ([1, 65535] [7]) m
