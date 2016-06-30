@@ -6,6 +6,7 @@
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
 #    0-03   2016-06-03   djm     Updated to match deployed instrument
+#    0-04   2016-06-30   djm     Remove software version (read-only)
 #
 
 parameters:
@@ -36,7 +37,6 @@ parameters:
   number_pings_diagnostic: 20              # Number Pings Diagnostic (None [1]) 
   number_samples_per_burst: 0              # Number of Samples per Burst (None [0]) 
   receive_length: 32                       # Receive Length ([0, 65535] [32]) counts
-  software_version: 13902                  # Software Version ([0, 65535] [13902]) 
   sound_speed_adjust_factor: 16657         # Adjustment Sound Speed ([0, 65535] [1525]) m/s
   time_between_bursts: 128                 # Time Between Burst Sequences ([0, 65535] [512]) counts
   time_between_pings: 437                  # Time Between Pings ([0, 65535] [437]) counts
