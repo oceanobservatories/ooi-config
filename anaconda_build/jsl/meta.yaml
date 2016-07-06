@@ -1,0 +1,63 @@
+package:
+  name: jsl
+  version: "0.2.4"
+
+source:
+  fn: jsl-0.2.4.tar.gz
+  url: https://files.pythonhosted.org/packages/c1/63/47d4bc4e4bfae29e00ff9256b52dfbf945b409804cfadf95714c113b8efb/jsl-0.2.4.tar.gz
+  md5: e51e9bf3cc294af204f0b20938cf4682
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - jsl = jsl:main
+    #
+    # Would create an entry point called jsl that calls jsl.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - jsl
+    - jsl._compat
+    - jsl.fields
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://jsl.readthedocs.org
+  license: BSD License
+  summary: 'A Python DSL for defining JSON schemas'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
