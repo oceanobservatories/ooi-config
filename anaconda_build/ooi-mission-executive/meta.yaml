@@ -1,0 +1,31 @@
+package:
+  name: ooi-mission-executive
+  version: 0.0.1
+
+source:
+  git_url: https://github.com/oceanobservatories/ooi-mission-executive
+  git_rev: 5f406b3bf10dfaaa57ad88fe704b2a52404683e3
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+    - setuptools
+    - flask
+    - pyyaml
+    - kombu
+    - jsonschema
+    - sqlalchemy
+    - requests
+    - jsl
+    - apscheduler
+
+build:
+  number: 1
+
+about:
+  home: http://oceanobservatories.org
+  license: apache 2.0
+  summary: Mission Excecutive for the Ocean Observatories Project
