@@ -5,6 +5,7 @@
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
+#    0-03   2016-07-12   djm     Match deployed configuration
 #
 
 parameters:
@@ -13,6 +14,6 @@ parameters:
 
   status_interval: 00:00:00                # Acquire Status Interval (None [00:00:00]) HH:MM:SS
   trhph_cycle_time: 20                     # Cycle Time (None [20]) s
-  trhph_metadata_on_powerup: null          # Metadata on Powerup (None [None]) 
-  trhph_metadata_on_restart: null          # Metadata on Restart (None [None]) 
-  verbose: null                            # Verbose (None [None]) 
+  trhph_metadata_on_powerup: 0             # Metadata on Powerup (None [None]) 
+  trhph_metadata_on_restart: 0             # Metadata on Restart (None [None]) 
+  verbose: 0                               # Verbose (None [None]) 
