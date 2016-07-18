@@ -1,10 +1,10 @@
 package:
   name: ooi_port_agent
-  version: 0.0.33
+  version: 0.0.37
 
 source:
   git_url: https://github.com/oceanobservatories/ooi_port_agent
-  git_rev: d02bc7dec15548cb4293a78756262e799c1807b7
+  git_rev: 405cdd78d2786c4c2e4168ec0c3a2c5bc1fc12a1
 
 requirements:
   build:
