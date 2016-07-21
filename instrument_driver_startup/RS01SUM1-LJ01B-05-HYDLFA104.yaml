@@ -10,7 +10,7 @@ parameters:
   refdes: RS01SUM1-LJ01B-05-HYDLFA104
   source_regex: .*HYS14_..H.*
 
-schedule:
+scheduler:
   DRIVER_EVENT_DISCOVER:
     trigger:
       seconds: 20

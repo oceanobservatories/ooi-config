@@ -10,7 +10,7 @@ parameters:
   refdes: RS03ASHS-MJ03B-05-OBSSPA302
   source_regex: .*AXAS2.*
 
-schedule:
+scheduler:
   DRIVER_EVENT_DISCOVER:
     trigger:
       seconds: 20

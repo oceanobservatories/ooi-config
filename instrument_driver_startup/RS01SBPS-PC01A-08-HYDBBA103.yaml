@@ -10,7 +10,7 @@ parameters:
   refdes: RS01SBPS-PC01A-08-HYDBBA103
   source_regex: .*HYVM2.*
 
-schedule:
+scheduler:
   DRIVER_EVENT_DISCOVER:
     trigger:
       seconds: 20

@@ -10,7 +10,7 @@ parameters:
   refdes: RS03ECAL-MJ03E-05-OBSSPA303
   source_regex: .*AXEC1.*
 
-schedule:
+scheduler:
   DRIVER_EVENT_DISCOVER:
     trigger:
       seconds: 20

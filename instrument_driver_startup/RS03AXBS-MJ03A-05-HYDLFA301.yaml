@@ -10,7 +10,7 @@ parameters:
   refdes: RS03AXBS-MJ03A-05-HYDLFA301
   source_regex: .*AXBA1_..H.*
 
-schedule:
+scheduler:
   DRIVER_EVENT_DISCOVER:
     trigger:
       seconds: 20

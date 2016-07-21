@@ -10,7 +10,7 @@ parameters:
   refdes: CE04OSBP-LJ01C-11-HYDBBA105
   source_regex: .*HYEA1.*
 
-schedule:
+scheduler:
   DRIVER_EVENT_DISCOVER:
     trigger:
       seconds: 20
