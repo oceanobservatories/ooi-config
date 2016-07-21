@@ -10,7 +10,7 @@ parameters:
   refdes: RS03ECAL-MJ03E-09-HYDLFA304
   source_regex: .*AXEC2_..H.*
 
-schedule:
+scheduler:
   DRIVER_EVENT_DISCOVER:
     trigger:
       seconds: 20

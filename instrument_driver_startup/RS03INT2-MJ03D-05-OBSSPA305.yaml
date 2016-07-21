@@ -10,7 +10,7 @@ parameters:
   refdes: RS03INT2-MJ03D-05-OBSSPA305
   source_regex: .*AXID1.*
 
-schedule:
+scheduler:
   DRIVER_EVENT_DISCOVER:
     trigger:
       seconds: 20

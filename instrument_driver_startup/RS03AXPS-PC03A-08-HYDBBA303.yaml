@@ -10,7 +10,7 @@ parameters:
   refdes: RS03AXPS-PC03A-08-HYDBBA303
   source_regex: .*AXVM2.*
 
-schedule:
+scheduler:
   DRIVER_EVENT_DISCOVER:
     trigger:
       seconds: 20
