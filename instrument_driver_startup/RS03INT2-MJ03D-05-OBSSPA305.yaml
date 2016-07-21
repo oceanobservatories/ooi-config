@@ -1,0 +1,21 @@
+
+# RS03INT2-MJ03D-05-OBSSPA305 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   pec     Transfer existing config
+
+parameters:
+  file_location: /san_data
+  refdes: RS03INT2-MJ03D-05-OBSSPA305
+  source_regex: .*AXID1.*
+
+schedule:
+  DRIVER_EVENT_DISCOVER:
+    trigger:
+      seconds: 20
+      type: interval
+  PROTOCOL_EVENT_FLUSH:
+    trigger:
+      seconds: 300
+      type: interval

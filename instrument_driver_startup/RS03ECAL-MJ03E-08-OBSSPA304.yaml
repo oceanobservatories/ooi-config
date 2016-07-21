@@ -1,0 +1,21 @@
+
+# RS03ECAL-MJ03E-08-OBSSPA304 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   pec     Transfer existing config
+
+parameters:
+  file_location: /san_data
+  refdes: RS03ECAL-MJ03E-08-OBSSPA304
+  source_regex: .*AXEC3.*
+
+schedule:
+  DRIVER_EVENT_DISCOVER:
+    trigger:
+      seconds: 20
+      type: interval
+  PROTOCOL_EVENT_FLUSH:
+    trigger:
+      seconds: 300
+      type: interval
