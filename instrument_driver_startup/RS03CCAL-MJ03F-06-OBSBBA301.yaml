@@ -1,0 +1,21 @@
+
+# RS03CCAL-MJ03F-06-OBSBBA301 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   pec     Transfer existing config
+
+parameters:
+  file_location: /san_data
+  refdes: RS03CCAL-MJ03F-06-OBSBBA301
+  source_regex: .*AXCC1_..[^H].*
+
+schedule:
+  DRIVER_EVENT_DISCOVER:
+    trigger:
+      seconds: 20
+      type: interval
+  PROTOCOL_EVENT_FLUSH:
+    trigger:
+      seconds: 300
+      type: interval

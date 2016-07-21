@@ -1,0 +1,21 @@
+
+# CE02SHBP-LJ01D-11-HYDBBA106 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2016-05-16   pec     Transfer existing config
+
+parameters:
+  file_location: /san_data
+  refdes: CE02SHBP-LJ01D-11-HYDBBA106
+  source_regex: .*HYEA2.*
+
+schedule:
+  DRIVER_EVENT_DISCOVER:
+    trigger:
+      seconds: 20
+      type: interval
+  PROTOCOL_EVENT_FLUSH:
+    trigger:
+      seconds: 300
+      type: interval
