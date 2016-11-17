@@ -1,10 +1,10 @@
 package:
   name: mi-instrument
-  version: 0.3.91
+  version: 0.3.101
 
 source:
   git_url: https://github.com/oceanobservatories/mi-instrument
-  git_rev: 5e12c3635dae79db5fd37ac620fd9033587f8c7b
+  git_rev: v0.3.101
 
 requirements:
   build:
