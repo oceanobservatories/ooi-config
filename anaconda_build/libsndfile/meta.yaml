@@ -1,0 +1,25 @@
+package:
+  name: libsndfile
+  version: 1.0.27
+
+source:
+  url: http://www.mega-nerd.com/libsndfile/files/libsndfile-1.0.27.tar.gz
+  md5: fd1d97c6077f03b5d984d7956ffedb7a
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - flac
+    - libogg
+    - libvorbis
+  run:
+    - flac
+    - libogg
+    - libvorbis
+
+about:
+  home: http://www.mega-nerd.com/libsndfile
+  license: LGPL
+  summary: Libsndfile is a C library for reading and writing files containing sampled sound (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface.

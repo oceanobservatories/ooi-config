@@ -1,0 +1,15 @@
+package:
+  name: flac
+  version: 1.3.1
+
+source:
+  url: http://downloads.xiph.org/releases/flac/flac-1.3.1.tar.xz
+  sha256: 4773c0099dba767d963fd92143263be338c48702172e8754b9bc5103efe1c56c
+
+build:
+  number: 0
+
+about:
+  home: https://xiph.org/flac/
+  license: BSD
+  summary: FLAC stands out as the fastest and most widely supported lossless audio codec, and the only one that at once is non-proprietary, is unencumbered by patents, has an open-source reference implementation, has a well documented format and API, and has several other independent implementations.
