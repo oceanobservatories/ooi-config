@@ -6,13 +6,6 @@ source:
   fn: PySoundFile-0.8.1.tar.gz
   url: https://pypi.python.org/packages/51/4d/2c36a6e79d1128b649ab0c32b79365f92f6146ffeb2d4ba0d0c4573826d5/PySoundFile-0.8.1.tar.gz
   md5: 276f26f454848ce7abcf5155c64e7680
-  patches:
-    # Patch setup.py to NOT deploy libsndfile on any platforms
-    # making this package OS independent
-    - setup.patch
-
-build:
-  noarch_python: True
 
 requirements:
   build:
