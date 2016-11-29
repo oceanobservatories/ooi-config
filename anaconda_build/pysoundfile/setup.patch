@@ -1,0 +1,38 @@
+diff --git a/setup.py b/setup.py
+index 9c7a7d3..f05b38b 100644
+--- a/setup.py
++++ b/setup.py
+@@ -11,30 +11,11 @@ PYTHON_INTERPRETERS = '.'.join([
+     'pp27',
+     'pp32',
+ ])
+-MACOSX_VERSIONS = '.'.join([
+-    'macosx_10_5_x86_64',
+-    'macosx_10_6_intel',
+-    'macosx_10_9_intel',
+-    'macosx_10_9_x86_64',
+-])
+-
+-# environment variables for cross-platform package creation
+-platform = os.environ.get('PYSOUNDFILE_PLATFORM', sys.platform)
+-architecture0 = os.environ.get('PYSOUNDFILE_ARCHITECTURE', architecture()[0])
+ 
+-if platform == 'darwin':
+-    libname = 'libsndfile.dylib'
+-elif platform == 'win32':
+-    libname = 'libsndfile' + architecture0 + '.dll'
+-else:
+-    libname = None
+ 
+-if libname:
+-    packages = ['_soundfile_data']
+-    package_data = {'_soundfile_data': [libname, 'COPYING']}
+-else:
+-    packages = None
+-    package_data = None
++libname = None
++packages = None
++package_data = None
+ 
+ 
+ class PyTest(TestCommand):
