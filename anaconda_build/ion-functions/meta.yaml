@@ -4,7 +4,7 @@ package:
 
 source:
   git_url: https://github.com/ooici/ion-functions
-  git_rev: dac1bd1bc9c397dc334786dff1d263a33199a1b2
+  git_rev: 38e9637db7f9dddd8ee18d7f4f7d20aa0c7bc879
 
 requirements:
   build:
@@ -25,7 +25,7 @@ requirements:
     - pygsw
 
 build:
-  number: 0
+  number: 1
 
 about:
   home: http://oceanobservatories.org
