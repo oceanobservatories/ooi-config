@@ -1,6 +1,0 @@
-package: ooi_port_agent
-install_channels:
-  - ooi
-script:
-  - conda build .
-build_targets: conda

@@ -1,6 +1,0 @@
-package: mi-instrument
-install_channels:
-  - ooi
-script:
-  - conda build .
-build_targets: conda

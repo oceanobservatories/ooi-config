@@ -1,6 +1,0 @@
-package: qpid-python
-install_channels:
-  - ooi
-script:
-  - conda build .
-build_targets: conda
