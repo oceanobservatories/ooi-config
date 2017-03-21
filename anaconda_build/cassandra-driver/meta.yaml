@@ -19,6 +19,7 @@ build:
 requirements:
   build:
     - python
+    - libev
     - numpy
     - setuptools
     - six >=1.6
@@ -27,6 +28,7 @@ requirements:
 
   run:
     - python
+    - libev
     - numpy
     - six >=1.6
     - futures <=2.2.0
