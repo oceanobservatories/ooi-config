@@ -1,47 +1,37 @@
+# Jinja variables help maintain the recipe as you'll update the version only here.
+{% set name = "cassandra-driver" %}
+{% set version = "2.7.2" %}
+{% set sha256 = "f65c7f9f0a552975b28ee370c9f19f8dd881ebd7c208e5818095533440a525df" %}
+
 package:
-  name: cassandra-driver
-  version: "2.7.2"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  fn: cassandra-driver-2.7.2.tar.gz
-  url: https://files.pythonhosted.org/packages/d0/c0/39de7f2b90431179ed55ff210aaed52b31497653456d63a1f14e0e1a63b6/cassandra-driver-2.7.2.tar.gz
-  md5: e82c41599892cb5d4f270c98c2062411
-#  patches:
-   # List any patch files here
-   # - fix.patch
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
-# build:
-  # noarch_python: True
-  # preserve_egg_dir: True
-  # entry_points:
-    # Put any entry points (scripts to be generated automatically) here. The
-    # syntax is module:function.  For example
-    #
-    # - cassandra-driver = cassandra-driver:main
-    #
-    # Would create an entry point called cassandra-driver that calls cassandra-driver.main()
-
-
-  # If this is a new build for the same version, increment the build
-  # number. If you do not include this key, it defaults to 0.
-  # number: 1
+build:
+  number: 1
+  script: python setup.py build build_ext -I${PREFIX}/include -L${PREFIX}/lib install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
     - python
     - libev
-    - numpy
+    - numpy x.x
     - setuptools
     - six >=1.6
-    - futures
-    - cython
+    - futures <=2.2.0
+    - cython <0.25
 
   run:
     - python
     - libev
     - numpy
     - six >=1.6
-    - futures
+    - futures <=2.2.0
 
 test:
   # Python imports
@@ -50,28 +40,21 @@ test:
     - cassandra.cqlengine
     - cassandra.io
 
-  # commands:
-    # You can put test commands to be run here.  Use this to test that the
-    # entry points work.
-
-
-  # You can also put a file called run_test.py in the recipe that will be run
-  # at test time.
-
-  requires:
-    - mock <=1.0.1
-    - nose
-    - pytz
-    - pyyaml
-    - sure
-    # Put any additional test requirements here.  For example
-    # - nose
-
 about:
   home: http://github.com/datastax/python-driver
-  license: Apache Software License
+  license: Apache
+  license_family: Apache
+  license_file: LICENSE
   summary: 'Python driver for Cassandra'
+  description: |
+    A modern, feature-rich and highly-tunable Python client library for Apache Cassandra
+    (1.2+) and DataStax Enterprise (3.1+) using exclusively Cassandra's binary protocol
+    and Cassandra Query Language v3.
+  doc_url: http://datastax.github.io/python-driver/api/index.html
+  dev_url: http://github.com/datastax/python-driver
 
-# See
-# http://docs.continuum.io/conda/build.html for
-# more information about meta.yaml
+extra:
+  recipe-maintainers:
+    # GitHub IDs for maintainers of the recipe.
+    # Always check with the people listed below if they are OK becoming maintainers of the recipe. (There will be spam!)
+    - petercable

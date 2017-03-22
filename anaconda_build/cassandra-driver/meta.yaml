@@ -1,7 +1,7 @@
 # Jinja variables help maintain the recipe as you'll update the version only here.
 {% set name = "cassandra-driver" %}
 {% set version = "3.8.1" %}
-{% set sha256 = "" %}
+{% set sha256 = "2c35138c52fb85f3889a2841af1d39a0fe91e2f58a6205b1676944d2f4cbefec" %}
 
 package:
   name: {{ name|lower }}
@@ -13,14 +13,14 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: python setup.py build build_ext -I${PREFIX}/include -L${PREFIX}/lib install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
     - python
     - libev
-    - numpy
+    - numpy x.x
     - setuptools
     - six >=1.6
     - futures <=2.2.0
