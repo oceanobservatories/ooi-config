@@ -28,16 +28,11 @@ $ conda install conda-build anaconda-client anaconda-build
 
 `$ anaconda -t $TOKEN package --create <ORGANIZATION>/<PACKAGENAME>`
  
-2. Submit the package build to the build queue
+2. Build the package
 
-`$ anaconda -t $TOKEN build submit --label main`
+`$ conda build <PACKAGEDIR>  # non-numpy-linked packages`
+`$ conda build --numpy=1.12 <PACKAGEDIR>  # numpy-linked packages`
 
-## Building a package for dev/test
+3. Upload the package
 
-1. Create the package, if it does not already exist
-
-`$ anaconda -t $TOKEN package --create <ORGANIZATION>/<PACKAGENAME>`
- 
-2. Submit the package build to the build queue
-
-`$ anaconda -t $TOKEN build submit --label dev`
+`$ anaconda -t $TOKEN upload /path/to/package`
