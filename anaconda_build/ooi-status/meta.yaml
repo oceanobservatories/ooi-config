@@ -26,9 +26,10 @@ requirements:
     - sqlalchemy 1.1.5
     - cachetools 2.0.0
     - ooi-data 0.0.5
+    - psycogreen 1.0
 
 build:
-  number: 1
+  number: 2
 
 about:
   home: http://oceanobservatories.org
