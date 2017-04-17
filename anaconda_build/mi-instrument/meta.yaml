@@ -1,10 +1,17 @@
+{% set name = "mi-instrument" %}
+{% set version = "0.4.0" %}
+
 package:
-  name: mi-instrument
-  version: 0.3.106
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   git_url: https://github.com/oceanobservatories/mi-instrument
-  git_rev: v0.3.106
+  git_rev: v{{ version }}
+
+build:
+  number: 0
+  script: python setup.py install
 
 requirements:
   build:
@@ -28,21 +35,26 @@ requirements:
     - meld3
     - xarray
     - pandas
-    # conda ooi channel
-    - qpid-python ==0.32
-    - python-consul ==0.6.0
-    - apscheduler ==2.1.0
-    - ooi_port_agent
-    - ntplib ==0.3.3
-    - tqdm ==2.0.0
+
+    # conda forge
     - librabbitmq ==1.6.1
     - kombu ==3.0.35
     - amqp ==1.4.9
+
+    # conda ooi channel
+    - ooi_port_agent
+    - qpid-python ==0.32
+    - python-consul ==0.6.0
+    - apscheduler ==2.1.0
+    - ntplib ==0.3.3
+    - tqdm ==2.0.0
 
 build:
   number: 0
 
 about:
   home: http://oceanobservatories.org
-  license: apache 2.0
-  summary: Port Agent for the Ocean Observatories Project
+  license: BSD-2-Clause
+  license_family: BSD
+  license_file: LICENSE.txt
+  summary: OOI Instrument Drivers
