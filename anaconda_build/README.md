@@ -6,7 +6,7 @@
     
 2. Install the anaconda build packages
 
-```
+```bash
 $ conda update conda
 $ conda install conda-build anaconda-client anaconda-build
 ```
@@ -22,7 +22,7 @@ $ conda install conda-build anaconda-client anaconda-build
     
 `$ export TOKEN=$(anaconda auth -o <ORGANIZATION> --create --name <TOKENNAME>)`
 
-## Building a package for production
+## Building a package for release
 
 1. Create the package, if it does not already exist
 
@@ -30,9 +30,21 @@ $ conda install conda-build anaconda-client anaconda-build
  
 2. Build the package
 
-`$ conda build <PACKAGEDIR>  # non-numpy-linked packages`
-`$ conda build --numpy=1.12 <PACKAGEDIR>  # numpy-linked packages`
+```bash
+$ conda build <PACKAGEDIR>  # non-numpy-linked packages
+$ conda build --numpy=1.12 <PACKAGEDIR>  # numpy-linked packages
+```
 
 3. Upload the package
 
 `$ anaconda -t $TOKEN upload /path/to/package`
+
+## Installation of a package
+
+Packages are installed by name using anaconda and are typically installed under a virtual environment. 
+E.g. on uframe-3-test, mi-instrument is installed under the ingest environment:
+
+```bash
+$ source activate ingest
+$ conda install mi-instrument
+```
