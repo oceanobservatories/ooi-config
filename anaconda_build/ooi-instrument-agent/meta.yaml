@@ -14,7 +14,7 @@ requirements:
     - gevent
     - pyzmq
     - python-consul
-    - twisted
+    - twisted ==16.6.0
   run:
     - python
     - setuptools
@@ -22,7 +22,7 @@ requirements:
     - gevent
     - pyzmq
     - python-consul
-    - twisted
+    - twisted ==16.6.0
 
 build:
   number: 0
