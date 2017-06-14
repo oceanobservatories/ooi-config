@@ -21,6 +21,8 @@ $ conda install conda-build anaconda-client anaconda-build
     * save this token for next time, but don't commit it to the repo!
     
 `$ export TOKEN=$(anaconda auth -o <ORGANIZATION> --create --name <TOKENNAME>)`
+    (ORGANIZATION=ooi)
+
 
 ## Building a package for release
 
