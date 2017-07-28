@@ -38,7 +38,8 @@ The services run by supervisor are listed below:
 | events_shovel | shovel |  | portland-01 |
 | pa_monitor | ooi_port_agent.tools.monitor | email notification service if network connectivity is lost to instruments | portland-01 portland-02 |
 | oms_alerts_shovel | shovel | forwards OMS alerts/alarms to production server | portland-01 |
-| oms_extractor | | creates alerts/alarms from OMS events | portland-04 |
+| oms_extractor | | creates engineering particles from engineering ports | portland-04 |
+| omsaasvr | oms_alert_alarms_server | creates alert/alarms from OMS events | portland-03 |
 | pa_stats_shovel | shovel | forwards statistics of port agent traffic to production server | portland-01 portland-02 |
 | particles_shovel | shovel | forwards instrument packets to production server | portland-01 |
 
