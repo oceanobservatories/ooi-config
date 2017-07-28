@@ -1,0 +1,5 @@
+#!/bin/bash
+export MSNEXEC_CONFIG=/home/asadev/supervisor/ia/executive_config.py
+#source activate executive
+#python -m ooi_executive.main
+~/miniconda2/envs/executive/bin/python -m ooi_executive.main
