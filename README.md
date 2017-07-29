@@ -21,13 +21,13 @@ Supervisor processes are run on the following machines using the given configura
 
 | location | configuration | purpose |
 | -------- | ------------- | ------- |
-| portland-01 | pa1.conf | port agents |
-| portland-02 | pa2.conf | port agents |
-| portland-03 | oms_aa_svr.conf | Alerts and Alarms |
-| portland-03 | services.conf | InstrumentAgent & MissionExecution |
-| portland-04 | pad_drivers.conf | OMS Alerts and Alarms |
-| portland-05 | drivers.conf | instrument drivers |
-| portland-06 | *drivers.conf* | *instrument drivers - backup* |
+| portland-01 | pa1/pa1.conf | port agents |
+| portland-02 | pa2/pa2.conf | port agents |
+| portland-03 | oms_aa_server/oms_aa_svr.conf | Alerts and Alarms |
+| portland-03 | ia/services.conf | InstrumentAgent & MissionExecution |
+| portland-04 | drivers/pad_drivers.conf | OMS Alerts and Alarms |
+| portland-05 | drivers/drivers.conf | instrument drivers |
+| portland-06 | *drivers/drivers.conf* | *instrument drivers - backup* |
 
 The services run by supervisor are listed below:
 
