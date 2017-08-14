@@ -1,0 +1,17 @@
+
+# RS03ASHS-MJ03B-09-BOTPTA304 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2017-08-14   djm     Initial version
+#
+
+parameters:
+
+### Startup parameters ###
+
+  auto_relevel: false                      # Automatic Releveling Enabled ({true, false} [None]) 
+  output_rate_hz: 20                       # NANO Output Rate ([1, 40] [None]) Hz
+  relevel_timeout: 600                     # LILY Leveling Timeout ([60, 6000] [None]) s
+  xtilt_relevel_trigger: 300               # X-tilt Releveling Trigger ([1, 330] [None]) µrad
+  ytilt_relevel_trigger: 300               # Y-tilt Releveling Trigger ([1, 330] [None]) µrad
