@@ -1,10 +1,10 @@
 
-# RS03AXBS-LJ03A-12-CTDPFB301 startup configuration file
+# RS03ASHS-MJ03B-10-CTDPFB304 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2017-08-14   djm     Initial version
-#
+#    0-02   2017-08-15   djm     Corrected reference designator in comments
 
 parameters:
 
