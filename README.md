@@ -28,12 +28,13 @@ Supervisor processes are run on the following machines using the given configura
 | portland-04 | drivers/pad_drivers.conf | OMS Alerts and Alarms |
 | portland-05 | drivers/drivers.conf | instrument drivers |
 | portland-06 | *drivers/drivers.conf* | *instrument drivers - backup* |
+| antelope | port_agent_supervisor/antelope.conf | port agents |
 
 The services run by supervisor are listed below:
 
 | name | service | purpose | location |
 | ---- | ------- | ------- | -------- |
-| *reference designator* | port_agent | communication link between specific instrument and its corresponding instrument agent driver | portland-01 portland-02 |
+| *reference designator* | port_agent | communication link between specific instrument and its corresponding instrument agent driver | portland-01 portland-02 antelope |
 | *reference designator* | run_driver | instrument driver | portland-05 *portland-06* |
 | events_shovel | shovel |  | portland-01 |
 | pa_monitor | ooi_port_agent.tools.monitor | email notification service if network connectivity is lost to instruments | portland-01 portland-02 |
