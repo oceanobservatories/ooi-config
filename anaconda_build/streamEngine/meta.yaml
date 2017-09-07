@@ -1,0 +1,8 @@
+package:
+    name: stream_engine
+    version: 1.0.0
+requirements:
+    run:
+        - enginemeta
+about:
+    summary: Stream engine
