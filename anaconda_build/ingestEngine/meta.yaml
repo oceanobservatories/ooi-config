@@ -1,0 +1,8 @@
+package:
+    name: ingest_engine
+    version: 1.0.0
+requirements:
+    run:
+        - enginemeta
+about:
+    summary: Ingest engine
