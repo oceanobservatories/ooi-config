@@ -73,3 +73,58 @@ local development. E.g. on uframe-3-test, mi-instrument is installed under the r
 ```bash
 $ conda install mi-instrument
 ```
+
+## The stream/ingest engines and environment
+
+The recipes are located in the <i>enginemeta</i>, <i>ingestEngine</i> and <i>streamEngine</i> folders. The enginemeta recipe declares the dependencies used while installing the packages built from the other recipes (ingestEngine and streamEngine). Modify it only as those dependencies change. The other recipes are based on the whole codebases via clones of the following Git repositories.
+
+* git clone ssh://uframe-cm.ooi.rutgers.edu:29418/ingest_engine
+* git clone https://github.com/oceanobservatories/stream_engine
+
+The ingestEngine and streamEngine recipes declare the enginemeta package as a dependency. When built, these recipes expect the code from the corresponding repositories to be pulled into the builder's $HOME/uframes/engines folder and the appropriate checkout locations activated as
+
+```bash
+$ cd $HOME/uframes/engines/stream_engine
+$ git fetch
+$ git checkout v1.3.7
+$ git submodule update --init --recursive
+$ cd $HOME/uframes/engines/ingest_engine
+$ git fetch
+$ git checkout build_8.0_20170630
+```
+
+Once done they need to be TAR/bzip'd there. Whenever the code bases represented by these repositories are modified, these TARs need to be updated. Use the following commands to TAR/bzip them
+
+```bash
+$ tar jcf ingest_engine.tar.bz2 ingest_engine
+$ tar jcf stream_engine.tar.bz2 stream_engine
+```
+
+Each of these recipes is used to create a package when running these commands from the folder containing these recipes
+
+```bash
+$ conda build enginemeta
+$ conda build ingestEngine
+$ conda build streamEngine
+```
+
+An environment is built and activated with the dependencies specified in the enginemeta recipe and either or both of the repositories from the ingestEngine and streamEngine recipes as (where <i>envname</i> represents a name to specify for the environment)
+
+```bash
+$ conda create --use-local -n envname [ingest_engine stream_engine]
+source activate envname
+```
+
+The management scripts can be run from within this environment as
+
+```bash
+$ cd $CONDA_PREFIX/ingest_engine (or stream_engine)
+$ manage-ingestng (or manage-streamng) start (or stop, etc.)
+```
+
+The environment can be deactivated and removed as
+
+```bash
+source deactivate
+conda remove -n engine --all
+```
