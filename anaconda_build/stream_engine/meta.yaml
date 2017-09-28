@@ -1,8 +1,14 @@
 package:
     name: stream_engine
     version: 1.0.0
+
+source:
+    git_url: https://github.com/oceanobservatories/stream_engine
+    git_rev: v1.3.7
+
 requirements:
     run:
         - enginemeta
+
 about:
     summary: Stream engine
