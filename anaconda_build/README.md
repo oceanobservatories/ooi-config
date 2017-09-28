@@ -99,10 +99,10 @@ If that occurs do a Ctrl-C to exit and then run the following command prior to r
 $ git config --global http.postBuffer 1048576000
 ```
 
-An environment is provisioned with the dependencies specified in the enginemeta recipe and either or both of the repositories from the ingest_engine and stream_engine recipes (depending on which packages are specified) and activated for use as (where <i>envname</i> represents a name to specify for the environment)
+An environment is provisioned with the dependencies specified in the enginemeta recipe and either or both of the repositories from the ingest_engine and stream_engine recipes (depending on which packages are specified; here both are specified) and activated for use. The environment name is flexible; here it's specified as <i>engine</i>
 
 ```bash
-$ conda create --use-local -n envname [ingest_engine stream_engine]
+$ conda create --use-local -n engine ingest_engine stream_engine
 $ source activate envname
 ```
 
