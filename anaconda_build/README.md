@@ -74,57 +74,49 @@ local development. E.g. on uframe-3-test, mi-instrument is installed under the r
 $ conda install mi-instrument
 ```
 
-## The stream/ingest engines and environment
+## The stream/ingest recipes, packages and environment
 
-The recipes are located in the <i>enginemeta</i>, <i>ingestEngine</i> and <i>streamEngine</i> folders. The enginemeta recipe declares the dependencies used while installing the packages built from the other recipes (ingestEngine and streamEngine). Modify it only as those dependencies change. The other recipes are based on the whole codebases via clones of the following Git repositories.
+These recipes are located in the <i>enginemeta</i>, <i>ingest_engine</i> and <i>stream_engine</i> folders. The enginemeta recipe declares the dependencies required for use in an environment that can be used to run the code obtained from the ingest_engine and stream_engine recipes. Modify it only as those dependencies change.
 
-* git clone ssh://uframe-cm.ooi.rutgers.edu:29418/ingest_engine
-* git clone https://github.com/oceanobservatories/stream_engine
+The ingest_engine and stream_engine recipes declare the enginemeta package as a dependency. The packages built from them are named the same as the recipes. They obtain and install their respective Git repositories from a tagged checkout point (that's specified in the recipe) into their respective packages:
 
-The ingestEngine and streamEngine recipes declare the enginemeta package as a dependency. When built, these recipes expect the code from the corresponding repositories to be pulled into the builder's $HOME/uframes/engines folder and the appropriate checkout locations activated as
+* ssh://uframe-cm.ooi.rutgers.edu:29418/ingest_engine
+* https://github.com/oceanobservatories/stream_engine
 
-```bash
-$ cd $HOME/uframes/engines/stream_engine
-$ git fetch
-$ git checkout v1.3.7
-$ git submodule update --init --recursive
-$ cd $HOME/uframes/engines/ingest_engine
-$ git fetch
-$ git checkout build_8.0_20170630
-```
-
-Once done they need to be TAR/bzip'd there. Whenever the code bases represented by these repositories are modified, these TARs need to be updated. Use the following commands to TAR/bzip them
-
-```bash
-$ tar jcf ingest_engine.tar.bz2 ingest_engine
-$ tar jcf stream_engine.tar.bz2 stream_engine
-```
-
-Each of these recipes is used to create a package when running these commands from the folder containing these recipes
+These recipes must be obtained from the ooi-config repository, modified as needed and built locally from the anaconda_build folder as 
 
 ```bash
 $ conda build enginemeta
-$ conda build ingestEngine
-$ conda build streamEngine
+$ conda build ingest_engine
+$ conda build stream_engine
 ```
 
-An environment is built and activated with the dependencies specified in the enginemeta recipe and either or both of the repositories from the ingestEngine and streamEngine recipes as (where <i>envname</i> represents a name to specify for the environment)
+It's possible the last of the 3 of the above commands will fail with the following error
+* error: RPC failed; result=52 HTTP code=0
+
+If that occurs do a Ctrl-C to exit and then run the following command prior to retrying the build command
+```bash
+$ git config --global http.postBuffer 1048576000
+```
+
+An environment is provisioned with the dependencies specified in the enginemeta recipe and either or both of the repositories from the ingest_engine and stream_engine recipes (depending on which packages are specified) and activated for use as (where <i>envname</i> represents a name to specify for the environment)
 
 ```bash
 $ conda create --use-local -n envname [ingest_engine stream_engine]
-source activate envname
+$ source activate envname
 ```
 
 The management scripts can be run from within this environment as
 
 ```bash
-$ cd $CONDA_PREFIX/ingest_engine (or stream_engine)
 $ manage-ingestng (or manage-streamng) start (or stop, etc.)
 ```
 
+The scripts generate log files within the <i>logs</i> sub-folder under the folder physically containing the "manage" scripts. The primary file for the ingest_engine script is <i>ingest_engine.error.log</i>. The primary file for the stream_engine script is <i>stream_engine.error.log</i>.
+  
 The environment can be deactivated and removed as
 
 ```bash
 source deactivate
-conda remove -n engine --all
+conda remove -n envname --all
 ```

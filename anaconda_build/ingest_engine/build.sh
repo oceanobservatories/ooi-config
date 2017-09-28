@@ -8,3 +8,4 @@ cp -r * $PREFIX/ingest_engine
 # set up links in the installation bin folder to key components
 cd $PREFIX/bin
 ln -s ../ingest_engine/manage-ingestng manage-ingestng
+ln -s ../ingest_engine/manage-ingest-handler manage-ingest-handler
