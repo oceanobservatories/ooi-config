@@ -1,8 +1,14 @@
 package:
     name: ingest_engine
     version: 1.0.0
+
+source:
+    git_url: ssh://uframe-cm.ooi.rutgers.edu:29418/ingest_engine
+    git_rev: build_10.0_20170930
+
 requirements:
     run:
         - enginemeta
+
 about:
     summary: Ingest engine

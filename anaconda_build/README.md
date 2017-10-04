@@ -73,3 +73,50 @@ local development. E.g. on uframe-3-test, mi-instrument is installed under the r
 ```bash
 $ conda install mi-instrument
 ```
+
+## The stream/ingest recipes, packages and environment
+
+These recipes are located in the *enginemeta*, *ingest_engine* and *stream_engine* folders. The enginemeta recipe declares the dependencies required for use in an environment that can be used to run the code obtained from the ingest_engine and stream_engine recipes. Modify it only as those dependencies change.
+
+The ingest_engine and stream_engine recipes declare the enginemeta package as a dependency. The packages built from them are named the same as the recipes. They obtain and install their respective Git repositories from a tagged checkout point (that's specified in the recipe) into their respective packages:
+
+* ssh://uframe-cm.ooi.rutgers.edu:29418/ingest_engine
+* https://github.com/oceanobservatories/stream_engine
+
+These recipes must be obtained from [this repository](https://github.com/oceanobservatories/ooi-config), modified as needed and built locally from the anaconda_build folder as 
+
+```bash
+$ conda build enginemeta
+$ conda build ingest_engine
+$ conda build stream_engine
+```
+
+It's possible the last of the 3 of the above commands will fail with the following error
+* error: RPC failed; result=52 HTTP code=0
+
+If that occurs do a Ctrl-C to exit and then run the following command prior to retrying the build command
+```bash
+$ git config --global http.postBuffer 1048576000
+```
+
+An environment is provisioned with the dependencies specified in the enginemeta recipe and either or both of the repositories from the ingest_engine and stream_engine recipes (depending on which packages are specified; here both are specified) and activated for use. The environment name is flexible; here it's specified as *engine*
+
+```bash
+$ conda create --use-local -n engine ingest_engine stream_engine
+$ source activate envname
+```
+
+The management scripts can be run from within this environment as
+
+```bash
+$ manage-ingestng (or manage-streamng) start (or stop, etc.)
+```
+
+The scripts generate log files within the *logs* sub-folder under the folder physically containing the "manage" scripts. The primary file for the ingest_engine script is *ingest_engine.error.log*. The primary file for the stream_engine script is *stream_engine.error.log*.
+  
+The environment can be deactivated and removed as
+
+```bash
+source deactivate
+conda remove -n envname --all
+```
