@@ -1,0 +1,14 @@
+
+# CE02SHBP-LJ01D-06-DOSTAD106 startup configuration file
+#
+# Version   Date         User    Description
+# ------------------------------------------------------------------------------
+#    0-01   2017-12-13   djm     Initial version (copied from attached CTD)
+#
+
+parameters:
+
+### Startup parameters ###
+
+  OPTODE: true                             # Optode Attached ({u'True': True, u'False': False} [True]) 
+  Volt1: true                              # Volt 1 ({u'True': True, u'False': False} [True]) 
