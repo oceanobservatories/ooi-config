@@ -56,7 +56,7 @@ The `run_driver` script configures and runs an instrument agent driver that mana
 
 `run_driver mi.instrument.satlantic.suna_deep.ooicore.driver InstrumentDriver CE04OSPS-SF01B-4A-NUTNRA102 amqp://ooi-production:T1cZp68WanMZ53dQ@192.168.150.101/production?queue=ha.instrument_events amqp://ooi-production:T1cZp68WanMZ53dQ@192.168.150.101/production?queue=ha.instrument_particles /home/asadev/ooi-config-master/CE04OSPS-SF01B-4A-NUTNRA102.yaml`
 
-Startup requires a YAML configuration file that can be found in `ooi-config/instrument_driver_startup`. 
+Startup requires a YAML configuration file that can be found in `ooi-config/instrument_driver_startup`. Currently the yaml files are installed at portland-05:~/ooi-config-master (a link to ~/ooi-config/instrument_driver_startup). 
 
 ### events_shovel
 
