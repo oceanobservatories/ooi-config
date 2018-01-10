@@ -1,5 +1,5 @@
 # Version 0.6.1
-* Patch Notes (2017-12-13)
+* Patch Notes (2018-01-10)
 	* Added startup parameter files for DOSTA drivers (12289)
 
 # Version 0.6.0
