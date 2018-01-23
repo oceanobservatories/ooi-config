@@ -1,11 +1,12 @@
 
-# CE04OSPS-PC01B-4C-PCO2WA105 startup configuration file
+# CE04OSPS-PC01B-4D-PCO2WA105 startup configuration file
 #
 # Version   Date         User    Description
 # ------------------------------------------------------------------------------
 #    0-01   2016-05-16   djm     Default parameters query
 #    0-02   2016-05-19   djm     Added additional parameter information
 #    0-03   2016-06-01   djm     Updated with data from pco2w_a_configuration
+#    0-04   2018-01-09   djm     Updated port from 4C to 4D
 #
 
 parameters:
