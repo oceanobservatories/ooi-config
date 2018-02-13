@@ -25,7 +25,7 @@ Supervisor processes are run on the following machines using the given configura
 | portland-02 | pa2/pa2.conf | port agents |
 | portland-03 | oms_aa_server/oms_aa_svr.conf | Alerts and Alarms |
 | portland-03 | ia/services.conf | InstrumentAgent & MissionExecution |
-| portland-04 | drivers/pad_drivers.conf | OMS Alerts and Alarms |
+| portland-04 | drivers/pad_drivers.conf | platform engineering streams |
 | portland-05 | drivers/drivers.conf | instrument drivers |
 | portland-06 | *drivers/drivers.conf* | *instrument drivers - backup* |
 | antelope | port_agent_supervisor/antelope.conf | port agents |
