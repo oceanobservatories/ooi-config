@@ -48,6 +48,7 @@ requirements:
     - apscheduler ==2.1.0
     - ntplib ==0.3.3
     - tqdm ==2.0.0
+    - Deprecated ==1.2.0
 
 about:
   home: http://oceanobservatories.org

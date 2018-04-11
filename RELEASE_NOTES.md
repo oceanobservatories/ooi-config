@@ -1,3 +1,7 @@
+# Version 0.6.2
+* Patch Notes (2018-04-10)
+        * Added python Deprecated package to anaconda_build/mi-instrument/meta.yaml.
+
 # Version 0.6.1
 * Patch Notes (2018-01-10)
 	* Added startup parameter files for DOSTA drivers (12289)
