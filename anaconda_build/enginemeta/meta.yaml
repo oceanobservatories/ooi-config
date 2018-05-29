@@ -1,12 +1,12 @@
 package:
     name: enginemeta
-    version: 1.0.6
+    version: 1.0.7
 requirements:
     run:
         - requests ==2.13.0
         - concurrentloghandler ==0.9.1
         - pandas ==0.19.2
-        - ion-functions ==2.3.1
+        - ion-functions ==2.4.0
         - numexpr ==2.6.2
         - netcdf4 ==1.2.4
         - nomkl
