@@ -15,10 +15,10 @@ requirements:
     - setuptools
     - setuptools_cython
     - cython
-    - numpy x.x
+    - numpy ==1.12
   run:
     - python
-    - numpy x.x
+    - numpy ==1.12
     - numexpr
     - scipy
     - geomag
