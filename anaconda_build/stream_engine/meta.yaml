@@ -8,7 +8,6 @@ source:
 
 requirements:
     run:
-        - enginemeta
 
 about:
     summary: Stream engine
