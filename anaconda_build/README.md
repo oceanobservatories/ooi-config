@@ -65,6 +65,12 @@ $ conda convert --platform linux-64 ~/miniconda/conda-bld/osx-64/mi-instrument* 
 $ anaconda -t $TOKEN upload ~/miniconda/conda-bld/*/mi-instrument-0.4.0-py27_0.tar.bz2
 ```
 
+## Wrap-up after building
+
+After building and uploading of packages is complete, terminate the anaconda session by logging out.
+
+`$ anaconda logout`
+
 ## Installation of a package
 
 Packages are installed using `conda` by downloading them from the anaconda cloud. Packages should be installed under 
