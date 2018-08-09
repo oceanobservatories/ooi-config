@@ -18,7 +18,8 @@ $ conda install conda-build anaconda-client anaconda-build
 
 4. Create a token
     * you can skip this step if you are not uploading to an organization
-    * save this token for next time, but don't commit it to the repo!
+    * save this token for subsequent use, but don't commit it to the repo!
+    * use it every time you upload using this account for the organization
     
 ```bash
 $ export TOKEN=$(anaconda auth -o ooi --create --name <TOKENNAME>)
