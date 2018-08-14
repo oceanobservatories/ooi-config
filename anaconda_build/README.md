@@ -103,20 +103,21 @@ It's possible the last of the 3 of the above commands will fail with the followi
 
 If that occurs do a Ctrl-C to exit and then run the following command prior to retrying the build command
 ```bash
-$ git config --global http.postBuffer 1048576000
+$ git config --global http.postBuffer 2097152000
 ```
 
 An environment is provisioned with the dependencies specified in the enginemeta recipe and either or both of the repositories from the ingest_engine and stream_engine recipes (depending on which packages are specified; here both are specified) and activated for use. The environment name is flexible; here it's specified as *engine*
 
 ```bash
-$ conda create --use-local -n engine ingest_engine stream_engine
-$ source activate envname
+$ conda create -n engine enginemeta ingest_engine stream_engine
+$ source activate engine
 ```
 
 The management scripts can be run from within this environment as
 
 ```bash
 $ manage-ingestng (or manage-streamng) start (or stop, etc.)
+$ manage-ingest-handler start (or stop, etc.) playback (or recovered or telemetered)
 ```
 
 The scripts generate log files within the *logs* sub-folder under the folder physically containing the "manage" scripts. The primary file for the ingest_engine script is *ingest_engine.error.log*. The primary file for the stream_engine script is *stream_engine.error.log*.
@@ -125,5 +126,30 @@ The environment can be deactivated and removed as
 
 ```bash
 source deactivate
-conda remove -n envname --all
+conda remove -n engine --all
 ```
+
+## The other recipes 
+
+* *ion-functions*: It's used for stream_engine during QC testing. It may also be used in other ways.
+* *mi-instrument*: It's used for ingest_engine during data ingest.
+* *ooi-status*: It's used to check data availability.
+* *apscheduler*: It's used by mi-instrument and ooi-status. APScheduler (Advanced Python Scheduler) is a light, powerful in-process task scheduler used to schedule functions or python callables to run at specified times.
+* *concurrentloghandler*: Used by ingest_engine and stream_engine to provide rolling logs that are concurrently accessible.
+* *geomag*: Used by ion-functions to calculate magnetic variation/declination for any lat/lon/altitude and date using the National Geophsical Data Center, epoch 2015 data.
+* *jsl*: a DSL for describing JSON schemas
+* *libgswteos*: Used by pygsw and ion-functions. It draws from the oceanobservatories GSW-C repository. It invovles TEOS-10 (Thermodynamic Equation of Seawater - 2010) which is about thermodynamic properties of seawater (density, enthalpy, entropy).
+* *ntplib*: Used by mi-instrument. It's an API to query NTP (network time protocol, for providing clock synchronization for computer systems) servers from python, providing utility functions to translate NTP field values to text.
+* *ooi-data*: Used by stream_engine. Uses the oceanobservatories repository by same name. It appears to define the Postgres data model used by sqlalchemy.
+* *ooi-instrument-agent*: Not sure but may be OBE due to ooi-port-agent
+* *ooi-mission-executive*: Uses the oceanobservatories repository by same name. It appears to involve instrument agent drivers
+* *ooi_port_agent*: Used by stream_engine. Uses the oceanobservatories repository by same name. It communicates between the cabled instruments and the Instrument Agent Drivers. It uses RabbitMQ messaging to pass data between them.
+* *psycogreen*: Used by ooi-status to enable psycopg2 to work with coroutine libraries (via internal asynchronous calls) with a blocking interface so regular code can run unmodified.
+* *pygsw*: Used by ion-functions. Uses the oceanobservatories repository by same name. It uses libgswteos to provide python bindings for the TEOS-10 v3.0.3 GSW Oceanographic Toolbox in C.
+* *pysmb*: Used by ooi_port_agent. It's an experiential SMB/CIFS python library that supports file sharing between Linux and Windows platforms.
+* *pysoundfile*: An audio library used to read/write sound files
+* *python-consul*: Used by mi-instrument and ooi-instrument-agent. It's a python API to Consul.
+* *qpid-python*: Used by mi-instrument. It's python API to Qpid.
+* *setuptools_cython*: Used by ion-functions. It's a superset of python that gives C-like performance with code written mostly in python.
+* *sure*: An idiomatic testing library for python. Unsure if it's used in OOI as Nose is used extensively.
+* *tqdm*: Used by mi-instrument to provide efficient progress meters on any iterable python construct.
