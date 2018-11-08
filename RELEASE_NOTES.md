@@ -1,3 +1,7 @@
+# Version 0.6.3
+* Patch Notes (2018-11-07)
+	* Added DO instrument driver configurations to drivers.conf (12289)
+
 # Version 0.6.2
 * Patch Notes (2018-04-10)
         * Added python Deprecated package to anaconda_build/mi-instrument/meta.yaml.
