@@ -1,10 +1,10 @@
 package:
     name: ingest_engine
-    version: 1.1.2
+    version: 1.1.2.1
 
 source:
     git_url: ssh://uframe-cm.ooi.rutgers.edu:29418/ingest_engine
-    git_rev: v1.1.2
+    git_rev: v1.1.2.1
 
 requirements:
     run:
