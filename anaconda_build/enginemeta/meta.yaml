@@ -1,6 +1,6 @@
 package:
     name: enginemeta
-    version: 1.0.15
+    version: 1.0.16
 requirements:
     run:
         - requests ==2.13.0
