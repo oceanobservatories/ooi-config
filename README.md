@@ -82,6 +82,9 @@ Generates engineering particles from the platform engineering elements. Executes
 
 `oms_extractor oms_extract_config.yml`
 
+The YAML file references the node configuration files which are used to specify the mapping of each engineering
+node to the corresponding OMS endpoint. These files are managed in the mi-instrument project, c.f. https://github.com/oceanobservatories/mi-instrument/tree/master/mi/platform/rsn/node_config_files
+
 ### omsaasvr
 
 Converts OMS messages into OOI alert/alarms. Executes the following command:
