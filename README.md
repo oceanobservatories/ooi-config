@@ -5,7 +5,18 @@ Configuration files (including instrument agent driver startup)
 
 Cabled services are mainly managed on the Portland (West Coast) servers. The provide a number of utilities to control and manage data from the cabled arrays (Regional Scale Nodes and Coastal Endurance). 
 
-Services are configured using the supervisor utility. The configuration can usually be found on the listed machine under the `~/supervisors` directory. A configuration file provides the details for managing the services (e.g. `pa1.conf`). For example, to configure the services on portland-01:
+Services are configured using the supervisor utility. The configuration can usually be found on the listed machine under the `~/supervisors` directory. A configuration file provides the details for managing the services (e.g. `pa1.conf`). 
+
+### Initial Startup
+Initial configuration of supervisor requires running the supervisor daemon which must be run under the port_agent environment:
+
+```bash
+/home/asadev/anaconda/envs/port_agent/bin/python /home/asadev/anaconda/envs/port_agent/bin/supervisord -c pa2.conf
+```
+
+### Maintenance
+After `supervisord` is running on the system, `supervisorctl` can be used to control the services. 
+For example, to configure the services on portland-01:
 
 ```bash
 cd ~/supervisors/pa1
