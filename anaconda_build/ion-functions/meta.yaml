@@ -1,5 +1,5 @@
 {% set name = "ion-functions" %}
-{% set version = "2.4.5" %}
+{% set version = "2.4.6" %}
 
 package:
   name: {{ name|lower }}
@@ -15,10 +15,10 @@ requirements:
     - setuptools
     - setuptools_cython
     - cython
-    - numpy ==1.12
+    - numpy ==1.16
   run:
     - python
-    - numpy ==1.12
+    - numpy ==1.16
     - numexpr
     - scipy
     - geomag

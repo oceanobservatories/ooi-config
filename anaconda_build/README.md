@@ -44,6 +44,7 @@ Conda builds are mananged in this project (`ooi-config`) for each OOI project. E
 $ conda build --numpy=1.12 ~/ooi-config/anaconda_build/mi-instrument
 ```
 
+* Note that numpy=1.16 is now used for stream_engine, ion_functions, and ooi-data.
 * Note that numpy is only required for some packages. For those packages, omit the numpy option.
 
 This will install the mi-instrument package in the miniconda installation folder based on the local platform, package name,

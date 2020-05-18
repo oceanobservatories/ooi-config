@@ -1,5 +1,5 @@
 {% set name = "ooi-data" %}
-{% set version = "0.0.6" %}
+{% set version = "0.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -11,12 +11,13 @@ source:
 
 requirements:
   build:
-    - python
+    - python <3
     - setuptools
+    - numpy ==1.16
   run:
     - python <3
     - setuptools
-    - numpy
+    - numpy ==1.16
     - sqlalchemy >1,<2
     - geoalchemy2 <1
 
