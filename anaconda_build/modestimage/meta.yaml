@@ -1,0 +1,25 @@
+{% set name = "ModestImage" %}
+{% set version = "0.1" %}
+{% set ext = "tar.gz" %}
+{% set hash_value = "f1c296d0058abbc633a5c9a6c5c9f9884824615da203600ff493d5c38d0ed359" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.{{ ext }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ ext }}
+  sha256: {{ hash_value }}
+
+requirements:
+  build:
+    - python
+
+  run:
+    - python
+
+about:
+  home: http://pypi.python.org/pypi/ModestImage
+  license: MIT License
+  summary: 'Friendlier matplotlib interaction with large images'
