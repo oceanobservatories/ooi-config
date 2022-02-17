@@ -1,10 +1,10 @@
 package:
     name: ingest_engine
-    version: 1.4.3
+    version: 1.4.4
 
 source:
     git_url: ssh://pmena@ooi-pmo-prd02.whoi.edu:29418/ingest_engine
-    git_rev: v1.4.3
+    git_rev: v1.4.4
 
 requirements:
     run:
