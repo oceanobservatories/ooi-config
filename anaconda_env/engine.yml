@@ -13,7 +13,7 @@ dependencies:
 - gunicorn=19.7.0
 - ion-functions=2.4.7
 - ioos_qc_py2=0.2.2
-- mi-instrument=1.0.3
+- mi-instrument=1.0.4
 - msgpack-python=0.4.8
 - netcdf4=1.4.2
 - nomkl
