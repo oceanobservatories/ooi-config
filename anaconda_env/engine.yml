@@ -11,9 +11,9 @@ dependencies:
 - futures=3.3.0
 - geoalchemy2=0.4.0
 - gunicorn=19.7.0
-- ion-functions=2.4.7
+- ion-functions=2.4.8
 - ioos_qc_py2=0.2.2
-- mi-instrument=1.0.7
+- mi-instrument=1.0.8
 - msgpack-python=0.4.8
 - netcdf4=1.4.2
 - nomkl
