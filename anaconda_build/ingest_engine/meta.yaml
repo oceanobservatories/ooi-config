@@ -3,7 +3,7 @@ package:
     version: 1.4.5
 
 source:
-    git_url: git@ciw-gitlab.intra.oceanobservatories.org:edex/ingest_engine.git
+    git_url: git@ciw-gitlab.intra.oceanobservatories.org:engine/ingest_engine.git
     git_rev: v1.4.5
 
 requirements:
