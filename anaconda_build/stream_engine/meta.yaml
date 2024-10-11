@@ -1,10 +1,10 @@
 package:
     name: stream_engine
-    version: 1.20.12
+    version: 1.20.13
 
 source:
     git_url: https://github.com/oceanobservatories/stream_engine
-    git_rev: v1.20.12
+    git_rev: v1.20.13
 
 requirements:
     run:
