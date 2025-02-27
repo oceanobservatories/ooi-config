@@ -1,5 +1,5 @@
 {% set name = "mi-instrument" %}
-{% set version = "1.0.14" %}
+{% set version = "1.0.17" %}
 
 package:
   name: {{ name|lower }}
