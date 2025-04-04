@@ -1,0 +1,57 @@
+#!/bin/env bash
+
+# create a package bundle, run after a build
+# to copy in most recently built packages
+
+tarname="ooi_python_$(date +%Y%m%d)"
+build_location="$(conda info --root)/conda-bld"
+
+# copy in the packages
+mkdir $tarname
+cp -r "$build_location/linux-64" "$tarname"
+cp -r "$build_location/noarch" "$tarname"
+
+# obtain the list of packages
+packages=""
+for d in */; do
+  packages="$packages ${d%/}"
+done
+
+# seperate out ooi-status
+# it doesn't play well with the others
+packages="${packages/ooi-status}"
+# exclude the temporary tar dir
+packages="${packages/$tarname}"
+
+# copy in create utility script
+cat > "$tarname/create" << HERE
+#!/bin/env bash
+
+# create new ooi_python and ooi_status environments
+# based on the packages in this bundle
+
+set -x
+conda create -n ooi_python -c ./ $packages gunicorn
+conda create -n ooi_status -c ./ ooi-status
+HERE
+chmod +x "$tarname/create"
+
+# copy in update utility script
+cat > "$tarname/update" << HERE
+set -x
+
+# update an existing ooi_python and ooi_status environemnt
+# based on the packages in this bundle
+
+conda update -n ooi_python -c ./ $packages gunicorn
+conda update -n ooi_status -c ./ ooi-status
+HERE
+chmod +x "$tarname/update"
+
+# tar up the bundle
+tar -czf $tarname.tgz $tarname
+
+# clean up the temporary files
+rm -fr $tarname
+
+
