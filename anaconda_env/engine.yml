@@ -12,9 +12,9 @@ dependencies:
 - geoalchemy2=0.4.0
 - gunicorn=19.7.0
 - ingest_engine=1.4.5
-- ion-functions=2.5.3
+- ion-functions=2.5.4
 - ioos_qc_py2=0.2.2
-- mi-instrument=1.0.17
+- mi-instrument=1.0.18
 - msgpack-python=0.4.8
 - netcdf4=1.4.2
 - nomkl
