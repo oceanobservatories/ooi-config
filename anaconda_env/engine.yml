@@ -14,7 +14,7 @@ dependencies:
 - ingest_engine=1.4.5
 - ion-functions=2.5.4
 - ioos_qc_py2=0.2.2
-- mi-instrument=1.0.18
+- mi-instrument=1.0.20
 - msgpack-python=0.4.8
 - netcdf4=1.4.2
 - nomkl
