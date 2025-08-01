@@ -1,0 +1,30 @@
+#!/bin/env bash
+
+# install packages as a bundle into local conda location
+# can be used to make sure that packages can be bundled together
+# and do not have dependency conflicts
+
+env_name="ooi_python27_$(date +%Y%m%d)"
+status_env_name="ooi_status_$(date +%Y%m%d)"
+
+# build up a list of packages 
+# make sure gunicorn is installed
+install_packages="gunicorn"
+for d in */; do
+  install_packages="${d%/} $install_packages"
+done
+
+# remvoe ooi-status and create a separate env for that one,
+# it uses dependancies that conflict with other packges
+install_packages="${install_packages/ooi-status/}"
+
+# create conda environments and install packages from the local build
+echo "creating $env_name"
+set -x
+conda create -y --copy --use-local --name $env_name $install_packages
+set +x
+
+echo "creating $status_env_name"
+set -x
+conda create -y --copy --use-local --name $status_env_name ooi-status
+set +x
