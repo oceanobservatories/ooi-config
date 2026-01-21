@@ -1,0 +1,26 @@
+#!/bin/env bash
+
+# make sure conda-forge is on the channels list
+conda config --append channels conda-forge
+
+# handle package specific arguments
+function build_args() {
+  package="$1"
+  args=""
+  case $package in
+    ion-functions/) args="--numpy=1.12" ;;
+  esac
+  echo "$args $package"
+}
+
+# loop through and build each package
+for d in */; do
+  echo "---------------------------------"
+  echo "building $d"
+  echo "---------------------------------"
+  conda build $(build_args "$d") || exit
+done
+
+# remove temporary build files
+echo "build complete, cleaning up..."
+conda build purge
