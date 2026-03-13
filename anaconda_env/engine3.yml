@@ -1,0 +1,38 @@
+name: engine3
+channels:
+  - defaults
+  - ooi
+  - conda-forge
+dependencies:
+  - cachetools=4.2.2
+  - cassandra-driver=3.25.0
+  - concurrent-log-handler
+  - flask=2.2.2
+  - geoalchemy2=0.14.2
+  - geojson=2.5.0
+  - gsw=3.6.17
+  - gunicorn=20.1.0
+  - ion-functions=2.5.7
+  - ioos_qc_py2=0.2.2
+  - jinja2=3.1.2
+  - msgpack-python=1.0.3
+  - netcdf4=1.6.2
+  - nomkl=3.0=0
+  - ntplib=0.4.0
+  - numexpr=2.8.7
+  - numpy=1.26.0
+  - ooi-data=0.0.8
+  - pandas=2.1.1
+  - pip=23.3
+  - psycopg2=2.9.3
+  - pyigrf=0.3.3
+  - python=3.10.13
+  - requests=2.31.0
+  - scipy=1.11.3
+  - setuptools=68.0.0
+  - simplejson=3.17.6
+  - sqlalchemy=2.0.21
+  - stream_engine=1.20.21
+  - werkzeug=2.2.3
+  - wheel=0.41.2
+  - xarray=2023.6.0
