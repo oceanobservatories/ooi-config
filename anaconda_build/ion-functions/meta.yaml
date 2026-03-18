@@ -13,7 +13,7 @@ requirements:
   build:
     - python ==3.10.13
     - setuptools
-    - setuptools_cython
+  #  - setuptools_cython
     - cython
     - numpy ==1.26.0
   run:
@@ -21,8 +21,8 @@ requirements:
     - numpy ==1.26.0
     - numexpr
     - scipy
-    - geomag
-    - pygsw
+    - pyigrf=0.3.3
+    - gsw=3.6.17
 
 build:
   number: 0
